@@ -2,7 +2,7 @@
 
 ## *Requirements* 
 - [ ] Database with CoffeeShops and CoffeBrand (with *Parse*)
-        - 1era Tabla: User Data
+        - 1rd Table: User Data
               -Username
               -Password
               -Profile Picture
@@ -10,7 +10,7 @@
               -Optional: -Reviews given
         -Location
 
-        - 2nda Tabla: Restaurants
+        - 2nd Table: Restaurants
             -Title
             -Description
             -Rating
@@ -18,7 +18,7 @@
             -Coffees offered
             -Upvotes /In Progress
             
-        - 3era Tabla: Coffee Brands
+        - 3rd Table: Coffee Brands
             -Name
             -Description
             -Rating
