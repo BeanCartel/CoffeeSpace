@@ -2,6 +2,7 @@
 
 ## *Requirements* 
 - [ ] Database with CoffeeShops and CoffeBrand (with *Parse*)
+
         - 1rd Table: User Data
               -Username
               -Password
@@ -9,7 +10,6 @@
               -Description
               -Optional: -Reviews given
         -Location
-
         - 2nd Table: Restaurants
             -Title
             -Description
