@@ -34,3 +34,5 @@
 - [ ] Display nearby coffeeshops in a Map 
 - [ ] Login with Facebook 
 - [ ] Cool animations 
+
+//test to create conflicts
