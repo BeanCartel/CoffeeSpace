@@ -7,16 +7,31 @@
 //
 
 import UIKit
+import Parse
 
 @UIApplicationMain
 class AppDelegate: UIResponder, UIApplicationDelegate {
 
     var window: UIWindow?
+    var storyboard = UIStoryboard(name: "Main", bundle: nil);
 
-
-    func application(application: UIApplication, didFinishLaunchingWithOptions launchOptions: [NSObject: AnyObject]?) -> Bool {
-        // Override point for customization after application launch.
+    func application(application: UIApplication, didFinishLaunchingWithOptions launchptions: [NSObject: AnyObject]?) -> Bool {
+        Parse.initializeWithConfiguration(
+            ParseClientConfiguration(block: { (configuration:ParseMutableClientConfiguration) -> Void in
+                configuration.applicationId = "BeanCartel"
+                configuration.clientKey = "askjghoagladfglknalskdn"
+                configuration.server = "http://bean-cartel-server.herokuapp.com/parse"
+            })
+        )
+        
+        if PFUser.currentUser() != nil {
+            // if there is a logged in user then load the home view controller
+            let vc = storyboard.instantiateViewControllerWithIdentifier("mainFeed")
+            print("user " + String(PFUser.currentUser()!.username!) + " is logged in to CoffeeSpace !")
+            window?.rootViewController = vc
+        }
         return true
+
     }
 
     func applicationWillResignActive(application: UIApplication) {

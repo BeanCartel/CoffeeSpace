@@ -12,6 +12,9 @@
 		0C91355A1C8FABFF0074CD93 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 0C9135581C8FABFF0074CD93 /* Main.storyboard */; };
 		0C91355C1C8FABFF0074CD93 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 0C91355B1C8FABFF0074CD93 /* Assets.xcassets */; };
 		0C91355F1C8FABFF0074CD93 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 0C91355D1C8FABFF0074CD93 /* LaunchScreen.storyboard */; };
+		0CEF4CA51C91EF3B0079C63A /* SignInViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0CEF4CA41C91EF3B0079C63A /* SignInViewController.swift */; };
+		0CEF4CA71C91F3030079C63A /* SignUpViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0CEF4CA61C91F3030079C63A /* SignUpViewController.swift */; };
+		1557B1A0ACAFAD57CED61F1A /* Pods_CoffeeSpace.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6FC86957997950D8136D8802 /* Pods_CoffeeSpace.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -22,6 +25,11 @@
 		0C91355B1C8FABFF0074CD93 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		0C91355E1C8FABFF0074CD93 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		0C9135601C8FABFF0074CD93 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		0CEF4CA41C91EF3B0079C63A /* SignInViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SignInViewController.swift; sourceTree = "<group>"; };
+		0CEF4CA61C91F3030079C63A /* SignUpViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SignUpViewController.swift; sourceTree = "<group>"; };
+		4113EB292DF2F71BBAAE2207 /* Pods-CoffeeSpace.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-CoffeeSpace.debug.xcconfig"; path = "Pods/Target Support Files/Pods-CoffeeSpace/Pods-CoffeeSpace.debug.xcconfig"; sourceTree = "<group>"; };
+		6FC86957997950D8136D8802 /* Pods_CoffeeSpace.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_CoffeeSpace.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		BEFA1903A1CDB448E131AE35 /* Pods-CoffeeSpace.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-CoffeeSpace.release.xcconfig"; path = "Pods/Target Support Files/Pods-CoffeeSpace/Pods-CoffeeSpace.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -29,6 +37,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				1557B1A0ACAFAD57CED61F1A /* Pods_CoffeeSpace.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -40,6 +49,8 @@
 			children = (
 				0C9135531C8FABFF0074CD93 /* CoffeeSpace */,
 				0C9135521C8FABFF0074CD93 /* Products */,
+				5C3A3B88B98FCD9573D6FB04 /* Pods */,
+				DA3F386C0F25D7DFBAFFA89A /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -60,8 +71,27 @@
 				0C91355B1C8FABFF0074CD93 /* Assets.xcassets */,
 				0C91355D1C8FABFF0074CD93 /* LaunchScreen.storyboard */,
 				0C9135601C8FABFF0074CD93 /* Info.plist */,
+				0CEF4CA41C91EF3B0079C63A /* SignInViewController.swift */,
+				0CEF4CA61C91F3030079C63A /* SignUpViewController.swift */,
 			);
 			path = CoffeeSpace;
+			sourceTree = "<group>";
+		};
+		5C3A3B88B98FCD9573D6FB04 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				4113EB292DF2F71BBAAE2207 /* Pods-CoffeeSpace.debug.xcconfig */,
+				BEFA1903A1CDB448E131AE35 /* Pods-CoffeeSpace.release.xcconfig */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
+		DA3F386C0F25D7DFBAFFA89A /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				6FC86957997950D8136D8802 /* Pods_CoffeeSpace.framework */,
+			);
+			name = Frameworks;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -71,9 +101,12 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 0C9135631C8FABFF0074CD93 /* Build configuration list for PBXNativeTarget "CoffeeSpace" */;
 			buildPhases = (
+				703BD5AD88498BE57748E385 /* Check Pods Manifest.lock */,
 				0C91354D1C8FABFF0074CD93 /* Sources */,
 				0C91354E1C8FABFF0074CD93 /* Frameworks */,
 				0C91354F1C8FABFF0074CD93 /* Resources */,
+				5165EABB4EFE4DEA15EACE82 /* Embed Pods Frameworks */,
+				E2DF69F0195FDCB655DF0AE5 /* Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -131,6 +164,54 @@
 		};
 /* End PBXResourcesBuildPhase section */
 
+/* Begin PBXShellScriptBuildPhase section */
+		5165EABB4EFE4DEA15EACE82 /* Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "Embed Pods Frameworks";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-CoffeeSpace/Pods-CoffeeSpace-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		703BD5AD88498BE57748E385 /* Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "Check Pods Manifest.lock";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [[ $? != 0 ]] ; then\n    cat << EOM\nerror: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\nEOM\n    exit 1\nfi\n";
+			showEnvVarsInLog = 0;
+		};
+		E2DF69F0195FDCB655DF0AE5 /* Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-CoffeeSpace/Pods-CoffeeSpace-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
 /* Begin PBXSourcesBuildPhase section */
 		0C91354D1C8FABFF0074CD93 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
@@ -138,6 +219,8 @@
 			files = (
 				0C9135571C8FABFF0074CD93 /* ViewController.swift in Sources */,
 				0C9135551C8FABFF0074CD93 /* AppDelegate.swift in Sources */,
+				0CEF4CA71C91F3030079C63A /* SignUpViewController.swift in Sources */,
+				0CEF4CA51C91EF3B0079C63A /* SignInViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -246,6 +329,7 @@
 		};
 		0C9135641C8FABFF0074CD93 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 4113EB292DF2F71BBAAE2207 /* Pods-CoffeeSpace.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				INFOPLIST_FILE = CoffeeSpace/Info.plist;
@@ -257,6 +341,7 @@
 		};
 		0C9135651C8FABFF0074CD93 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = BEFA1903A1CDB448E131AE35 /* Pods-CoffeeSpace.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				INFOPLIST_FILE = CoffeeSpace/Info.plist;
@@ -285,6 +370,7 @@
 				0C9135651C8FABFF0074CD93 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
