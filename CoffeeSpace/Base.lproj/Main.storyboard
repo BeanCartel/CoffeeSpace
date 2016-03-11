@@ -172,6 +172,74 @@
             </objects>
             <point key="canvasLocation" x="300" y="1083"/>
         </scene>
+        <!--Add Coffee Brand View Controller-->
+        <scene sceneID="3Dc-tt-ahE">
+            <objects>
+                <viewController storyboardIdentifier="postBrand" id="Ht0-0S-Mr4" customClass="addCoffeeBrandViewController" customModule="CoffeeSpace" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="Lih-1a-ALc"/>
+                        <viewControllerLayoutGuide type="bottom" id="bAK-vp-qSD"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="zmz-3q-X2B">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" hasAttributedTitle="YES" translatesAutoresizingMaskIntoConstraints="NO" id="iVt-vd-Tmc">
+                                <rect key="frame" x="0.0" y="0.0" width="320" height="145"/>
+                                <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                                <state key="normal">
+                                    <attributedString key="attributedTitle">
+                                        <fragment content="button">
+                                            <attributes>
+                                                <font key="NSFont" size="15" name="HelveticaNeue"/>
+                                            </attributes>
+                                        </fragment>
+                                    </attributedString>
+                                </state>
+                                <connections>
+                                    <action selector="onPickPhoto:" destination="Ht0-0S-Mr4" eventType="touchUpInside" id="bX7-Lv-KEc"/>
+                                </connections>
+                            </button>
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Brand Name" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="2Ys-i5-9rK">
+                                <rect key="frame" x="0.0" y="153" width="320" height="30"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Where its made" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="Rbc-QF-FF8">
+                                <rect key="frame" x="0.0" y="191" width="320" height="30"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="i1O-DV-Sdn">
+                                <rect key="frame" x="77" y="438" width="166" height="76"/>
+                                <color key="backgroundColor" red="0.81518429489999999" green="0.51776003240000001" blue="0.31337103199999999" alpha="1" colorSpace="calibratedRGB"/>
+                                <color key="tintColor" red="0.97303225360000001" green="1" blue="0.99941482120000003" alpha="1" colorSpace="calibratedRGB"/>
+                                <state key="normal" title="Button"/>
+                                <connections>
+                                    <action selector="onAddBrand:" destination="Ht0-0S-Mr4" eventType="touchUpInside" id="dPa-i3-WnQ"/>
+                                </connections>
+                            </button>
+                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" text="Description" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="1cc-NR-cVF">
+                                <rect key="frame" x="0.0" y="242" width="320" height="157"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                            </textView>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    </view>
+                    <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina4"/>
+                    <connections>
+                        <outlet property="brandDescriptionTextView" destination="1cc-NR-cVF" id="8Iq-zZ-HOZ"/>
+                        <outlet property="brandImagePic" destination="iVt-vd-Tmc" id="vkK-G1-GIM"/>
+                        <outlet property="brandNameTextView" destination="2Ys-i5-9rK" id="YKF-Qh-jYm"/>
+                        <outlet property="locationBrandTextView" destination="Rbc-QF-FF8" id="kjh-Ll-Df7"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Rfu-xP-Wyq" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1141" y="364"/>
+        </scene>
         <!--View Controller-->
         <scene sceneID="L4g-gm-w1j">
             <objects>
@@ -189,10 +257,10 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="vnm-td-f0i" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="719" y="367"/>
+            <point key="canvasLocation" x="764" y="364"/>
         </scene>
     </scenes>
     <inferredMetricsTieBreakers>
-        <segue reference="J0s-cx-hxd"/>
+        <segue reference="7F0-QO-iXm"/>
     </inferredMetricsTieBreakers>
 </document>

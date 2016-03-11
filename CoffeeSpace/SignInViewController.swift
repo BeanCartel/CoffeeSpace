@@ -28,6 +28,9 @@ class SignInViewController: UIViewController {
     }
     
 
+    override func touchesBegan(touches: Set<UITouch>, withEvent event: UIEvent?) {
+        self.view.endEditing(true)
+    }
    
     @IBAction func onSignUp(sender: AnyObject) {
         

@@ -15,6 +15,8 @@
 		0CEF4CA51C91EF3B0079C63A /* SignInViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0CEF4CA41C91EF3B0079C63A /* SignInViewController.swift */; };
 		0CEF4CA71C91F3030079C63A /* SignUpViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0CEF4CA61C91F3030079C63A /* SignUpViewController.swift */; };
 		0CEF4CAB1C923D240079C63A /* singleCoffeeShopViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0CEF4CAA1C923D240079C63A /* singleCoffeeShopViewController.swift */; };
+		0CEF4CAD1C923FBD0079C63A /* CoffeeBrand.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0CEF4CAC1C923FBD0079C63A /* CoffeeBrand.swift */; };
+		0CEF4CAF1C9249F50079C63A /* addCoffeeBrandViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0CEF4CAE1C9249F50079C63A /* addCoffeeBrandViewController.swift */; };
 		1557B1A0ACAFAD57CED61F1A /* Pods_CoffeeSpace.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6FC86957997950D8136D8802 /* Pods_CoffeeSpace.framework */; };
 /* End PBXBuildFile section */
 
@@ -29,6 +31,8 @@
 		0CEF4CA41C91EF3B0079C63A /* SignInViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SignInViewController.swift; sourceTree = "<group>"; };
 		0CEF4CA61C91F3030079C63A /* SignUpViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SignUpViewController.swift; sourceTree = "<group>"; };
 		0CEF4CAA1C923D240079C63A /* singleCoffeeShopViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = singleCoffeeShopViewController.swift; sourceTree = "<group>"; };
+		0CEF4CAC1C923FBD0079C63A /* CoffeeBrand.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CoffeeBrand.swift; sourceTree = "<group>"; };
+		0CEF4CAE1C9249F50079C63A /* addCoffeeBrandViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = addCoffeeBrandViewController.swift; sourceTree = "<group>"; };
 		4113EB292DF2F71BBAAE2207 /* Pods-CoffeeSpace.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-CoffeeSpace.debug.xcconfig"; path = "Pods/Target Support Files/Pods-CoffeeSpace/Pods-CoffeeSpace.debug.xcconfig"; sourceTree = "<group>"; };
 		6FC86957997950D8136D8802 /* Pods_CoffeeSpace.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_CoffeeSpace.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		BEFA1903A1CDB448E131AE35 /* Pods-CoffeeSpace.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-CoffeeSpace.release.xcconfig"; path = "Pods/Target Support Files/Pods-CoffeeSpace/Pods-CoffeeSpace.release.xcconfig"; sourceTree = "<group>"; };
@@ -76,6 +80,8 @@
 				0CEF4CA41C91EF3B0079C63A /* SignInViewController.swift */,
 				0CEF4CA61C91F3030079C63A /* SignUpViewController.swift */,
 				0CEF4CAA1C923D240079C63A /* singleCoffeeShopViewController.swift */,
+				0CEF4CAC1C923FBD0079C63A /* CoffeeBrand.swift */,
+				0CEF4CAE1C9249F50079C63A /* addCoffeeBrandViewController.swift */,
 			);
 			path = CoffeeSpace;
 			sourceTree = "<group>";
@@ -223,8 +229,10 @@
 				0CEF4CAB1C923D240079C63A /* singleCoffeeShopViewController.swift in Sources */,
 				0C9135571C8FABFF0074CD93 /* ViewController.swift in Sources */,
 				0C9135551C8FABFF0074CD93 /* AppDelegate.swift in Sources */,
+				0CEF4CAF1C9249F50079C63A /* addCoffeeBrandViewController.swift in Sources */,
 				0CEF4CA71C91F3030079C63A /* SignUpViewController.swift in Sources */,
 				0CEF4CA51C91EF3B0079C63A /* SignInViewController.swift in Sources */,
+				0CEF4CAD1C923FBD0079C63A /* CoffeeBrand.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
