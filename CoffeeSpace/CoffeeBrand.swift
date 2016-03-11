@@ -29,7 +29,7 @@ class CoffeeBrand: NSObject {
 
        
     }
-    
+    //This method is for the user to add more images to a coffeeBrand, no implementation yet
     class func postExtraImages(image: UIImage?, withCompletion completion: PFBooleanResultBlock?)
     {
         let coffeeBrand = PFObject(className: "coffeeBrand")

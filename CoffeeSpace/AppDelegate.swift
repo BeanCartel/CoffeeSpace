@@ -25,8 +25,8 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         )
         
         if PFUser.currentUser() != nil {
-            // if there is a logged in user then load the home view controller
-            let vc = storyboard.instantiateViewControllerWithIdentifier("postBrand")
+            // if there is a logged in user then load the addCoffeeBrandViewController view controller
+            let vc = storyboard.instantiateViewControllerWithIdentifier("addCoffeeBrandViewController")
             print("user " + String(PFUser.currentUser()!.username!) + " is logged in to CoffeeSpace !")
             window?.rootViewController = vc
         }

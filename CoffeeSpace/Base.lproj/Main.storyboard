@@ -175,7 +175,7 @@
         <!--Add Coffee Brand View Controller-->
         <scene sceneID="3Dc-tt-ahE">
             <objects>
-                <viewController storyboardIdentifier="postBrand" id="Ht0-0S-Mr4" customClass="addCoffeeBrandViewController" customModule="CoffeeSpace" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="addCoffeeBrandViewController" id="Ht0-0S-Mr4" customClass="addCoffeeBrandViewController" customModule="CoffeeSpace" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="Lih-1a-ALc"/>
                         <viewControllerLayoutGuide type="bottom" id="bAK-vp-qSD"/>

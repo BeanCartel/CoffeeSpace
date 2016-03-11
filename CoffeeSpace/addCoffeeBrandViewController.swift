@@ -7,7 +7,9 @@
 //
 
 import UIKit
-
+/**
+ Simple View to add CoffeeBrands, accesed only if the user IS ALREADY LOGGED IN
+**/
 class addCoffeeBrandViewController: UIViewController, UIImagePickerControllerDelegate, UINavigationControllerDelegate {
 
     @IBOutlet weak var brandDescriptionTextView: UITextView!
