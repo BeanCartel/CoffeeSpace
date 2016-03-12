@@ -35,7 +35,7 @@ class CoffeeBrand: NSObject {
         
         // Add relevant fields to the object
         coffeeBrand["brandTitle"] = title
-        coffeeBrand["brandImage"] = getPFFileFromImage(image) // PFFile column type
+        coffeeBrand["brandImage"] = GlobalFuncs.getPFFileFromImage(image) // PFFile column type
         coffeeBrand["author"] = PFUser.currentUser() // Pointer column type that points to PFUser
         coffeeBrand["description"] = description
         coffeeBrand["location"] = location
@@ -51,27 +51,10 @@ class CoffeeBrand: NSObject {
     class func postExtraImages(image: UIImage?, withCompletion completion: PFBooleanResultBlock?)
     {
         let coffeeBrand = PFObject(className: "coffeeBrand")
-        coffeeBrand["extraImages"] = getPFFileFromImage(image)
+        
+        coffeeBrand["extraImages"] = GlobalFuncs.getPFFileFromImage(image)
         
         // Save object (following function will save the object in Parse asynchronously)
         coffeeBrand.saveInBackgroundWithBlock(completion)
     }
-    /**
-     Method to convert UIImage to PFFile
-     
-     - parameter image: Image that the user wants to upload to parse
-     
-     - returns: PFFile for the the data in the image
-     */
-    class func getPFFileFromImage(image: UIImage?) -> PFFile? {
-        // check if image is not nil
-        if let image = image {
-            // get image data and check if that is not nil
-            if let imageData = UIImagePNGRepresentation(image) {
-                return PFFile(name: "image.png", data: imageData)
-            }
-        }
-        return nil
-    }
-
 }

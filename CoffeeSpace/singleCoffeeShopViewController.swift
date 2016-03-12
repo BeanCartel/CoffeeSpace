@@ -7,6 +7,7 @@
 //
 
 import UIKit
+import Parse
 
 class singleCoffeeShopViewController: UIViewController {
 
@@ -21,7 +22,6 @@ class singleCoffeeShopViewController: UIViewController {
         // Dispose of any resources that can be recreated.
     }
     
-
     /*
     // MARK: - Navigation
 
