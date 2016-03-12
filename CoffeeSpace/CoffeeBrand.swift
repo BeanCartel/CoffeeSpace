@@ -47,6 +47,23 @@ class CoffeeBrand: NSObject {
 
        
     }
+    
+    func queryBrands(completion: (brands: [PFObject]?, error: NSError?)-> Void){
+        let query = PFQuery(className: "coffeeBrand")
+        query.orderByAscending("brandTitle")
+        query.includeKey("author")
+        query.limit = 20
+        
+        // fetch data asynchronously
+        query.findObjectsInBackgroundWithBlock { (brands: [PFObject]?, error: NSError?) -> Void in
+            if let brands = brands {
+                completion(brands: brands, error: nil)
+            } else {
+                print(error?.localizedDescription)
+            }
+        }
+    }
+
     //This method is for the user to add more images to a coffeeBrand, no implementation yet
     class func postExtraImages(image: UIImage?, withCompletion completion: PFBooleanResultBlock?)
     {
