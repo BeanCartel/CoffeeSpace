@@ -10,8 +10,26 @@ import UIKit
 import Parse
 
 class CoffeeBrand: NSObject {
+    
 
-    class func postBrandPage(image: UIImage?, title: String?,  description: String?, location: String?, withCompletion completion: PFBooleanResultBlock?) {
+    var brandTitle: String?
+    var brandDescription: String?
+    var rating: Double?
+    var brand_profile_picture: PFFile?
+    var location: String?
+    //var fcPage = NSURL?
+    
+    //constructor needs some work, specially with the image which I dont know how to get just yet, more on that when we need to display the data
+    init(dictionary: NSDictionary){
+        self.brandTitle = dictionary["brandTitle"] as? String
+        self.brandDescription = dictionary["description"] as? String
+        self.location = dictionary["location"] as? String
+        self.rating = dictionary["rating"] as? Double
+        self.brand_profile_picture = dictionary["brandImage"] as? PFFile
+        //self.fcPage = dictionary[""]
+    }
+
+    class func postBrandPage(image: UIImage?, title: String?,  description: String?, location: String?, fbURL: NSURL?, withCompletion completion: PFBooleanResultBlock?) {
         // Create Parse object PFObject
         let coffeeBrand = PFObject(className: "coffeeBrand")
         
@@ -21,7 +39,7 @@ class CoffeeBrand: NSObject {
         coffeeBrand["author"] = PFUser.currentUser() // Pointer column type that points to PFUser
         coffeeBrand["description"] = description
         coffeeBrand["location"] = location
-        coffeeBrand["likesCount"] = 0
+        coffeeBrand["rating"] = 0
         coffeeBrand["commentsCount"] = 0
         print("success")
         

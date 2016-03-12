@@ -12,6 +12,7 @@
 		0C91355A1C8FABFF0074CD93 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 0C9135581C8FABFF0074CD93 /* Main.storyboard */; };
 		0C91355C1C8FABFF0074CD93 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 0C91355B1C8FABFF0074CD93 /* Assets.xcassets */; };
 		0C91355F1C8FABFF0074CD93 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 0C91355D1C8FABFF0074CD93 /* LaunchScreen.storyboard */; };
+		0CAD75111C93921500CFAFB6 /* Shops.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0CAD75101C93921500CFAFB6 /* Shops.swift */; };
 		0CEF4CA51C91EF3B0079C63A /* SignInViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0CEF4CA41C91EF3B0079C63A /* SignInViewController.swift */; };
 		0CEF4CA71C91F3030079C63A /* SignUpViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0CEF4CA61C91F3030079C63A /* SignUpViewController.swift */; };
 		0CEF4CAB1C923D240079C63A /* singleCoffeeShopViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0CEF4CAA1C923D240079C63A /* singleCoffeeShopViewController.swift */; };
@@ -28,6 +29,7 @@
 		0C91355B1C8FABFF0074CD93 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		0C91355E1C8FABFF0074CD93 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		0C9135601C8FABFF0074CD93 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		0CAD75101C93921500CFAFB6 /* Shops.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Shops.swift; sourceTree = "<group>"; };
 		0CEF4CA41C91EF3B0079C63A /* SignInViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SignInViewController.swift; sourceTree = "<group>"; };
 		0CEF4CA61C91F3030079C63A /* SignUpViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SignUpViewController.swift; sourceTree = "<group>"; };
 		0CEF4CAA1C923D240079C63A /* singleCoffeeShopViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = singleCoffeeShopViewController.swift; sourceTree = "<group>"; };
@@ -78,6 +80,7 @@
 				0C91355D1C8FABFF0074CD93 /* LaunchScreen.storyboard */,
 				0C9135601C8FABFF0074CD93 /* Info.plist */,
 				0CEF4CA41C91EF3B0079C63A /* SignInViewController.swift */,
+				0CAD75101C93921500CFAFB6 /* Shops.swift */,
 				0CEF4CA61C91F3030079C63A /* SignUpViewController.swift */,
 				0CEF4CAA1C923D240079C63A /* singleCoffeeShopViewController.swift */,
 				0CEF4CAC1C923FBD0079C63A /* CoffeeBrand.swift */,
@@ -229,6 +232,7 @@
 				0CEF4CAB1C923D240079C63A /* singleCoffeeShopViewController.swift in Sources */,
 				0C9135571C8FABFF0074CD93 /* ViewController.swift in Sources */,
 				0C9135551C8FABFF0074CD93 /* AppDelegate.swift in Sources */,
+				0CAD75111C93921500CFAFB6 /* Shops.swift in Sources */,
 				0CEF4CAF1C9249F50079C63A /* addCoffeeBrandViewController.swift in Sources */,
 				0CEF4CA71C91F3030079C63A /* SignUpViewController.swift in Sources */,
 				0CEF4CA51C91EF3B0079C63A /* SignInViewController.swift in Sources */,

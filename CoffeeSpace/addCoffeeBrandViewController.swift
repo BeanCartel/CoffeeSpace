@@ -35,7 +35,7 @@ class addCoffeeBrandViewController: UIViewController, UIImagePickerControllerDel
     @IBAction func onAddBrand(sender: AnyObject) {
         print("Button Pressed")
         let image = resize(toPostImage, newSize: CGSizeMake(200,200))
-        CoffeeBrand.postBrandPage(image, title: brandNameTextView.text , description: brandDescriptionTextView.text, location: locationBrandTextView.text, withCompletion: nil)
+        CoffeeBrand.postBrandPage(image, title: brandNameTextView.text, description: brandDescriptionTextView.text, location: locationBrandTextView.text, fbURL: nil, withCompletion: nil)
         print("Photo Uploaded")
     }
     
