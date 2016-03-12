@@ -72,16 +72,13 @@
 			isa = PBXGroup;
 			children = (
 				0C9135541C8FABFF0074CD93 /* AppDelegate.swift */,
-				0C9135561C8FABFF0074CD93 /* ViewController.swift */,
 				0C9135581C8FABFF0074CD93 /* Main.storyboard */,
 				0C91355B1C8FABFF0074CD93 /* Assets.xcassets */,
 				0C91355D1C8FABFF0074CD93 /* LaunchScreen.storyboard */,
 				0C9135601C8FABFF0074CD93 /* Info.plist */,
-				0CEF4CA41C91EF3B0079C63A /* SignInViewController.swift */,
-				0CEF4CA61C91F3030079C63A /* SignUpViewController.swift */,
-				0CEF4CAA1C923D240079C63A /* singleCoffeeShopViewController.swift */,
-				0CEF4CAC1C923FBD0079C63A /* CoffeeBrand.swift */,
-				0CEF4CAE1C9249F50079C63A /* addCoffeeBrandViewController.swift */,
+				A049366A1C94A6420091971C /* Models */,
+				A04936691C94A63F0091971C /* Views */,
+				A04936681C94A6380091971C /* Controller */,
 			);
 			path = CoffeeSpace;
 			sourceTree = "<group>";
@@ -93,6 +90,33 @@
 				BEFA1903A1CDB448E131AE35 /* Pods-CoffeeSpace.release.xcconfig */,
 			);
 			name = Pods;
+			sourceTree = "<group>";
+		};
+		A04936681C94A6380091971C /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+				0C9135561C8FABFF0074CD93 /* ViewController.swift */,
+				0CEF4CA41C91EF3B0079C63A /* SignInViewController.swift */,
+				0CEF4CA61C91F3030079C63A /* SignUpViewController.swift */,
+				0CEF4CAA1C923D240079C63A /* singleCoffeeShopViewController.swift */,
+				0CEF4CAE1C9249F50079C63A /* addCoffeeBrandViewController.swift */,
+			);
+			name = Controller;
+			sourceTree = "<group>";
+		};
+		A04936691C94A63F0091971C /* Views */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = Views;
+			sourceTree = "<group>";
+		};
+		A049366A1C94A6420091971C /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				0CEF4CAC1C923FBD0079C63A /* CoffeeBrand.swift */,
+			);
+			name = Models;
 			sourceTree = "<group>";
 		};
 		DA3F386C0F25D7DFBAFFA89A /* Frameworks */ = {
