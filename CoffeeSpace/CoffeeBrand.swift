@@ -51,7 +51,7 @@ class CoffeeBrand: NSObject {
     func queryBrands(completion: (brands: [PFObject]?, error: NSError?)-> Void){
         let query = PFQuery(className: "coffeeBrand")
         query.orderByAscending("brandTitle")
-        query.includeKey("author")
+        
         query.limit = 20
         
         // fetch data asynchronously
