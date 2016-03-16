@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		0C1C27931C961BAE0041B06F /* CoffeeBradsTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0C1C27921C961BAE0041B06F /* CoffeeBradsTableViewController.swift */; };
+		0C1C27951C98D73B0041B06F /* CoffeeBrandsCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0C1C27941C98D73B0041B06F /* CoffeeBrandsCell.swift */; };
 		0C9135551C8FABFF0074CD93 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0C9135541C8FABFF0074CD93 /* AppDelegate.swift */; };
 		0C9135571C8FABFF0074CD93 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0C9135561C8FABFF0074CD93 /* ViewController.swift */; };
 		0C91355A1C8FABFF0074CD93 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 0C9135581C8FABFF0074CD93 /* Main.storyboard */; };
@@ -24,6 +26,8 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		0C1C27921C961BAE0041B06F /* CoffeeBradsTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CoffeeBradsTableViewController.swift; sourceTree = "<group>"; };
+		0C1C27941C98D73B0041B06F /* CoffeeBrandsCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CoffeeBrandsCell.swift; sourceTree = "<group>"; };
 		0C9135511C8FABFF0074CD93 /* CoffeeSpace.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = CoffeeSpace.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		0C9135541C8FABFF0074CD93 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		0C9135561C8FABFF0074CD93 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -107,6 +111,8 @@
 				0CEF4CA61C91F3030079C63A /* SignUpViewController.swift */,
 				0CEF4CAA1C923D240079C63A /* singleCoffeeShopViewController.swift */,
 				0CEF4CAE1C9249F50079C63A /* addCoffeeBrandViewController.swift */,
+				0C1C27921C961BAE0041B06F /* CoffeeBradsTableViewController.swift */,
+				0C1C27941C98D73B0041B06F /* CoffeeBrandsCell.swift */,
 			);
 			name = Controller;
 			sourceTree = "<group>";
@@ -254,7 +260,9 @@
 				0CEF4CAB1C923D240079C63A /* singleCoffeeShopViewController.swift in Sources */,
 				0C9135571C8FABFF0074CD93 /* ViewController.swift in Sources */,
 				0C9135551C8FABFF0074CD93 /* AppDelegate.swift in Sources */,
+				0C1C27951C98D73B0041B06F /* CoffeeBrandsCell.swift in Sources */,
 				0CBD41F91C94C4940072787F /* addCoffeeShopViewController.swift in Sources */,
+				0C1C27931C961BAE0041B06F /* CoffeeBradsTableViewController.swift in Sources */,
 				0CBD41FA1C94C4940072787F /* GlobalFuncs.swift in Sources */,
 				0CAD75111C93921500CFAFB6 /* Shops.swift in Sources */,
 				0CEF4CAF1C9249F50079C63A /* addCoffeeBrandViewController.swift in Sources */,

@@ -14,6 +14,7 @@ class addCoffeeShopViewController: UIViewController, UIImagePickerControllerDele
     @IBOutlet weak var descriptionTextView: UITextView!
     @IBOutlet weak var profileImageView: UIImageView!
     @IBOutlet weak var facebookField: UITextField!
+    @IBOutlet weak var locationField: UITextField!
     
     let imagePicker = UIImagePickerController()
     
@@ -61,6 +62,9 @@ class addCoffeeShopViewController: UIViewController, UIImagePickerControllerDele
         dismissViewControllerAnimated(true, completion: nil)
     }
     
+    override func touchesBegan(touches: Set<UITouch>, withEvent event: UIEvent?) {
+        self.view.endEditing(true)
+    }
     /*
     // MARK: - Navigation
 
