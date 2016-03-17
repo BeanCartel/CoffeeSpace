@@ -1,7 +1,7 @@
 # CoffeeSpace
 
 ## *Requirements* 
-- [ ] Database with CoffeeShops and CoffeBrand (with *Parse*)
+- [X] Database with CoffeeShops and CoffeBrand (with *Parse*)
 
         - 1rd Table: User Data
               -Username
@@ -25,7 +25,8 @@
             -Word Reviews
             -Profile Pic
 - [ ] Search by CoffeeShop's location (Address only), name and their coffee's brand
-- [ ] Login page 
+- [X] Display CoffeeShops and Brands in tableview/Collection View
+- [X] Login page 
 - [ ] Crowdsource system to authenticate the information provided by the users (Coffee Brand and other details)
 - [ ] Favorites page for the saved restaurants and coffee brands 
 
@@ -34,3 +35,4 @@
 - [ ] Display nearby coffeeshops in a Map 
 - [ ] Login with Facebook 
 - [ ] Cool animations 
+<img src='https://giant.gfycat.com/EthicalConsiderateCrownofthornsstarfish.gif'/>
