@@ -10,6 +10,7 @@ import UIKit
 import ParseUI
 import Parse
 
+//Totally Confused the class names, this is the CoffeeShops tableview, will change eventually
 class CoffeeBradsTableViewController: PFQueryTableViewController {
     
     @IBOutlet var tableview: UITableView!

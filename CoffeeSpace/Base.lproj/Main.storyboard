@@ -246,6 +246,75 @@
             </objects>
             <point key="canvasLocation" x="1015" y="326"/>
         </scene>
+        <!--Coffee Brands Collection View Controller-->
+        <scene sceneID="I2g-kY-1o3">
+            <objects>
+                <collectionViewController id="Gah-aD-PJQ" customClass="CoffeeBrandsCollectionViewController" customModule="CoffeeSpace" customModuleProvider="target" sceneMemberID="viewController">
+                    <collectionView key="view" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" dataMode="prototypes" id="3uh-9y-Hx7">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" red="0.31536613560924043" green="0.58679887820512822" blue="0.37871735967800146" alpha="1" colorSpace="calibratedRGB"/>
+                        <color key="tintColor" red="0.54246031805576345" green="1" blue="0.65684523854182264" alpha="1" colorSpace="calibratedRGB"/>
+                        <collectionViewFlowLayout key="collectionViewLayout" minimumLineSpacing="4" minimumInteritemSpacing="4" id="zoZ-1C-VuR">
+                            <size key="itemSize" width="154" height="151"/>
+                            <size key="headerReferenceSize" width="0.0" height="0.0"/>
+                            <size key="footerReferenceSize" width="0.0" height="0.0"/>
+                            <inset key="sectionInset" minX="0.0" minY="5" maxX="0.0" maxY="0.0"/>
+                        </collectionViewFlowLayout>
+                        <cells>
+                            <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" alpha="0.80000000000000004" contentMode="center" reuseIdentifier="CoffeeBrandsCollectionViewCell" id="afn-27-Fsw" customClass="CoffeeBrandsCollectionViewCell" customModule="CoffeeSpace" customModuleProvider="target">
+                                <rect key="frame" x="0.0" y="5" width="154" height="151"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center">
+                                    <rect key="frame" x="0.0" y="0.0" width="154" height="151"/>
+                                    <autoresizingMask key="autoresizingMask"/>
+                                    <subviews>
+                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" usesAttributedText="YES" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="Q52-Ia-Q03">
+                                            <rect key="frame" x="8" y="122" width="146" height="21"/>
+                                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                            <attributedString key="attributedText">
+                                                <fragment content="Label">
+                                                    <attributes>
+                                                        <color key="NSColor" red="0.46324056390000001" green="0.69876086709999996" blue="0.42596483229999998" alpha="1" colorSpace="calibratedRGB"/>
+                                                        <font key="NSFont" size="16" name="TrebuchetMS-Bold"/>
+                                                    </attributes>
+                                                </fragment>
+                                            </attributedString>
+                                            <nil key="highlightedColor"/>
+                                        </label>
+                                        <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Coffeepng.png" id="hXZ-b2-F6L">
+                                            <rect key="frame" x="0.0" y="0.0" width="154" height="124"/>
+                                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        </imageView>
+                                    </subviews>
+                                    <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                                </view>
+                                <color key="backgroundColor" red="0.5" green="0.31532025523885177" blue="0.19489477804714833" alpha="1" colorSpace="calibratedRGB"/>
+                                <connections>
+                                    <outlet property="BrandImageView" destination="hXZ-b2-F6L" id="JCW-Cl-cBj"/>
+                                    <outlet property="BrandNameLabel" destination="Q52-Ia-Q03" id="WdI-wr-Uhb"/>
+                                </connections>
+                            </collectionViewCell>
+                        </cells>
+                        <connections>
+                            <outlet property="dataSource" destination="Gah-aD-PJQ" id="crz-y0-nHU"/>
+                            <outlet property="delegate" destination="Gah-aD-PJQ" id="J9M-HR-rR3"/>
+                        </connections>
+                    </collectionView>
+                    <navigationItem key="navigationItem" id="xaN-UV-p1f"/>
+                    <userDefinedRuntimeAttributes>
+                        <userDefinedRuntimeAttribute type="string" keyPath="parseClassName" value="CoffeeBrand"/>
+                        <userDefinedRuntimeAttribute type="boolean" keyPath="pullToRefreshEnabled" value="YES"/>
+                        <userDefinedRuntimeAttribute type="boolean" keyPath="paginationEnabled" value="NO"/>
+                    </userDefinedRuntimeAttributes>
+                    <connections>
+                        <outlet property="brandsCollectionView" destination="3uh-9y-Hx7" id="Dl9-tr-neN"/>
+                    </connections>
+                </collectionViewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Jj8-2z-ZSb" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1465" y="243"/>
+        </scene>
         <!--Title-->
         <scene sceneID="JG9-sQ-gnV">
             <objects>
@@ -329,14 +398,20 @@
                             <outlet property="delegate" destination="Zap-Jj-FTz" id="vsH-S2-0UL"/>
                         </connections>
                     </tableView>
-                    <navigationItem key="navigationItem" title="Title" id="fHH-4C-q0H"/>
+                    <navigationItem key="navigationItem" title="Title" id="fHH-4C-q0H">
+                        <barButtonItem key="rightBarButtonItem" title="Brands" id="ict-om-4nm">
+                            <connections>
+                                <segue destination="Gah-aD-PJQ" kind="modal" id="r0n-aj-lIM"/>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
                     <connections>
                         <outlet property="tableview" destination="vSq-7p-vvu" id="H8Y-Xl-VJD"/>
                     </connections>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="O5D-at-Y5P" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1137" y="963"/>
+            <point key="canvasLocation" x="1654" y="1038"/>
         </scene>
         <!--Add Coffee Shop View Controller-->
         <scene sceneID="yNm-O2-2qP">
@@ -411,7 +486,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="8Id-vB-QzD" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1547" y="963"/>
+            <point key="canvasLocation" x="2079" y="963"/>
         </scene>
         <!--View Controller-->
         <scene sceneID="L4g-gm-w1j">
@@ -437,12 +512,20 @@
                                     <segue destination="Ht0-0S-Mr4" kind="modal" id="Mtd-t1-UDE"/>
                                 </connections>
                             </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="Aa3-aT-UnH">
+                                <rect key="frame" x="119" y="363" width="73" height="30"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" title="Brands"/>
+                                <connections>
+                                    <segue destination="Gah-aD-PJQ" kind="modal" id="bRm-je-HKp"/>
+                                </connections>
+                            </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="swb-XZ-3EU">
                                 <rect key="frame" x="119" y="167" width="46" height="30"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <state key="normal" title="Table"/>
                                 <connections>
-                                    <segue destination="CdO-wz-vjs" kind="modal" id="M1a-dL-bpQ"/>
+                                    <segue destination="Isj-N9-j5Z" kind="modal" id="3gD-Nt-6Sh"/>
                                 </connections>
                             </button>
                         </subviews>
@@ -455,29 +538,29 @@
             <point key="canvasLocation" x="629" y="326"/>
         </scene>
         <!--Navigation Controller-->
-        <scene sceneID="Eks-o3-f5I">
+        <scene sceneID="m8p-VX-86F">
             <objects>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="ijQ-kT-U56" userLabel="First Responder" sceneMemberID="firstResponder"/>
-                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="CdO-wz-vjs" sceneMemberID="viewController">
+                <navigationController storyboardIdentifier="CoffeeNavigationController" automaticallyAdjustsScrollViewInsets="NO" id="Isj-N9-j5Z" sceneMemberID="viewController">
                     <toolbarItems/>
-                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="w8o-BW-SRS">
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="FTM-KN-pqo">
                         <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
                     </navigationBar>
                     <nil name="viewControllers"/>
-                    <toolbar key="toolbar" opaque="NO" clearsContextBeforeDrawing="NO" contentMode="scaleToFill" id="Y2L-yy-t0b">
-                        <rect key="frame" x="0.0" y="524" width="320" height="44"/>
-                        <autoresizingMask key="autoresizingMask"/>
-                    </toolbar>
                     <connections>
-                        <segue destination="Zap-Jj-FTz" kind="relationship" relationship="rootViewController" id="wPH-G8-gQ9"/>
+                        <segue destination="Zap-Jj-FTz" kind="relationship" relationship="rootViewController" id="fRA-KX-o3C"/>
                     </connections>
                 </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="1V6-Bp-2Xe" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="629" y="1089"/>
+            <point key="canvasLocation" x="1137" y="963"/>
         </scene>
     </scenes>
+    <resources>
+        <image name="Coffeepng.png" width="338" height="362"/>
+    </resources>
     <inferredMetricsTieBreakers>
         <segue reference="J0s-cx-hxd"/>
+        <segue reference="r0n-aj-lIM"/>
     </inferredMetricsTieBreakers>
 </document>
