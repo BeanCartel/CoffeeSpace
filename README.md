@@ -35,4 +35,11 @@
 - [ ] Display nearby coffeeshops in a Map 
 - [ ] Login with Facebook 
 - [ ] Cool animations 
+
+
+## Video Walkthrough 
+
 <img src='https://giant.gfycat.com/EthicalConsiderateCrownofthornsstarfish.gif'/>
+
+## Notes
+- On the walkthrough we didn't show the views to add the data partlly because thats just for the admins to see and won't be on the final build. Lot's of changes to UI to come.
