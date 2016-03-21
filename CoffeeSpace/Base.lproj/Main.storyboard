@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="9531" systemVersion="15D21" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" initialViewController="BYZ-38-t0r">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="9531" systemVersion="15C50" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" initialViewController="BYZ-38-t0r">
     <dependencies>
         <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="9529"/>
@@ -210,7 +210,7 @@
                             <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" text="Description" textAlignment="natural" id="1cc-NR-cVF">
                                 <rect key="frame" x="0.0" y="242" width="320" height="157"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <color key="backgroundColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
                             </textView>
@@ -244,7 +244,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Rfu-xP-Wyq" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1015" y="326"/>
+            <point key="canvasLocation" x="1101" y="28"/>
         </scene>
         <!--Coffee Brands Collection View Controller-->
         <scene sceneID="I2g-kY-1o3">
@@ -282,7 +282,7 @@
                                             </attributedString>
                                             <nil key="highlightedColor"/>
                                         </label>
-                                        <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Coffeepng.png" id="hXZ-b2-F6L">
+                                        <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" id="hXZ-b2-F6L">
                                             <rect key="frame" x="0.0" y="0.0" width="154" height="124"/>
                                             <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                         </imageView>
@@ -313,7 +313,7 @@
                 </collectionViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Jj8-2z-ZSb" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1465" y="243"/>
+            <point key="canvasLocation" x="1696" y="378"/>
         </scene>
         <!--Title-->
         <scene sceneID="JG9-sQ-gnV">
@@ -324,11 +324,11 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <prototypes>
-                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="CoffeeBrandsCell" rowHeight="130" id="blS-VL-WaI" customClass="CoffeeBrandsCell" customModule="CoffeeSpace" customModuleProvider="target">
+                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" accessoryType="disclosureIndicator" indentationWidth="10" reuseIdentifier="CoffeeBrandsCell" rowHeight="130" id="blS-VL-WaI" customClass="CoffeeBrandsCell" customModule="CoffeeSpace" customModuleProvider="target">
                                 <rect key="frame" x="0.0" y="92" width="320" height="130"/>
                                 <autoresizingMask key="autoresizingMask"/>
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="blS-VL-WaI" id="ywi-hB-2C8">
-                                    <rect key="frame" x="0.0" y="0.0" width="320" height="129"/>
+                                    <rect key="frame" x="0.0" y="0.0" width="287" height="129"/>
                                     <autoresizingMask key="autoresizingMask"/>
                                     <subviews>
                                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" usesAttributedText="YES" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="tZu-h8-0vn">
@@ -370,7 +370,7 @@
                                             <attributedString key="attributedText">
                                                 <fragment content="Label">
                                                     <attributes>
-                                                        <color key="NSColor" cocoaTouchSystemColor="darkTextColor"/>
+                                                        <color key="NSColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                                         <font key="NSFont" size="15" name="TrebuchetMS"/>
                                                     </attributes>
                                                 </fragment>
@@ -390,6 +390,7 @@
                                     <outlet property="descriptionLabel" destination="KkT-ht-22k" id="phM-F3-jdy"/>
                                     <outlet property="likesLabel" destination="MFW-4L-dNq" id="F7t-ce-Wtq"/>
                                     <outlet property="locationLabel" destination="Afq-Dx-B0V" id="CeW-UT-izx"/>
+                                    <segue destination="FRY-6g-ngD" kind="push" id="tsA-BV-pPL"/>
                                 </connections>
                             </tableViewCell>
                         </prototypes>
@@ -401,7 +402,7 @@
                     <navigationItem key="navigationItem" title="Title" id="fHH-4C-q0H">
                         <barButtonItem key="rightBarButtonItem" title="Brands" id="ict-om-4nm">
                             <connections>
-                                <segue destination="Gah-aD-PJQ" kind="modal" id="r0n-aj-lIM"/>
+                                <segue destination="Gah-aD-PJQ" kind="push" id="IkC-g7-jLE"/>
                             </connections>
                         </barButtonItem>
                     </navigationItem>
@@ -411,7 +412,49 @@
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="O5D-at-Y5P" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1654" y="1038"/>
+            <point key="canvasLocation" x="1101" y="710"/>
+        </scene>
+        <!--Single Coffee Shop View Controller-->
+        <scene sceneID="RTL-Kr-02v">
+            <objects>
+                <viewController id="FRY-6g-ngD" customClass="singleCoffeeShopViewController" customModule="CoffeeSpace" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="YgD-lL-jRK">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Shop Name" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="Znh-8r-gNf">
+                                <rect key="frame" x="115" y="76" width="90" height="21"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Description" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="Jwc-B3-vOe">
+                                <rect key="frame" x="0.0" y="267" width="320" height="21"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" id="sqd-Pl-6Z3">
+                                <rect key="frame" x="40" y="100" width="240" height="128"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            </imageView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Rating" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="Mov-se-Wcz">
+                                <rect key="frame" x="136" y="238" width="49" height="21"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    </view>
+                    <navigationItem key="navigationItem" id="Wfg-S4-jJ9"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="vQH-IX-jCZ" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1126" y="1507"/>
         </scene>
         <!--Add Coffee Shop View Controller-->
         <scene sceneID="yNm-O2-2qP">
@@ -486,7 +529,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="8Id-vB-QzD" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2079" y="963"/>
+            <point key="canvasLocation" x="1555" y="1067"/>
         </scene>
         <!--View Controller-->
         <scene sceneID="L4g-gm-w1j">
@@ -513,7 +556,7 @@
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="Aa3-aT-UnH">
-                                <rect key="frame" x="119" y="363" width="73" height="30"/>
+                                <rect key="frame" x="115" y="398" width="73" height="30"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <state key="normal" title="Brands"/>
                                 <connections>
@@ -553,14 +596,11 @@
                 </navigationController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="1V6-Bp-2Xe" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1137" y="963"/>
+            <point key="canvasLocation" x="605" y="1255"/>
         </scene>
     </scenes>
-    <resources>
-        <image name="Coffeepng.png" width="338" height="362"/>
-    </resources>
     <inferredMetricsTieBreakers>
-        <segue reference="J0s-cx-hxd"/>
-        <segue reference="r0n-aj-lIM"/>
+        <segue reference="7F0-QO-iXm"/>
+        <segue reference="bRm-je-HKp"/>
     </inferredMetricsTieBreakers>
 </document>
