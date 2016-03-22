@@ -15,10 +15,7 @@ class CoffeeBradsTableViewController: PFQueryTableViewController {
     
     @IBOutlet var tableview: UITableView!
   
-  
-    
-    
-   // var data = [PFQuery]?()
+    // var data = [PFQuery]?()
     override func queryForTable() -> PFQuery
     {
         let query = PFQuery(className: "coffeeShop")
@@ -59,17 +56,21 @@ class CoffeeBradsTableViewController: PFQueryTableViewController {
        
     }
     
-   
-    
-
-    /*
     // MARK: - Navigation
 
     // In a storyboard-based application, you will often want to do a little preparation before navigation
     override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
-        // Get the new view controller using segue.destinationViewController.
-        // Pass the selected object to the new view controller.
+        if segue.identifier == "singleCoffeeShopViewController" {
+            let cell = sender as! UITableViewCell
+            if let indexPath = tableView.indexPathForCell(cell) {
+                let singleCoffeeShopController = segue.destinationViewController as! singleCoffeeShopViewController
+                let row = indexPath.row
+
+                singleCoffeeShopController.shopName = "\(row)"
+                
+                tableView.deselectRowAtIndexPath(indexPath, animated: true)
+            }
+        }
     }
-    */
 
 }
