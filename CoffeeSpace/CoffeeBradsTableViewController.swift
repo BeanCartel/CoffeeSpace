@@ -14,7 +14,11 @@ import Parse
 class CoffeeBradsTableViewController: PFQueryTableViewController {
     
     @IBOutlet var tableview: UITableView!
-  
+    
+    var shopName: String! = ""
+    var shopLocation: String! = ""
+    var shopDescription: String! = ""
+    
     // var data = [PFQuery]?()
     override func queryForTable() -> PFQuery
     {
@@ -33,9 +37,13 @@ class CoffeeBradsTableViewController: PFQueryTableViewController {
     {
         let cell = tableView.dequeueReusableCellWithIdentifier("CoffeeBrandsCell", forIndexPath: indexPath) as! CoffeeBrandsCell
         
-        cell.coffeeShopName?.text = object?.objectForKey("shopName") as? String
-        cell.locationLabel?.text = object?.objectForKey("location") as? String
-        cell.descriptionLabel?.text = object?.objectForKey("description") as? String
+        self.shopName = object?.objectForKey("shopName") as? String
+        self.shopLocation = object?.objectForKey("location") as? String
+        self.shopDescription = object?.objectForKey("description") as? String
+        
+        cell.coffeeShopName?.text = self.shopName
+        cell.locationLabel?.text = self.shopLocation
+        cell.descriptionLabel?.text = self.shopDescription
         
         object!["shopPic"].getDataInBackgroundWithBlock { (imageData: NSData?, error:NSError?) -> Void in
             if error == nil {
@@ -64,9 +72,8 @@ class CoffeeBradsTableViewController: PFQueryTableViewController {
             let cell = sender as! UITableViewCell
             if let indexPath = tableView.indexPathForCell(cell) {
                 let singleCoffeeShopController = segue.destinationViewController as! singleCoffeeShopViewController
-                let row = indexPath.row
-
-                singleCoffeeShopController.shopName = "\(row)"
+                
+                singleCoffeeShopController.shopName = "\(self.shopName)"
                 
                 tableView.deselectRowAtIndexPath(indexPath, animated: true)
             }
