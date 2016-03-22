@@ -11,7 +11,6 @@
 		0C1C27951C98D73B0041B06F /* CoffeeBrandsCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0C1C27941C98D73B0041B06F /* CoffeeBrandsCell.swift */; };
 		0C1C27971C9A11AF0041B06F /* CoffeeBrandsCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0C1C27961C9A11AE0041B06F /* CoffeeBrandsCollectionViewCell.swift */; };
 		0C1C27991C9A13490041B06F /* CoffeeBrandsCollectionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0C1C27981C9A13490041B06F /* CoffeeBrandsCollectionViewController.swift */; };
-		0C6C07941CA0E5E3006D2836 /* Boy-50.png in Resources */ = {isa = PBXBuildFile; fileRef = 0C6C07931CA0E5E3006D2836 /* Boy-50.png */; };
 		0C9135551C8FABFF0074CD93 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0C9135541C8FABFF0074CD93 /* AppDelegate.swift */; };
 		0C91355A1C8FABFF0074CD93 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 0C9135581C8FABFF0074CD93 /* Main.storyboard */; };
 		0C91355C1C8FABFF0074CD93 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 0C91355B1C8FABFF0074CD93 /* Assets.xcassets */; };
@@ -32,7 +31,6 @@
 		0C1C27941C98D73B0041B06F /* CoffeeBrandsCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CoffeeBrandsCell.swift; sourceTree = "<group>"; };
 		0C1C27961C9A11AE0041B06F /* CoffeeBrandsCollectionViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CoffeeBrandsCollectionViewCell.swift; sourceTree = "<group>"; };
 		0C1C27981C9A13490041B06F /* CoffeeBrandsCollectionViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CoffeeBrandsCollectionViewController.swift; sourceTree = "<group>"; };
-		0C6C07931CA0E5E3006D2836 /* Boy-50.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "Boy-50.png"; path = "../../../Downloads/Boy-50.png"; sourceTree = "<group>"; };
 		0C9135511C8FABFF0074CD93 /* CoffeeSpace.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = CoffeeSpace.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		0C9135541C8FABFF0074CD93 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		0C9135591C8FABFF0074CD93 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
@@ -92,7 +90,6 @@
 				0C9135581C8FABFF0074CD93 /* Main.storyboard */,
 				0C91355B1C8FABFF0074CD93 /* Assets.xcassets */,
 				0C91355D1C8FABFF0074CD93 /* LaunchScreen.storyboard */,
-				0C6C07931CA0E5E3006D2836 /* Boy-50.png */,
 				0C9135601C8FABFF0074CD93 /* Info.plist */,
 			);
 			path = CoffeeSpace;
@@ -219,7 +216,6 @@
 			buildActionMask = 2147483647;
 			files = (
 				0C91355F1C8FABFF0074CD93 /* LaunchScreen.storyboard in Resources */,
-				0C6C07941CA0E5E3006D2836 /* Boy-50.png in Resources */,
 				0C91355C1C8FABFF0074CD93 /* Assets.xcassets in Resources */,
 				0C91355A1C8FABFF0074CD93 /* Main.storyboard in Resources */,
 			);
