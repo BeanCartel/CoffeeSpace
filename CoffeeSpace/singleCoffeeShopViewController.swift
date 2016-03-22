@@ -12,6 +12,8 @@ import Parse
 class singleCoffeeShopViewController: UIViewController {
     
     var shopName: String! = ""
+    var shopLocation: String! = ""
+    var shopDescription: String! = ""
     
     @IBOutlet weak var shopNameLabel: UILabel!
     @IBOutlet weak var shopImageView: UIImageView!
@@ -22,6 +24,7 @@ class singleCoffeeShopViewController: UIViewController {
         super.viewDidLoad()
         
         shopNameLabel.text = "\(shopName)"
+        descriptionLabel.text = "\(shopDescription)"
     }
 
     override func didReceiveMemoryWarning() {

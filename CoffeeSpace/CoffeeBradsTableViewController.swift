@@ -64,6 +64,17 @@ class CoffeeBradsTableViewController: PFQueryTableViewController {
        
     }
     
+    override func tableView(tableView: UITableView, didSelectRowAtIndexPath indexPath: NSIndexPath) {
+        let object = objectAtIndexPath(indexPath)
+        
+        self.shopName = object?.objectForKey("shopName") as? String
+        self.shopLocation = object?.objectForKey("location") as? String
+        self.shopDescription = object?.objectForKey("description") as? String
+        
+        tableView.deselectRowAtIndexPath(indexPath, animated: false)
+        //self.performSegueWithIdentifier("singleCoffeeShopViewController", sender: self)
+    }
+    
     // MARK: - Navigation
 
     // In a storyboard-based application, you will often want to do a little preparation before navigation
@@ -73,7 +84,9 @@ class CoffeeBradsTableViewController: PFQueryTableViewController {
             if let indexPath = tableView.indexPathForCell(cell) {
                 let singleCoffeeShopController = segue.destinationViewController as! singleCoffeeShopViewController
                 
+                singleCoffeeShopController.shopDescription = "\(self.shopDescription)"
                 singleCoffeeShopController.shopName = "\(self.shopName)"
+                singleCoffeeShopController.shopLocation = "\(self.shopLocation)"
                 
                 tableView.deselectRowAtIndexPath(indexPath, animated: true)
             }
