@@ -64,7 +64,7 @@ class CoffeeBradsTableViewController: PFQueryTableViewController {
        
     }
     
-    override func tableView(tableView: UITableView, didSelectRowAtIndexPath indexPath: NSIndexPath) {
+    override func tableView(tableView: UITableView, didHighlightRowAtIndexPath indexPath: NSIndexPath) {
         let object = objectAtIndexPath(indexPath)
         
         self.shopName = object?.objectForKey("shopName") as? String
@@ -72,9 +72,8 @@ class CoffeeBradsTableViewController: PFQueryTableViewController {
         self.shopDescription = object?.objectForKey("description") as? String
         
         tableView.deselectRowAtIndexPath(indexPath, animated: false)
-        //self.performSegueWithIdentifier("singleCoffeeShopViewController", sender: self)
     }
-    
+        
     // MARK: - Navigation
 
     // In a storyboard-based application, you will often want to do a little preparation before navigation
