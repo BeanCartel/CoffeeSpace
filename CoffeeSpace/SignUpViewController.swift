@@ -69,7 +69,7 @@ class SignUpViewController: UIViewController, UITextFieldDelegate {
         doneButton.frame = CGRectMake(100, 100, 100, 50)
         doneButton.backgroundColor = UIColor.greenColor()
         doneButton.setTitle("Done!", forState: UIControlState.Normal)
-        doneButton.addTarget(self, action: "buttonAction:", forControlEvents: UIControlEvents.TouchUpInside)
+        doneButton.addTarget(self, action: Selector("buttonAction:"), forControlEvents: UIControlEvents.TouchUpInside)
         view3.addSubview(doneButton)
 
         

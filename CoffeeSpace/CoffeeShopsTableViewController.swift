@@ -11,7 +11,7 @@ import ParseUI
 import Parse
 
 //Totally Confused the class names, this is the CoffeeShops tableview, will change eventually
-class CoffeeBradsTableViewController: PFQueryTableViewController {
+class CoffeeShopsTableViewController: PFQueryTableViewController {
     
     @IBOutlet var tableview: UITableView!
    
@@ -23,18 +23,18 @@ class CoffeeBradsTableViewController: PFQueryTableViewController {
     {
         let query = PFQuery(className: "coffeeShop")
         
-        query.cachePolicy = .NetworkElseCache
+        query.cachePolicy = .CacheThenNetwork
         
         query.orderByDescending("createdAt")
         self.paginationEnabled = false
         self.objectsPerPage = 25
         return query
-        
+
     }
     
     override func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath, object: PFObject?) -> PFTableViewCell?
     {
-        let cell = tableView.dequeueReusableCellWithIdentifier("CoffeeBrandsCell", forIndexPath: indexPath) as! CoffeeBrandsCell
+        let cell = tableView.dequeueReusableCellWithIdentifier("CoffeeShopsCell", forIndexPath: indexPath) as! CoffeeShopsCell
         
         print(object!)
         

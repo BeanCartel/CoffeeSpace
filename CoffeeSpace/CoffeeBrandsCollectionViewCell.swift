@@ -26,5 +26,7 @@ class CoffeeBrandsCollectionViewCell: PFCollectionViewCell {
         super.awakeFromNib()
         self.layer.cornerRadius = 8
         self.clipsToBounds = true
+        self.backgroundView?.alpha = 0.5
+        
     }
 }

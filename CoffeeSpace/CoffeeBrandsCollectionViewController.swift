@@ -15,7 +15,9 @@ class CoffeeBrandsCollectionViewController: PFQueryCollectionViewController {
     @IBOutlet weak var brandCell: CoffeeBrandsCollectionViewCell!
 
     @IBOutlet var brandsCollectionView: UICollectionView!
-    
+    weak var mDelegate:MyProtocol?
+    var comesFromAddCoffeeShop = false
+    var selectedCoffee = [PFObject]()
     override func queryForCollection() -> PFQuery {
         let query = PFQuery(className: "coffeeBrand")
         
@@ -28,8 +30,26 @@ class CoffeeBrandsCollectionViewController: PFQueryCollectionViewController {
         
     }
 
+    override func collectionView(collectionView: UICollectionView, didSelectItemAtIndexPath indexPath: NSIndexPath)
+    {
+        
+        
+        if comesFromAddCoffeeShop {
+            let cell = collectionView.cellForItemAtIndexPath(indexPath)
+            
+            if cell?.selected == true {
+                cell?.backgroundColor = UIColor.orangeColor()
+                let selectedCoffeeBrand = objectAtIndexPath(indexPath)
+                print(selectedCoffeeBrand?.objectId)
+                selectedCoffee.append(selectedCoffeeBrand!)
+            }
+            else{
+                cell?.backgroundColor = UIColor.clearColor()
+            }
+        }
+    }
     
-
+    
     override func collectionView(collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
         //#warning Incomplete method implementation -- Return the number of items in the section
         return self.objects.count
@@ -39,6 +59,13 @@ class CoffeeBrandsCollectionViewController: PFQueryCollectionViewController {
         
         let cell = collectionView.dequeueReusableCellWithReuseIdentifier("CoffeeBrandsCollectionViewCell", forIndexPath: indexPath) as! CoffeeBrandsCollectionViewCell
        
+       /** 
+         if (cell.selected == true)
+        {cell.backgroundColor = UIColor.orangeColor()}
+        else{
+            cell.backgroundColor = UIColor.clearColor()}
+        **/
+        
         cell.BrandNameLabel.text = object?.objectForKey("brandTitle") as? String
         object!["brandImage"].getDataInBackgroundWithBlock { (imageData: NSData?, error:NSError?) -> Void in
                 if error == nil {
@@ -48,13 +75,27 @@ class CoffeeBrandsCollectionViewController: PFQueryCollectionViewController {
         }
         return cell
     }
+     @IBAction func done(sender: AnyObject) {
+        comesFromAddCoffeeShop = false
+        brandsCollectionView.allowsMultipleSelection = false
+        mDelegate?.sendArrayToPreviousVC(selectedCoffee)
+        dismissViewControllerAnimated(true, completion: nil)
+    }
     
+
  
     override func viewDidLoad() {
         super.viewDidLoad()
-        self.brandsCollectionView.backgroundColor = UIColor.brownColor()
-        self.brandsCollectionView.alpha = 0.7
+        
+        if(comesFromAddCoffeeShop)
+        {
+        let cancelbtn : UIBarButtonItem = UIBarButtonItem(title: "Done", style: UIBarButtonItemStyle.Plain, target: self, action: #selector(CoffeeBrandsCollectionViewController.done(_:)))
+        self.navigationItem.rightBarButtonItem = cancelbtn
+        self.brandsCollectionView.allowsMultipleSelection = true
+        }
     }
+    
+   
     /*
     // MARK: - Navigation
 
@@ -65,4 +106,9 @@ class CoffeeBrandsCollectionViewController: PFQueryCollectionViewController {
     }
     */
 
+}
+
+protocol MyProtocol: class
+{
+    func sendArrayToPreviousVC(myArray:[PFObject])
 }

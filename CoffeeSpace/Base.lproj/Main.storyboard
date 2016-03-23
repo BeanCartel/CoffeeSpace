@@ -80,7 +80,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="668" y="-93"/>
+            <point key="canvasLocation" x="162.66666666666666" y="357.83999999999997"/>
         </scene>
         <!--Sign Up View Controller-->
         <scene sceneID="lLu-ix-wI4">
@@ -175,7 +175,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="g03-mi-R9t" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="668" y="593"/>
+            <point key="canvasLocation" x="160" y="1025.24"/>
         </scene>
         <!--Add Coffee Brand View Controller-->
         <scene sceneID="3Dc-tt-ahE">
@@ -244,17 +244,15 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Rfu-xP-Wyq" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1199" y="586"/>
+            <point key="canvasLocation" x="1625" y="-372"/>
         </scene>
         <!--Brands-->
         <scene sceneID="I2g-kY-1o3">
             <objects>
-                <collectionViewController id="Gah-aD-PJQ" customClass="CoffeeBrandsCollectionViewController" customModule="CoffeeSpace" customModuleProvider="target" sceneMemberID="viewController">
+                <collectionViewController title="Brands" id="Gah-aD-PJQ" customClass="CoffeeBrandsCollectionViewController" customModule="CoffeeSpace" customModuleProvider="target" sceneMemberID="viewController">
                     <collectionView key="view" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" dataMode="prototypes" id="3uh-9y-Hx7">
                         <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <color key="backgroundColor" red="0.31536613560924043" green="0.58679887820512822" blue="0.37871735967800146" alpha="1" colorSpace="calibratedRGB"/>
-                        <color key="tintColor" red="0.54246031805576345" green="1" blue="0.65684523854182264" alpha="1" colorSpace="calibratedRGB"/>
                         <collectionViewFlowLayout key="collectionViewLayout" minimumLineSpacing="4" minimumInteritemSpacing="4" id="zoZ-1C-VuR">
                             <size key="itemSize" width="154" height="151"/>
                             <size key="headerReferenceSize" width="0.0" height="0.0"/>
@@ -262,7 +260,7 @@
                             <inset key="sectionInset" minX="0.0" minY="5" maxX="0.0" maxY="0.0"/>
                         </collectionViewFlowLayout>
                         <cells>
-                            <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" alpha="0.80000000000000004" contentMode="center" reuseIdentifier="CoffeeBrandsCollectionViewCell" id="afn-27-Fsw" customClass="CoffeeBrandsCollectionViewCell" customModule="CoffeeSpace" customModuleProvider="target">
+                            <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" alpha="0.5" contentMode="center" reuseIdentifier="CoffeeBrandsCollectionViewCell" id="afn-27-Fsw" customClass="CoffeeBrandsCollectionViewCell" customModule="CoffeeSpace" customModuleProvider="target">
                                 <rect key="frame" x="0.0" y="5" width="154" height="151"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center">
@@ -289,7 +287,7 @@
                                     </subviews>
                                     <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                                 </view>
-                                <color key="backgroundColor" red="0.5" green="0.31532025523885177" blue="0.19489477804714833" alpha="1" colorSpace="calibratedRGB"/>
+                                <color key="backgroundColor" red="0.68627450980000004" green="0.47969236659999998" blue="0.26395046599999999" alpha="1" colorSpace="calibratedRGB"/>
                                 <connections>
                                     <outlet property="BrandImageView" destination="hXZ-b2-F6L" id="JCW-Cl-cBj"/>
                                     <outlet property="BrandNameLabel" destination="Q52-Ia-Q03" id="WdI-wr-Uhb"/>
@@ -301,12 +299,11 @@
                             <outlet property="delegate" destination="Gah-aD-PJQ" id="J9M-HR-rR3"/>
                         </connections>
                     </collectionView>
-                    <tabBarItem key="tabBarItem" title="Brands" image="CoffeeBean" id="Alp-2F-vLp"/>
-                    <navigationItem key="navigationItem" id="xaN-UV-p1f"/>
+                    <navigationItem key="navigationItem" title="Brands" id="xaN-UV-p1f"/>
                     <userDefinedRuntimeAttributes>
                         <userDefinedRuntimeAttribute type="string" keyPath="parseClassName" value="CoffeeBrand"/>
                         <userDefinedRuntimeAttribute type="boolean" keyPath="pullToRefreshEnabled" value="YES"/>
-                        <userDefinedRuntimeAttribute type="boolean" keyPath="paginationEnabled" value="NO"/>
+                        <userDefinedRuntimeAttribute type="boolean" keyPath="paginationEnabled" value="YES"/>
                     </userDefinedRuntimeAttributes>
                     <connections>
                         <outlet property="brandsCollectionView" destination="3uh-9y-Hx7" id="Dl9-tr-neN"/>
@@ -314,19 +311,19 @@
                 </collectionViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Jj8-2z-ZSb" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2083" y="-93"/>
+            <point key="canvasLocation" x="1615" y="312"/>
         </scene>
-        <!--Title-->
+        <!--Shops-->
         <scene sceneID="JG9-sQ-gnV">
             <objects>
-                <tableViewController storyboardIdentifier="CoffeeBradsTableViewController" id="Zap-Jj-FTz" customClass="CoffeeBradsTableViewController" customModule="CoffeeSpace" customModuleProvider="target" sceneMemberID="viewController">
+                <tableViewController storyboardIdentifier="CoffeeShopsTableViewController" id="Zap-Jj-FTz" customClass="CoffeeShopsTableViewController" customModule="CoffeeSpace" customModuleProvider="target" sceneMemberID="viewController">
                     <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="130" sectionHeaderHeight="28" sectionFooterHeight="28" id="vSq-7p-vvu">
                         <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <prototypes>
-                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="CoffeeBrandsCell" rowHeight="130" id="blS-VL-WaI" customClass="CoffeeBrandsCell" customModule="CoffeeSpace" customModuleProvider="target">
-                                <rect key="frame" x="0.0" y="92" width="320" height="130"/>
+                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="CoffeeShopsCell" rowHeight="130" id="blS-VL-WaI" customClass="CoffeeShopsCell" customModule="CoffeeSpace" customModuleProvider="target">
+                                <rect key="frame" x="0.0" y="28" width="320" height="130"/>
                                 <autoresizingMask key="autoresizingMask"/>
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="blS-VL-WaI" id="ywi-hB-2C8">
                                     <rect key="frame" x="0.0" y="0.0" width="320" height="129"/>
@@ -400,14 +397,14 @@
                             <outlet property="delegate" destination="Zap-Jj-FTz" id="vsH-S2-0UL"/>
                         </connections>
                     </tableView>
-                    <navigationItem key="navigationItem" title="Title" id="fHH-4C-q0H"/>
+                    <navigationItem key="navigationItem" title="Shops" id="fHH-4C-q0H"/>
                     <connections>
                         <outlet property="tableview" destination="vSq-7p-vvu" id="H8Y-Xl-VJD"/>
                     </connections>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="O5D-at-Y5P" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1647" y="949"/>
+            <point key="canvasLocation" x="1548" y="1342"/>
         </scene>
         <!--Shop-->
         <scene sceneID="RTL-Kr-02v">
@@ -511,7 +508,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="vQH-IX-jCZ" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2055" y="949"/>
+            <point key="canvasLocation" x="1548" y="2015"/>
         </scene>
         <!--Add Coffee Shop View Controller-->
         <scene sceneID="yNm-O2-2qP">
@@ -573,6 +570,14 @@
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits"/>
                             </textField>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="PuR-RJ-KNK">
+                                <rect key="frame" x="20" y="323" width="93" height="30"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" title="Add Brands"/>
+                                <connections>
+                                    <segue destination="EP1-K9-mkc" kind="modal" identifier="segueFromAddCoffeeShops" id="geh-NR-nYb"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                     </view>
@@ -586,7 +591,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="8Id-vB-QzD" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1199" y="1224"/>
+            <point key="canvasLocation" x="1106" y="-450"/>
         </scene>
         <!--Admin-->
         <scene sceneID="L4g-gm-w1j">
@@ -630,7 +635,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="vnm-td-f0i" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1199" y="-93"/>
+            <point key="canvasLocation" x="619" y="728"/>
         </scene>
         <!--Tab Bar Controller-->
         <scene sceneID="QFT-Mn-hAK">
@@ -643,13 +648,13 @@
                     </tabBar>
                     <connections>
                         <segue destination="vll-ht-wfJ" kind="relationship" relationship="viewControllers" id="0hi-9C-EJh"/>
-                        <segue destination="Gah-aD-PJQ" kind="relationship" relationship="viewControllers" id="lE2-Ex-M7Y"/>
+                        <segue destination="EP1-K9-mkc" kind="relationship" relationship="viewControllers" id="lE2-Ex-M7Y"/>
                         <segue destination="470-xv-In5" kind="relationship" relationship="viewControllers" id="xIN-vi-hWg"/>
                     </connections>
                 </tabBarController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="iw7-sj-4Pv" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1647" y="-391"/>
+            <point key="canvasLocation" x="1106" y="1025"/>
         </scene>
         <!--Shops-->
         <scene sceneID="OUe-gg-2LK">
@@ -668,7 +673,27 @@
                 </navigationController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="f7t-VP-c01" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1647" y="289"/>
+            <point key="canvasLocation" x="1106" y="1934"/>
+        </scene>
+        <!--Brands-->
+        <scene sceneID="63m-Eh-VS3">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="EP1-K9-mkc" sceneMemberID="viewController">
+                    <tabBarItem key="tabBarItem" title="Brands" image="CoffeeBean" id="Alp-2F-vLp"/>
+                    <toolbarItems/>
+                    <navigationItem key="navigationItem" id="9Sb-Nx-Kze"/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="sQZ-l5-dcL">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="Gah-aD-PJQ" kind="relationship" relationship="rootViewController" id="e7M-dd-KJO"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Ewm-SR-TZx" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1106" y="312"/>
         </scene>
     </scenes>
     <resources>
@@ -677,6 +702,7 @@
         <image name="CoffeeCup" width="24" height="30"/>
     </resources>
     <inferredMetricsTieBreakers>
-        <segue reference="J0s-cx-hxd"/>
+        <segue reference="xIN-vi-hWg"/>
+        <segue reference="geh-NR-nYb"/>
     </inferredMetricsTieBreakers>
 </document>

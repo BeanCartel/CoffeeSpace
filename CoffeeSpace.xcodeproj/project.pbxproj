@@ -7,8 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		0C1C27931C961BAE0041B06F /* CoffeeBradsTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0C1C27921C961BAE0041B06F /* CoffeeBradsTableViewController.swift */; };
-		0C1C27951C98D73B0041B06F /* CoffeeBrandsCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0C1C27941C98D73B0041B06F /* CoffeeBrandsCell.swift */; };
+		0C1C27931C961BAE0041B06F /* CoffeeShopsTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0C1C27921C961BAE0041B06F /* CoffeeShopsTableViewController.swift */; };
+		0C1C27951C98D73B0041B06F /* CoffeeShopsCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0C1C27941C98D73B0041B06F /* CoffeeShopsCell.swift */; };
 		0C1C27971C9A11AF0041B06F /* CoffeeBrandsCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0C1C27961C9A11AE0041B06F /* CoffeeBrandsCollectionViewCell.swift */; };
 		0C1C27991C9A13490041B06F /* CoffeeBrandsCollectionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0C1C27981C9A13490041B06F /* CoffeeBrandsCollectionViewController.swift */; };
 		0C9135551C8FABFF0074CD93 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0C9135541C8FABFF0074CD93 /* AppDelegate.swift */; };
@@ -27,8 +27,8 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
-		0C1C27921C961BAE0041B06F /* CoffeeBradsTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CoffeeBradsTableViewController.swift; sourceTree = "<group>"; };
-		0C1C27941C98D73B0041B06F /* CoffeeBrandsCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CoffeeBrandsCell.swift; sourceTree = "<group>"; };
+		0C1C27921C961BAE0041B06F /* CoffeeShopsTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CoffeeShopsTableViewController.swift; sourceTree = "<group>"; };
+		0C1C27941C98D73B0041B06F /* CoffeeShopsCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CoffeeShopsCell.swift; sourceTree = "<group>"; };
 		0C1C27961C9A11AE0041B06F /* CoffeeBrandsCollectionViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CoffeeBrandsCollectionViewCell.swift; sourceTree = "<group>"; };
 		0C1C27981C9A13490041B06F /* CoffeeBrandsCollectionViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CoffeeBrandsCollectionViewController.swift; sourceTree = "<group>"; };
 		0C9135511C8FABFF0074CD93 /* CoffeeSpace.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = CoffeeSpace.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -112,7 +112,7 @@
 				0CEF4CA41C91EF3B0079C63A /* SignInViewController.swift */,
 				0CEF4CA61C91F3030079C63A /* SignUpViewController.swift */,
 				0CEF4CAA1C923D240079C63A /* singleCoffeeShopViewController.swift */,
-				0C1C27921C961BAE0041B06F /* CoffeeBradsTableViewController.swift */,
+				0C1C27921C961BAE0041B06F /* CoffeeShopsTableViewController.swift */,
 				0C1C27981C9A13490041B06F /* CoffeeBrandsCollectionViewController.swift */,
 			);
 			name = Controller;
@@ -130,7 +130,7 @@
 		A03211101CA0491600D94186 /* Views */ = {
 			isa = PBXGroup;
 			children = (
-				0C1C27941C98D73B0041B06F /* CoffeeBrandsCell.swift */,
+				0C1C27941C98D73B0041B06F /* CoffeeShopsCell.swift */,
 				0C1C27961C9A11AE0041B06F /* CoffeeBrandsCollectionViewCell.swift */,
 			);
 			name = Views;
@@ -278,9 +278,9 @@
 			files = (
 				0CEF4CAB1C923D240079C63A /* singleCoffeeShopViewController.swift in Sources */,
 				0C9135551C8FABFF0074CD93 /* AppDelegate.swift in Sources */,
-				0C1C27951C98D73B0041B06F /* CoffeeBrandsCell.swift in Sources */,
+				0C1C27951C98D73B0041B06F /* CoffeeShopsCell.swift in Sources */,
 				0CBD41F91C94C4940072787F /* addCoffeeShopViewController.swift in Sources */,
-				0C1C27931C961BAE0041B06F /* CoffeeBradsTableViewController.swift in Sources */,
+				0C1C27931C961BAE0041B06F /* CoffeeShopsTableViewController.swift in Sources */,
 				0CBD41FA1C94C4940072787F /* GlobalFuncs.swift in Sources */,
 				0CAD75111C93921500CFAFB6 /* Shops.swift in Sources */,
 				0CEF4CAF1C9249F50079C63A /* addCoffeeBrandViewController.swift in Sources */,
