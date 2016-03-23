@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="9531" systemVersion="15D21" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" initialViewController="BYZ-38-t0r">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="9531" systemVersion="15C50" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" initialViewController="BYZ-38-t0r">
     <dependencies>
         <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="9529"/>
@@ -80,7 +80,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="162.66666666666666" y="357.83999999999997"/>
+            <point key="canvasLocation" x="668" y="-93"/>
         </scene>
         <!--Sign Up View Controller-->
         <scene sceneID="lLu-ix-wI4">
@@ -175,7 +175,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="g03-mi-R9t" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="160" y="1025.24"/>
+            <point key="canvasLocation" x="668" y="593"/>
         </scene>
         <!--Add Coffee Brand View Controller-->
         <scene sceneID="3Dc-tt-ahE">
@@ -244,7 +244,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Rfu-xP-Wyq" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1047" y="-358"/>
+            <point key="canvasLocation" x="1199" y="586"/>
         </scene>
         <!--Brands-->
         <scene sceneID="I2g-kY-1o3">
@@ -314,7 +314,7 @@
                 </collectionViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Jj8-2z-ZSb" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1647" y="735"/>
+            <point key="canvasLocation" x="2083" y="-93"/>
         </scene>
         <!--Title-->
         <scene sceneID="JG9-sQ-gnV">
@@ -400,16 +400,14 @@
                             <outlet property="delegate" destination="Zap-Jj-FTz" id="vsH-S2-0UL"/>
                         </connections>
                     </tableView>
-                    <navigationItem key="navigationItem" title="Title" id="fHH-4C-q0H">
-                        <barButtonItem key="rightBarButtonItem" title="Brands" id="ict-om-4nm"/>
-                    </navigationItem>
+                    <navigationItem key="navigationItem" title="Title" id="fHH-4C-q0H"/>
                     <connections>
                         <outlet property="tableview" destination="vSq-7p-vvu" id="H8Y-Xl-VJD"/>
                     </connections>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="O5D-at-Y5P" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1647" y="1353"/>
+            <point key="canvasLocation" x="1647" y="949"/>
         </scene>
         <!--Shop-->
         <scene sceneID="RTL-Kr-02v">
@@ -513,7 +511,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="vQH-IX-jCZ" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2111" y="1353"/>
+            <point key="canvasLocation" x="2055" y="949"/>
         </scene>
         <!--Add Coffee Shop View Controller-->
         <scene sceneID="yNm-O2-2qP">
@@ -588,7 +586,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="8Id-vB-QzD" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="659" y="-358"/>
+            <point key="canvasLocation" x="1199" y="1224"/>
         </scene>
         <!--Admin-->
         <scene sceneID="L4g-gm-w1j">
@@ -632,7 +630,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="vnm-td-f0i" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="629" y="326"/>
+            <point key="canvasLocation" x="1199" y="-93"/>
         </scene>
         <!--Tab Bar Controller-->
         <scene sceneID="QFT-Mn-hAK">
@@ -651,7 +649,7 @@
                 </tabBarController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="iw7-sj-4Pv" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="636" y="999"/>
+            <point key="canvasLocation" x="1647" y="-391"/>
         </scene>
         <!--Shops-->
         <scene sceneID="OUe-gg-2LK">
@@ -670,7 +668,7 @@
                 </navigationController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="f7t-VP-c01" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1115" y="1353"/>
+            <point key="canvasLocation" x="1647" y="289"/>
         </scene>
     </scenes>
     <resources>
@@ -679,6 +677,6 @@
         <image name="CoffeeCup" width="24" height="30"/>
     </resources>
     <inferredMetricsTieBreakers>
-        <segue reference="xIN-vi-hWg"/>
+        <segue reference="J0s-cx-hxd"/>
     </inferredMetricsTieBreakers>
 </document>
