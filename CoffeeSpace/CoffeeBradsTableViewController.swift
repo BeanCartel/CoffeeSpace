@@ -14,12 +14,11 @@ import Parse
 class CoffeeBradsTableViewController: PFQueryTableViewController {
     
     @IBOutlet var tableview: UITableView!
-    
+   
     var shopName: String! = ""
     var shopLocation: String! = ""
     var shopDescription: String! = ""
     
-    // var data = [PFQuery]?()
     override func queryForTable() -> PFQuery
     {
         let query = PFQuery(className: "coffeeShop")
@@ -37,13 +36,11 @@ class CoffeeBradsTableViewController: PFQueryTableViewController {
     {
         let cell = tableView.dequeueReusableCellWithIdentifier("CoffeeBrandsCell", forIndexPath: indexPath) as! CoffeeBrandsCell
         
-        self.shopName = object?.objectForKey("shopName") as? String
-        self.shopLocation = object?.objectForKey("location") as? String
-        self.shopDescription = object?.objectForKey("description") as? String
+        print(object!)
         
-        cell.coffeeShopName?.text = self.shopName
-        cell.locationLabel?.text = self.shopLocation
-        cell.descriptionLabel?.text = self.shopDescription
+        cell.coffeeShopName?.text = object?.objectForKey("shopName") as? String
+        cell.locationLabel?.text = object?.objectForKey("location") as? String
+        cell.descriptionLabel?.text = object?.objectForKey("description") as? String
         
         object!["shopPic"].getDataInBackgroundWithBlock { (imageData: NSData?, error:NSError?) -> Void in
             if error == nil {
@@ -73,9 +70,8 @@ class CoffeeBradsTableViewController: PFQueryTableViewController {
         
         tableView.deselectRowAtIndexPath(indexPath, animated: false)
     }
-        
+    
     // MARK: - Navigation
-
     // In a storyboard-based application, you will often want to do a little preparation before navigation
     override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
         if segue.identifier == "singleCoffeeShopViewController" {
@@ -91,5 +87,4 @@ class CoffeeBradsTableViewController: PFQueryTableViewController {
             }
         }
     }
-
 }
