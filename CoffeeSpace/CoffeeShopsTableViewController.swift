@@ -19,6 +19,11 @@ class CoffeeShopsTableViewController: PFQueryTableViewController {
     var shopLocation: String! = ""
     var shopDescription: String! = ""
     
+    override func viewDidLoad() {
+        super.viewDidLoad()
+        
+    }
+    
     override func queryForTable() -> PFQuery
     {
         let query = PFQuery(className: "coffeeShop")
