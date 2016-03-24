@@ -18,6 +18,14 @@ class SignUpViewController: UIViewController, UITextFieldDelegate {
     @IBOutlet weak var newEmailTextView: UITextField!
     @IBOutlet weak var newNameTextView: UITextField!
     @IBOutlet weak var scrollView: UIScrollView!
+    @IBOutlet weak var firstView: UIView!
+    @IBOutlet weak var secondView: UIView!
+    @IBOutlet weak var thirdView: UIView!
+    @IBOutlet weak var checkmarkImage: UIImageView!
+    @IBOutlet weak var smallcheckmarkImage: UIImageView!
+    @IBOutlet weak var checkmarkusername: UIImageView!
+    @IBOutlet weak var checkmarkpassword: UIImageView!
+    @IBOutlet weak var checkmarkemail: UIImageView!
     
     
     override func viewDidLoad() {
@@ -32,50 +40,21 @@ class SignUpViewController: UIViewController, UITextFieldDelegate {
         scrollView.pagingEnabled = true
         scrollView.showsHorizontalScrollIndicator = false
         
-        let view1 = UIView(frame: CGRectMake(0, 0, pageWidth, pageHeight))
-        let usertextfield = UITextField(frame: CGRectMake(20, 100, 300, 30))
-        usertextfield.placeholder = "Username"
-        usertextfield.font = UIFont.systemFontOfSize(15)
-        usertextfield.borderStyle = UITextBorderStyle.RoundedRect
-        usertextfield.autocorrectionType = UITextAutocorrectionType.No
-        usertextfield.keyboardType = UIKeyboardType.Default
-        usertextfield.returnKeyType = UIReturnKeyType.Done
-        usertextfield.clearButtonMode = UITextFieldViewMode.WhileEditing;
-       // usertextfield.contentVerticalAlignment = UIControlContentVerticalAlignment.Center
-        usertextfield.delegate = self
-        view1.addSubview(usertextfield)
-        view1.backgroundColor = UIColor.blueColor()
         
-        
-        
-        let view2 = UIView(frame: CGRectMake(pageWidth, 0, pageWidth, pageHeight))
-        view2.backgroundColor = UIColor.orangeColor()
-        let passwordTextfield = UITextField(frame: CGRectMake(20, 100, 300, 30))
-        passwordTextfield.placeholder = "Enter Password"
-        passwordTextfield.font = UIFont.systemFontOfSize(15)
-        passwordTextfield.borderStyle = UITextBorderStyle.RoundedRect
-        passwordTextfield.autocorrectionType = UITextAutocorrectionType.No
-        passwordTextfield.keyboardType = UIKeyboardType.Default
-        passwordTextfield.returnKeyType = UIReturnKeyType.Done
-        passwordTextfield.clearButtonMode = UITextFieldViewMode.WhileEditing;
-        //passwordTextfield.contentVerticalAlignment = UIControlContentVerticalAlignment.Center
-        passwordTextfield.delegate = self
-        view2.addSubview(passwordTextfield)
-        
-        let view3 = UIView(frame: CGRectMake(2*pageWidth, 0, pageWidth, pageHeight))
-        view3.backgroundColor = UIColor.purpleColor()
-        
-        let doneButton   = UIButton(type: UIButtonType.System) as UIButton
-        doneButton.frame = CGRectMake(100, 100, 100, 50)
-        doneButton.backgroundColor = UIColor.greenColor()
-        doneButton.setTitle("Done!", forState: UIControlState.Normal)
-        doneButton.addTarget(self, action: "buttonAction:", forControlEvents: UIControlEvents.TouchUpInside)
-        view3.addSubview(doneButton)
 
         
-        scrollView.addSubview(view1)
-        scrollView.addSubview(view2)
-        scrollView.addSubview(view3)
+        scrollView.addSubview(firstView)
+        scrollView.addSubview(secondView)
+        scrollView.addSubview(thirdView)
+        
+        //newNameTextView.becomeFirstResponder()
+        
+        checkmarkImage.alpha = 0
+        smallcheckmarkImage.alpha = 0
+        checkmarkemail.alpha = 0
+        checkmarkusername.alpha = 0
+        checkmarkpassword.alpha = 0
+        
         
     }
 
@@ -92,6 +71,8 @@ class SignUpViewController: UIViewController, UITextFieldDelegate {
         
         print("pressed second Sign Up Button")
         let newUser = PFUser()
+        
+        
         newUser.email = self.newEmailTextView.text
         newUser.username = self.newUserNameTextView.text
         newUser.password = self.newPasswordTextView.text
@@ -106,7 +87,74 @@ class SignUpViewController: UIViewController, UITextFieldDelegate {
             }
         }
     }
-
+    
+    // MARK: - Form Validation Functions
+    
+    
+    
+    @IBAction func editingChanged(sender: AnyObject) {
+        if ((self.newEmailTextView.text?.containsString("@") == true) && (self.newEmailTextView.text?.containsString(".") == true)) {
+        
+            print("@ is in the string")
+            
+            UIView.animateWithDuration(0.4, animations: {
+                self.checkmarkemail.alpha = 1
+                
+                self.newEmailTextView.background = UIImage(named: "activeText")
+            })
+            
+        } else if ((self.newEmailTextView.text?.containsString("@") == false) || (self.newEmailTextView.text?.containsString(".") == false) && (self.newEmailTextView.text!.characters.count >= 1) ) {
+            UIView.animateWithDuration(0.4, animations: {
+                self.checkmarkemail.alpha = 0
+                
+                self.newNameTextView.background = UIImage(named: "errorText")
+            })
+        }
+    }
+    
+    @IBAction func namedidChange(sender: AnyObject) {
+        if ((self.newNameTextView.text!.characters.count) >= 1) {
+            UIView.animateWithDuration(0.4, animations: {
+                self.checkmarkImage.alpha = 1
+                self.smallcheckmarkImage.alpha = 1
+                self.newNameTextView.background = UIImage(named: "activeText")
+            })
+        }
+    }
+    
+    @IBAction func usernameChanged(sender: AnyObject) {
+        if (self.newUserNameTextView.text!.characters.count >= 4) && (self.newUserNameTextView.text!.characters.count < 21) {
+            UIView.animateWithDuration(0.4, animations: {
+                self.checkmarkusername.alpha = 1
+                
+                self.newUserNameTextView.background = UIImage(named: "activeText")
+            })
+        } else if (self.newUserNameTextView.text!.characters.count < 4) || (self.newUserNameTextView.text!.characters.count > 21) {
+            UIView.animateWithDuration(0.4, animations: {
+                self.checkmarkusername.alpha = 0
+                
+                self.newUserNameTextView.background = UIImage(named: "errorText")
+            })
+        }
+    }
+    
+    @IBAction func passwordChanged(sender: AnyObject) {
+        if (self.newPasswordTextView.text!.characters.count >= 4) && (self.newPasswordTextView.text!.characters.count < 21) {
+            UIView.animateWithDuration(0.4, animations: {
+                self.checkmarkpassword.alpha = 1
+                
+                self.newPasswordTextView.background = UIImage(named: "activeText")
+            })
+        } else if (self.newPasswordTextView.text!.characters.count < 4) || (self.newUserNameTextView.text!.characters.count > 21) {
+            UIView.animateWithDuration(0.4, animations: {
+                self.checkmarkpassword.alpha = 0
+                
+                self.newPasswordTextView.background = UIImage(named: "errorText")
+            })
+        }
+    }
+    
+    
     /*
     // MARK: - Navigation
 
