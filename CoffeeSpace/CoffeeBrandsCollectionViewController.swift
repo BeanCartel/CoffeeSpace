@@ -11,13 +11,32 @@ import Parse
 import ParseUI
 
 
-class CoffeeBrandsCollectionViewController: PFQueryCollectionViewController {
+class CoffeeBrandsCollectionViewController: PFQueryCollectionViewController, UISearchBarDelegate {
     @IBOutlet weak var brandCell: CoffeeBrandsCollectionViewCell!
-
     @IBOutlet var brandsCollectionView: UICollectionView!
+    
     weak var mDelegate:MyProtocol?
     var comesFromAddCoffeeShop = false
     var selectedCoffee = [PFObject]()
+    
+    var searchText: String? = nil
+    
+    override func viewDidLoad() {
+        super.viewDidLoad()
+        if(comesFromAddCoffeeShop) {
+//                let cancelbtn : UIBarButtonItem = UIBarButtonItem(title: "Done", style: UIBarButtonItemStyle.Plain, target: self, action: #selector(CoffeeBrandsCollectionViewController.done(_:)))
+//                self.navigationItem.rightBarButtonItem = cancelbtn
+//                self.brandsCollectionView.allowsMultipleSelection = true
+        }
+    }
+    
+    @IBAction func done(sender: AnyObject) {
+        comesFromAddCoffeeShop = false
+        brandsCollectionView.allowsMultipleSelection = false
+        mDelegate?.sendArrayToPreviousVC(selectedCoffee)
+        dismissViewControllerAnimated(true, completion: nil)
+    }
+    
     override func queryForCollection() -> PFQuery {
         let query = PFQuery(className: "coffeeBrand")
         
@@ -26,10 +45,24 @@ class CoffeeBrandsCollectionViewController: PFQueryCollectionViewController {
         query.orderByDescending("createdAt")
         self.paginationEnabled = false
         self.objectsPerPage = 25
-        return query
         
+        if(searchText != nil){
+            query.whereKey("coffeeBrand", containsString: searchText)
+        }
+        return query
     }
-
+    
+    //Search
+    func search(searchText: String? = nil) {
+        self.searchText = searchText
+    }
+    
+    func searchBar(searchBar: UISearchBar, textDidChange searchText: String) {
+        search(searchText)
+        self.loadObjects()
+    }
+    
+    //Collection View
     override func collectionView(collectionView: UICollectionView, didSelectItemAtIndexPath indexPath: NSIndexPath)
     {
         
@@ -75,26 +108,6 @@ class CoffeeBrandsCollectionViewController: PFQueryCollectionViewController {
         }
         return cell
     }
-     @IBAction func done(sender: AnyObject) {
-        comesFromAddCoffeeShop = false
-        brandsCollectionView.allowsMultipleSelection = false
-        mDelegate?.sendArrayToPreviousVC(selectedCoffee)
-        dismissViewControllerAnimated(true, completion: nil)
-    }
-    
-
- 
-    override func viewDidLoad() {
-        super.viewDidLoad()
-        
-        if(comesFromAddCoffeeShop)
-        {
-        let cancelbtn : UIBarButtonItem = UIBarButtonItem(title: "Done", style: UIBarButtonItemStyle.Plain, target: self, action: #selector(CoffeeBrandsCollectionViewController.done(_:)))
-        self.navigationItem.rightBarButtonItem = cancelbtn
-        self.brandsCollectionView.allowsMultipleSelection = true
-        }
-    }
-    
    
     /*
     // MARK: - Navigation
@@ -108,7 +121,6 @@ class CoffeeBrandsCollectionViewController: PFQueryCollectionViewController {
 
 }
 
-protocol MyProtocol: class
-{
+protocol MyProtocol: class {
     func sendArrayToPreviousVC(myArray:[PFObject])
 }
