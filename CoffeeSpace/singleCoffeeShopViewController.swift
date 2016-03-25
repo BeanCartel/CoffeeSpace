@@ -10,7 +10,7 @@ import UIKit
 import Parse
 import ParseUI
 
-class singleCoffeeShopViewController: PFQueryCollectionViewController {
+class singleCoffeeShopViewController: UIViewController {
     
     var shopName: String! = ""
     var shopLocation: String! = ""
@@ -18,13 +18,13 @@ class singleCoffeeShopViewController: PFQueryCollectionViewController {
     
     
     
-    @IBOutlet weak var collectionview: UICollectionView!
+   
     @IBOutlet weak var shopNameLabel: UILabel!
     @IBOutlet weak var shopImageView: UIImageView!
     @IBOutlet weak var ratingLabel: UILabel!
     @IBOutlet weak var descriptionLabel: UILabel!
     
-    
+    /**
     override func queryForCollection() -> PFQuery {
         let query = PFQuery(className: "coffeeShop")
         
@@ -42,7 +42,7 @@ class singleCoffeeShopViewController: PFQueryCollectionViewController {
         return self.objects.count
     }
     
-    override func collectionView(collectionView: UICollectionView, cellForItemAtIndexPath indexPath: NSIndexPath, object: PFObject?) -> PFCollectionViewCell? {
+   override func collectionView(collectionView: UICollectionView, cellForItemAtIndexPath indexPath: NSIndexPath, object: PFObject?) -> PFCollectionViewCell? {
         
         let cell = collectionView.dequeueReusableCellWithReuseIdentifier("CoffeeBrandsCollectionViewCell", forIndexPath: indexPath) as! CoffeeBrandsCollectionViewCell
         //let arr = object!["availableCoffee"]
@@ -54,8 +54,8 @@ class singleCoffeeShopViewController: PFQueryCollectionViewController {
                 cell.BrandImageView.image = image
             }
         }
-        return cell
-    }
+        return cell}
+    **/
 
     override func viewDidLoad() {
         super.viewDidLoad()
