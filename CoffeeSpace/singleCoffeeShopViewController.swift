@@ -7,13 +7,24 @@
 //
 
 import UIKit
+import Parse
 
 class singleCoffeeShopViewController: UIViewController {
-
+    
+    var shopName: String! = ""
+    var shopLocation: String! = ""
+    var shopDescription: String! = ""
+    
+    @IBOutlet weak var shopNameLabel: UILabel!
+    @IBOutlet weak var shopImageView: UIImageView!
+    @IBOutlet weak var ratingLabel: UILabel!
+    @IBOutlet weak var descriptionLabel: UILabel!
+    
     override func viewDidLoad() {
         super.viewDidLoad()
-
-        // Do any additional setup after loading the view.
+        
+        shopNameLabel.text = "\(shopName)"
+        descriptionLabel.text = "\(shopDescription)"
     }
 
     override func didReceiveMemoryWarning() {
@@ -21,7 +32,6 @@ class singleCoffeeShopViewController: UIViewController {
         // Dispose of any resources that can be recreated.
     }
     
-
     /*
     // MARK: - Navigation
 
