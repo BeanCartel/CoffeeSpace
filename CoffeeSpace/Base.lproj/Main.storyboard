@@ -1,8 +1,8 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="9531" systemVersion="15C50" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" initialViewController="BYZ-38-t0r">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="10116" systemVersion="15D21" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" initialViewController="BYZ-38-t0r">
     <dependencies>
         <deployment identifier="iOS"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="9529"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="10085"/>
     </dependencies>
     <scenes>
         <!--Sign In View Controller-->
@@ -78,10 +78,24 @@
                                     <action selector="pressSignin:" destination="BYZ-38-t0r" eventType="touchUpInside" id="tXj-iT-dWH"/>
                                 </connections>
                             </button>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="SPACE" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="UMI-KZ-RHr">
+                                <rect key="frame" x="104" y="284" width="96" height="36"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="boldSystem" pointSize="30"/>
+                                <color key="textColor" red="0.66666666666666663" green="0.71249300894854584" blue="0.66666666666666663" alpha="1" colorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="COFFEE" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="U1z-bs-v2m">
+                                <rect key="frame" x="82" y="239" width="140" height="45"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="boldSystem" pointSize="37"/>
+                                <color key="textColor" red="0.47450980539999998" green="0.33333334329999997" blue="0.2823529541" alpha="1" colorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="Epd-wQ-1yB">
                                 <rect key="frame" x="0.0" y="284" width="320" height="284"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <color key="backgroundColor" red="0.47450980544090271" green="0.3333333432674408" blue="0.28235295414924622" alpha="1" colorSpace="calibratedRGB"/>
+                                <color key="backgroundColor" red="0.396078431372549" green="0.25882352941176473" blue="0.2196078431372549" alpha="1" colorSpace="calibratedRGB"/>
                                 <fontDescription key="fontDescription" name="Arial-BoldMT" family="Arial" pointSize="75"/>
                                 <state key="normal" title="Sign Up">
                                     <color key="titleColor" red="0.98904118306753541" green="1" blue="0.98729886925664112" alpha="1" colorSpace="calibratedRGB"/>
@@ -91,20 +105,6 @@
                                     <segue destination="LIw-QM-lLd" kind="modal" id="atM-GD-815"/>
                                 </connections>
                             </button>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="SPACE" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="UMI-KZ-RHr">
-                                <rect key="frame" x="103" y="275" width="96" height="36"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <fontDescription key="fontDescription" type="boldSystem" pointSize="30"/>
-                                <color key="textColor" red="0.66666666666666663" green="0.71249300894854584" blue="0.66666666666666663" alpha="1" colorSpace="calibratedRGB"/>
-                                <nil key="highlightedColor"/>
-                            </label>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="COFFEE" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="U1z-bs-v2m">
-                                <rect key="frame" x="76" y="251" width="140" height="45"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <fontDescription key="fontDescription" type="boldSystem" pointSize="37"/>
-                                <color key="textColor" red="0.47450980539999998" green="0.33333334329999997" blue="0.2823529541" alpha="1" colorSpace="calibratedRGB"/>
-                                <nil key="highlightedColor"/>
-                            </label>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                     </view>
@@ -119,12 +119,12 @@
                         <outlet property="spacetitleLAbel" destination="UMI-KZ-RHr" id="UYw-wy-QLs"/>
                         <outlet property="textfieldsUIView" destination="Yys-Oe-ljU" id="dHS-jL-YXi"/>
                         <outlet property="userNameTextView" destination="T8R-LK-zQm" id="y51-zv-IeZ"/>
-                        <segue destination="470-xv-In5" kind="modal" identifier="signInSegue" id="7F0-QO-iXm"/>
+                        <segue destination="rSQ-5e-6QS" kind="modal" identifier="signInSegue" id="vtW-gn-9EA"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="162" y="357"/>
+            <point key="canvasLocation" x="233" y="431"/>
         </scene>
         <!--Sign Up View Controller-->
         <scene sceneID="lLu-ix-wI4">
@@ -322,12 +322,12 @@
                         <outlet property="secondView" destination="H04-rT-9RX" id="DV4-0P-BnK"/>
                         <outlet property="smallcheckmarkImage" destination="hbr-A7-jIV" id="3PF-Gz-s6O"/>
                         <outlet property="thirdView" destination="6kt-nI-dw9" id="xJM-5n-Yiu"/>
-                        <segue destination="470-xv-In5" kind="modal" identifier="signupSegue" id="J0s-cx-hxd"/>
+                        <segue destination="rSQ-5e-6QS" kind="modal" identifier="signupSegue" id="jAR-NM-OfB"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="g03-mi-R9t" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="162" y="1025"/>
+            <point key="canvasLocation" x="233" y="1108"/>
         </scene>
         <!--Add Coffee Brand View Controller-->
         <scene sceneID="3Dc-tt-ahE">
@@ -419,27 +419,27 @@
                                     <rect key="frame" x="0.0" y="0.0" width="154" height="151"/>
                                     <autoresizingMask key="autoresizingMask"/>
                                     <subviews>
+                                        <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="stockShopImage" id="hXZ-b2-F6L">
+                                            <rect key="frame" x="0.0" y="0.0" width="154" height="124"/>
+                                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        </imageView>
                                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" usesAttributedText="YES" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="Q52-Ia-Q03">
                                             <rect key="frame" x="8" y="122" width="146" height="21"/>
                                             <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                             <attributedString key="attributedText">
                                                 <fragment content="Label">
                                                     <attributes>
-                                                        <color key="NSColor" red="0.46324056390000001" green="0.69876086709999996" blue="0.42596483229999998" alpha="1" colorSpace="calibratedRGB"/>
+                                                        <color key="NSColor" red="0.396078431372549" green="0.25882352941176473" blue="0.2196078431372549" alpha="1" colorSpace="calibratedRGB"/>
                                                         <font key="NSFont" size="16" name="TrebuchetMS-Bold"/>
                                                     </attributes>
                                                 </fragment>
                                             </attributedString>
                                             <nil key="highlightedColor"/>
                                         </label>
-                                        <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" id="hXZ-b2-F6L">
-                                            <rect key="frame" x="0.0" y="0.0" width="154" height="124"/>
-                                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                        </imageView>
                                     </subviews>
                                     <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                                 </view>
-                                <color key="backgroundColor" red="0.68627450980000004" green="0.47969236659999998" blue="0.26395046599999999" alpha="1" colorSpace="calibratedRGB"/>
+                                <color key="backgroundColor" red="0.60392156862745094" green="0.6588235294117647" blue="0.60392156862745094" alpha="1" colorSpace="calibratedRGB"/>
                                 <connections>
                                     <outlet property="BrandImageView" destination="hXZ-b2-F6L" id="JCW-Cl-cBj"/>
                                     <outlet property="BrandNameLabel" destination="Q52-Ia-Q03" id="WdI-wr-Uhb"/>
@@ -463,7 +463,7 @@
                 </collectionViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Jj8-2z-ZSb" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1615" y="312"/>
+            <point key="canvasLocation" x="1106" y="256"/>
         </scene>
         <!--Shops-->
         <scene sceneID="JG9-sQ-gnV">
@@ -480,7 +480,7 @@
                         </searchBar>
                         <prototypes>
                             <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="CoffeeShopsCell" rowHeight="130" id="blS-VL-WaI" customClass="CoffeeShopsCell" customModule="CoffeeSpace" customModuleProvider="target">
-                                <rect key="frame" x="0.0" y="72" width="320" height="130"/>
+                                <rect key="frame" x="0.0" y="136" width="320" height="130"/>
                                 <autoresizingMask key="autoresizingMask"/>
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="blS-VL-WaI" id="ywi-hB-2C8">
                                     <rect key="frame" x="0.0" y="0.0" width="320" height="129"/>
@@ -492,7 +492,7 @@
                                             <attributedString key="attributedText">
                                                 <fragment content="title">
                                                     <attributes>
-                                                        <color key="NSColor" red="0.81518429517745972" green="0.51776003837585449" blue="0.31337103247642517" alpha="1" colorSpace="calibratedRGB"/>
+                                                        <color key="NSColor" red="0.60392156862745094" green="0.6588235294117647" blue="0.60392156862745094" alpha="1" colorSpace="calibratedRGB"/>
                                                         <font key="NSFont" size="17" name="TrebuchetMS-Bold"/>
                                                     </attributes>
                                                 </fragment>
@@ -512,31 +512,31 @@
                                             <attributedString key="attributedText">
                                                 <fragment content="made in">
                                                     <attributes>
-                                                        <color key="NSColor" red="0.46324056386947632" green="0.69876086711883545" blue="0.4259648323059082" alpha="1" colorSpace="calibratedRGB"/>
+                                                        <color key="NSColor" red="0.396078431372549" green="0.25882352941176473" blue="0.2196078431372549" alpha="1" colorSpace="calibratedRGB"/>
                                                         <font key="NSFont" size="17" name="TrebuchetMS-Bold"/>
                                                     </attributes>
                                                 </fragment>
                                             </attributedString>
                                             <nil key="highlightedColor"/>
                                         </label>
+                                        <button opaque="NO" contentMode="scaleAspectFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="f0c-rd-LD5">
+                                            <rect key="frame" x="0.0" y="2" width="125" height="125"/>
+                                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                            <state key="normal" backgroundImage="stockShopImage"/>
+                                        </button>
                                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" usesAttributedText="YES" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="KkT-ht-22k">
                                             <rect key="frame" x="133" y="37" width="179" height="62"/>
                                             <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                             <attributedString key="attributedText">
                                                 <fragment content="Label">
                                                     <attributes>
-                                                        <color key="NSColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                                        <color key="NSColor" red="0.396078431372549" green="0.25882352941176473" blue="0.2196078431372549" alpha="1" colorSpace="calibratedRGB"/>
                                                         <font key="NSFont" size="15" name="TrebuchetMS"/>
                                                     </attributes>
                                                 </fragment>
                                             </attributedString>
                                             <nil key="highlightedColor"/>
                                         </label>
-                                        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="f0c-rd-LD5">
-                                            <rect key="frame" x="0.0" y="2" width="125" height="125"/>
-                                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                            <color key="backgroundColor" red="1" green="0.82006754427002893" blue="0.63395786111421426" alpha="1" colorSpace="calibratedRGB"/>
-                                        </button>
                                     </subviews>
                                 </tableViewCellContentView>
                                 <connections>
@@ -562,7 +562,7 @@
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="O5D-at-Y5P" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1548" y="1342"/>
+            <point key="canvasLocation" x="1106" y="1592"/>
         </scene>
         <!--Shop-->
         <scene sceneID="RTL-Kr-02v">
@@ -666,7 +666,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="vQH-IX-jCZ" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1548" y="2015"/>
+            <point key="canvasLocation" x="1805" y="1934"/>
         </scene>
         <!--Add Coffee Shop View Controller-->
         <scene sceneID="yNm-O2-2qP">
@@ -793,7 +793,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="vnm-td-f0i" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="619" y="728"/>
+            <point key="canvasLocation" x="1106" y="941"/>
         </scene>
         <!--Tab Bar Controller-->
         <scene sceneID="QFT-Mn-hAK">
@@ -812,7 +812,7 @@
                 </tabBarController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="iw7-sj-4Pv" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1106" y="1025"/>
+            <point key="canvasLocation" x="702" y="655"/>
         </scene>
         <!--Shops-->
         <scene sceneID="OUe-gg-2LK">
@@ -823,6 +823,10 @@
                     <navigationBar key="navigationBar" contentMode="scaleToFill" id="g7v-YI-zsP">
                         <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
+                        <color key="barTintColor" red="0.46324056386947632" green="0.69876086711883545" blue="0.4259648323059082" alpha="1" colorSpace="calibratedRGB"/>
+                        <textAttributes key="titleTextAttributes">
+                            <color key="textColor" red="0.396078431372549" green="0.25882352941176473" blue="0.2196078431372549" alpha="1" colorSpace="calibratedRGB"/>
+                        </textAttributes>
                     </navigationBar>
                     <nil name="viewControllers"/>
                     <connections>
@@ -831,7 +835,7 @@
                 </navigationController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="f7t-VP-c01" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1106" y="1934"/>
+            <point key="canvasLocation" x="702" y="1404"/>
         </scene>
         <!--Brands-->
         <scene sceneID="63m-Eh-VS3">
@@ -843,6 +847,10 @@
                     <navigationBar key="navigationBar" contentMode="scaleToFill" id="sQZ-l5-dcL">
                         <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
+                        <color key="barTintColor" red="0.46324056386947632" green="0.69876086711883545" blue="0.4259648323059082" alpha="1" colorSpace="calibratedRGB"/>
+                        <textAttributes key="titleTextAttributes">
+                            <color key="textColor" red="0.396078431372549" green="0.25882352941176473" blue="0.2196078431372549" alpha="1" colorSpace="calibratedRGB"/>
+                        </textAttributes>
                     </navigationBar>
                     <nil name="viewControllers"/>
                     <connections>
@@ -851,23 +859,24 @@
                 </navigationController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Ewm-SR-TZx" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1106" y="312"/>
+            <point key="canvasLocation" x="716" y="-4"/>
         </scene>
     </scenes>
     <resources>
-        <image name="Admin" width="251" height="38"/>
-        <image name="CoffeeBean" width="251" height="38"/>
-        <image name="CoffeeCup" width="251" height="38"/>
+        <image name="Admin" width="50" height="50"/>
+        <image name="CoffeeBean" width="30" height="30"/>
+        <image name="CoffeeCup" width="24" height="30"/>
         <image name="checkmark-256" width="256" height="256"/>
         <image name="emailicon " width="700" height="700"/>
         <image name="leftarrow" width="700" height="700"/>
         <image name="normalText" width="251" height="38"/>
         <image name="passwordicon" width="700" height="700"/>
         <image name="rightarrow" width="700" height="700"/>
+        <image name="stockShopImage" width="338" height="362"/>
         <image name="usericon" width="700" height="700"/>
     </resources>
     <inferredMetricsTieBreakers>
-        <segue reference="J0s-cx-hxd"/>
-        <segue reference="geh-NR-nYb"/>
+        <segue reference="vtW-gn-9EA"/>
+        <segue reference="lE2-Ex-M7Y"/>
     </inferredMetricsTieBreakers>
 </document>

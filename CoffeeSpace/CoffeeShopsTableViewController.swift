@@ -70,7 +70,6 @@ class CoffeeShopsTableViewController: PFQueryTableViewController, UISearchBarDel
     
     override func tableView(tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         if ((self.objects?.count) != nil) {
-            print(self.objects?.count)
             return (self.objects?.count)!
         }else {
             return 0

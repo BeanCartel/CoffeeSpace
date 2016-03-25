@@ -24,9 +24,9 @@ class CoffeeBrandsCollectionViewController: PFQueryCollectionViewController, UIS
     override func viewDidLoad() {
         super.viewDidLoad()
         if(comesFromAddCoffeeShop) {
-//                let cancelbtn : UIBarButtonItem = UIBarButtonItem(title: "Done", style: UIBarButtonItemStyle.Plain, target: self, action: #selector(CoffeeBrandsCollectionViewController.done(_:)))
-//                self.navigationItem.rightBarButtonItem = cancelbtn
-//                self.brandsCollectionView.allowsMultipleSelection = true
+                let doneBtn : UIBarButtonItem = UIBarButtonItem(title: "Done", style: UIBarButtonItemStyle.Plain, target: self, action: #selector(CoffeeBrandsCollectionViewController.done(_:)))
+               self.navigationItem.rightBarButtonItem = doneBtn
+               self.brandsCollectionView.allowsMultipleSelection = true
         }
     }
     
@@ -71,13 +71,13 @@ class CoffeeBrandsCollectionViewController: PFQueryCollectionViewController, UIS
             let cell = collectionView.cellForItemAtIndexPath(indexPath)
             
             if cell?.selected == true {
-                cell?.backgroundColor = UIColor.orangeColor()
+                cell?.backgroundColor = UIColor(red: 101, green: 66, blue: 56, alpha: 1)
                 let selectedCoffeeBrand = objectAtIndexPath(indexPath)
                 print(selectedCoffeeBrand?.objectId)
                 selectedCoffee.append(selectedCoffeeBrand!)
             }
             else{
-                cell?.backgroundColor = UIColor.clearColor()
+                cell?.backgroundColor = UIColor(red: 136, green: 96, blue: 82, alpha: 1)
             }
         }
     }
