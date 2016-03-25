@@ -51,8 +51,6 @@ class SignInViewController: UIViewController {
     
     @IBAction func onSignIn(sender: UIButton) {
         
-       
-            
         PFUser.logInWithUsernameInBackground(userNameTextView.text!, password: passWordTextView.text!) { (user: PFUser?, error: NSError?) -> Void in
             if (user != nil)
             {
@@ -72,6 +70,7 @@ class SignInViewController: UIViewController {
     @IBAction func pressSignin(sender: UIButton) {
         UIView.animateWithDuration(0.4, animations: {
             self.buttonsUIView.frame = CGRectMake(20, 202, 280, 128)
+            self.buttonsUIView.alpha = 1
             
             self.textfieldsUIView.alpha = 1
             self.userNameTextView.alpha = 1
@@ -85,8 +84,9 @@ class SignInViewController: UIViewController {
         })
 
     }
-    
-    
+    override func touchesBegan(touches: Set<UITouch>, withEvent event: UIEvent?) {
+        self.view.endEditing(true)
+    }
     
     /*
     // MARK: - Navigation

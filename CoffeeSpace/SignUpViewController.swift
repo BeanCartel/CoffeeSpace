@@ -90,13 +90,9 @@ class SignUpViewController: UIViewController, UITextFieldDelegate {
     
     // MARK: - Form Validation Functions
     
-    
-    
     @IBAction func editingChanged(sender: AnyObject) {
         if ((self.newEmailTextView.text?.containsString("@") == true) && (self.newEmailTextView.text?.containsString(".") == true)) {
-        
             print("@ is in the string")
-            
             UIView.animateWithDuration(0.4, animations: {
                 self.checkmarkemail.alpha = 1
                 
@@ -154,6 +150,9 @@ class SignUpViewController: UIViewController, UITextFieldDelegate {
         }
     }
     
+    override func touchesBegan(touches: Set<UITouch>, withEvent event: UIEvent?) {
+        self.view.endEditing(true)
+    }
     
     /*
     // MARK: - Navigation
