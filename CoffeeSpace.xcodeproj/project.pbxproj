@@ -188,7 +188,7 @@
 				TargetAttributes = {
 					0C9135501C8FABFF0074CD93 = {
 						CreatedOnToolsVersion = 7.2;
-						DevelopmentTeam = 39C65TSQEG;
+						DevelopmentTeam = LZC5C8PJ6Y;
 					};
 				};
 			};
@@ -400,10 +400,13 @@
 			baseConfigurationReference = 4113EB292DF2F71BBAAE2207 /* Pods-CoffeeSpace.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				INFOPLIST_FILE = CoffeeSpace/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = Lanista.CoffeeSpace;
+				PRODUCT_BUNDLE_IDENTIFIER = vila.CoffeeSpace;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE = "";
 			};
 			name = Debug;
 		};
@@ -412,10 +415,13 @@
 			baseConfigurationReference = BEFA1903A1CDB448E131AE35 /* Pods-CoffeeSpace.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				INFOPLIST_FILE = CoffeeSpace/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = Lanista.CoffeeSpace;
+				PRODUCT_BUNDLE_IDENTIFIER = vila.CoffeeSpace;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE = "";
 			};
 			name = Release;
 		};
