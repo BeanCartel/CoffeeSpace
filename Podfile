@@ -5,5 +5,6 @@ use_frameworks!
 
 target 'CoffeeSpace' do
 	pod 'Parse'
+        pod 'ParseUI'
 end
 

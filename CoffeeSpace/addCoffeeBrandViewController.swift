@@ -37,6 +37,7 @@ class addCoffeeBrandViewController: UIViewController, UIImagePickerControllerDel
         let image = resize(toPostImage, newSize: CGSizeMake(200,200))
         CoffeeBrand.postBrandPage(image, title: brandNameTextView.text, description: brandDescriptionTextView.text, location: locationBrandTextView.text, fbURL: nil, withCompletion: nil)
         print("Photo Uploaded")
+        dismissViewControllerAnimated(true, completion: nil)
     }
     
     

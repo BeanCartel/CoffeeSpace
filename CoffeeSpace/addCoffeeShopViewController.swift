@@ -7,14 +7,18 @@
 //
 
 import UIKit
+import Parse
 
-class addCoffeeShopViewController: UIViewController, UIImagePickerControllerDelegate, UINavigationControllerDelegate {
+class addCoffeeShopViewController: UIViewController, UIImagePickerControllerDelegate, UINavigationControllerDelegate, MyProtocol {
     
     @IBOutlet weak var shopNameField: UITextField!
     @IBOutlet weak var descriptionTextView: UITextView!
     @IBOutlet weak var profileImageView: UIImageView!
     @IBOutlet weak var facebookField: UITextField!
+    @IBOutlet weak var locationField: UITextField!
     
+    
+    var arrayOfSelectedCoffees = [PFObject]()
     let imagePicker = UIImagePickerController()
     
     override func viewDidLoad() {
@@ -39,7 +43,7 @@ class addCoffeeShopViewController: UIViewController, UIImagePickerControllerDele
     }
     
     @IBAction func submitButton(sender: AnyObject) {
-        Shops.postShop(shopNameField.text, description: descriptionTextView.text, shopImage: profileImageView.image, coffees: "", facebook: facebookField.text, withCompletion: nil)
+        Shops.postShop(shopNameField.text, description: descriptionTextView.text, shopImage: profileImageView.image, availableCoffee: arrayOfSelectedCoffees, facebook: facebookField.text, withCompletion: nil)
         print("finished opening shop")
         dismissViewControllerAnimated(true, completion: nil)
     }
@@ -47,6 +51,7 @@ class addCoffeeShopViewController: UIViewController, UIImagePickerControllerDele
     @IBAction func cancelPost(sender: AnyObject) {
         dismissViewControllerAnimated(true, completion: nil)
     }
+   
     
     //Delegate Functions
     func imagePickerController(picker: UIImagePickerController, didFinishPickingMediaWithInfo info: [String : AnyObject]) {
@@ -61,14 +66,31 @@ class addCoffeeShopViewController: UIViewController, UIImagePickerControllerDele
         dismissViewControllerAnimated(true, completion: nil)
     }
     
-    /*
-    // MARK: - Navigation
-
+    override func touchesBegan(touches: Set<UITouch>, withEvent event: UIEvent?) {
+        self.view.endEditing(true)
+    }
+    
+    
+   
+    
+     func sendArrayToPreviousVC(myArray:[PFObject])
+    {
+        arrayOfSelectedCoffees = myArray
+    }
+    
+    
     // In a storyboard-based application, you will often want to do a little preparation before navigation
     override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
-        // Get the new view controller using segue.destinationViewController.
-        // Pass the selected object to the new view controller.
+         if segue.identifier == "segueFromAddCoffeeShops" {
+            let nav = segue.destinationViewController as! UINavigationController
+            
+            let brandsCollectionViewController = nav.topViewController as! CoffeeBrandsCollectionViewController
+            brandsCollectionViewController.mDelegate = self
+            brandsCollectionViewController.comesFromAddCoffeeShop = true
+            
+        }
+        
     }
-    */
+    
 
 }
