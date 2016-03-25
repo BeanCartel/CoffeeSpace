@@ -24,7 +24,6 @@ class CoffeeShopsTableViewController: PFQueryTableViewController, UISearchBarDel
     override func viewDidLoad() {
         super.viewDidLoad()
         searchBar.delegate = self
-        
         self.navigationItem.titleView = searchBar
 
     }

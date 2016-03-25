@@ -20,14 +20,17 @@ class CoffeeBrandsCollectionViewController: PFQueryCollectionViewController, UIS
     var selectedCoffee = [PFObject]()
     
     var searchText: String? = nil
+    var searchBar = UISearchBar()
     
     override func viewDidLoad() {
         super.viewDidLoad()
         if(comesFromAddCoffeeShop) {
-                let doneBtn : UIBarButtonItem = UIBarButtonItem(title: "Done", style: UIBarButtonItemStyle.Plain, target: self, action: #selector(CoffeeBrandsCollectionViewController.done(_:)))
-               self.navigationItem.rightBarButtonItem = doneBtn
-               self.brandsCollectionView.allowsMultipleSelection = true
+//                let doneBtn : UIBarButtonItem = UIBarButtonItem(title: "Done", style: UIBarButtonItemStyle.Plain, target: self, action: #selector(CoffeeBrandsCollectionViewController.done(_:)))
+//               self.navigationItem.rightBarButtonItem = doneBtn
+//               self.brandsCollectionView.allowsMultipleSelection = true
         }
+        
+        self.navigationItem.titleView = searchBar
     }
     
     @IBAction func done(sender: AnyObject) {
