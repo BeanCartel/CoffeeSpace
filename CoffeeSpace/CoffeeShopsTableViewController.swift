@@ -24,8 +24,9 @@ class CoffeeShopsTableViewController: PFQueryTableViewController, UISearchBarDel
     override func viewDidLoad() {
         super.viewDidLoad()
         searchBar.delegate = self
+        let barButton = UIBarButtonItem(title: "Cancel", style: UIBarButtonItemStyle.Done, target: self, action: "cancelSearch")
+        self.navigationItem.rightBarButtonItem = barButton
         self.navigationItem.titleView = searchBar
-
     }
     
     //Query
@@ -51,6 +52,10 @@ class CoffeeShopsTableViewController: PFQueryTableViewController, UISearchBarDel
     func searchBar(searchBar: UISearchBar, textDidChange searchText: String) {
         search(searchText)
         self.loadObjects()
+    }
+    
+    func cancelSearch() {
+        searchBar.resignFirstResponder()
     }
     
     //Table Views

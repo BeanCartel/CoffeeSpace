@@ -12,6 +12,7 @@ import ParseUI
 
 
 class CoffeeBrandsCollectionViewController: PFQueryCollectionViewController, UISearchBarDelegate {
+    
     @IBOutlet weak var brandCell: CoffeeBrandsCollectionViewCell!
     @IBOutlet var brandsCollectionView: UICollectionView!
     
@@ -29,7 +30,9 @@ class CoffeeBrandsCollectionViewController: PFQueryCollectionViewController, UIS
 //               self.navigationItem.rightBarButtonItem = doneBtn
 //               self.brandsCollectionView.allowsMultipleSelection = true
         }
-        
+        searchBar.delegate = self
+        let barButton = UIBarButtonItem(title: "Cancel", style: UIBarButtonItemStyle.Done, target: self, action: "cancelSearch")
+        self.navigationItem.rightBarButtonItem = barButton
         self.navigationItem.titleView = searchBar
     }
     
@@ -50,7 +53,7 @@ class CoffeeBrandsCollectionViewController: PFQueryCollectionViewController, UIS
         self.objectsPerPage = 25
         
         if(searchText != nil){
-            query.whereKey("coffeeBrand", containsString: searchText)
+            query.whereKey("brandTitle", containsString: searchText)
         }
         return query
     }
@@ -63,6 +66,10 @@ class CoffeeBrandsCollectionViewController: PFQueryCollectionViewController, UIS
     func searchBar(searchBar: UISearchBar, textDidChange searchText: String) {
         search(searchText)
         self.loadObjects()
+    }
+    
+    func cancelSearch() {
+        searchBar.resignFirstResponder()
     }
     
     //Collection View
