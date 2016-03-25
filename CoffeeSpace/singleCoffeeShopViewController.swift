@@ -8,18 +8,55 @@
 
 import UIKit
 import Parse
+import ParseUI
 
-class singleCoffeeShopViewController: UIViewController {
+class singleCoffeeShopViewController: PFQueryCollectionViewController {
     
     var shopName: String! = ""
     var shopLocation: String! = ""
     var shopDescription: String! = ""
     
+    
+    
+    @IBOutlet weak var collectionview: UICollectionView!
     @IBOutlet weak var shopNameLabel: UILabel!
     @IBOutlet weak var shopImageView: UIImageView!
     @IBOutlet weak var ratingLabel: UILabel!
     @IBOutlet weak var descriptionLabel: UILabel!
     
+    
+    override func queryForCollection() -> PFQuery {
+        let query = PFQuery(className: "coffeeShop")
+        
+        query.cachePolicy = .NetworkElseCache
+        
+        query.orderByDescending("createdAt")
+        self.paginationEnabled = false
+        self.objectsPerPage = 25
+        return query
+        
+    }
+    
+    override func collectionView(collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
+        //#warning Incomplete method implementation -- Return the number of items in the section
+        return self.objects.count
+    }
+    
+    override func collectionView(collectionView: UICollectionView, cellForItemAtIndexPath indexPath: NSIndexPath, object: PFObject?) -> PFCollectionViewCell? {
+        
+        let cell = collectionView.dequeueReusableCellWithReuseIdentifier("CoffeeBrandsCollectionViewCell", forIndexPath: indexPath) as! CoffeeBrandsCollectionViewCell
+        //let arr = object!["availableCoffee"]
+        
+        //cell.BrandNameLabel.text = object?.objectForKey("brandTitle") as? String
+        object!["availableCoffee"].getDataInBackgroundWithBlock { (imageData: NSData?, error:NSError?) -> Void in
+            if error == nil {
+                let image = UIImage(data: imageData!)
+                cell.BrandImageView.image = image
+            }
+        }
+        return cell
+    }
+
     override func viewDidLoad() {
         super.viewDidLoad()
         
