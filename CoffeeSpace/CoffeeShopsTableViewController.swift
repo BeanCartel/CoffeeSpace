@@ -10,33 +10,57 @@ import UIKit
 import ParseUI
 import Parse
 
-//Totally Confused the class names, this is the CoffeeShops tableview, will change eventually
-class CoffeeBradsTableViewController: PFQueryTableViewController {
+class CoffeeShopsTableViewController: PFQueryTableViewController, UISearchBarDelegate {
     
     @IBOutlet var tableview: UITableView!
-   
+    @IBOutlet weak var searchBar: UISearchBar!
+    
     var shopName: String! = ""
     var shopLocation: String! = ""
     var shopDescription: String! = ""
     
-    override func queryForTable() -> PFQuery
-    {
+    var searchText: String? = nil
+    
+    override func viewDidLoad() {
+        super.viewDidLoad()
+        searchBar.delegate = self
+        let barButton = UIBarButtonItem(title: "Cancel", style: UIBarButtonItemStyle.Done, target: self, action: "cancelSearch")
+        self.navigationItem.rightBarButtonItem = barButton
+        self.navigationItem.titleView = searchBar
+    }
+    
+    //Query
+    override func queryForTable() -> PFQuery {
         let query = PFQuery(className: "coffeeShop")
         
-        query.cachePolicy = .NetworkElseCache
-        
+        query.cachePolicy = .CacheThenNetwork
         query.orderByDescending("createdAt")
         self.paginationEnabled = false
         self.objectsPerPage = 25
-        return query
         
+        if(searchText != nil){
+            query.whereKey("shopName", containsString: searchText)
+        }
+        return query
     }
     
-    override func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath, object: PFObject?) -> PFTableViewCell?
-    {
-        let cell = tableView.dequeueReusableCellWithIdentifier("CoffeeBrandsCell", forIndexPath: indexPath) as! CoffeeBrandsCell
-        
-        print(object!)
+    //Search
+    func search(searchText: String? = nil) {
+        self.searchText = searchText
+    }
+    
+    func searchBar(searchBar: UISearchBar, textDidChange searchText: String) {
+        search(searchText)
+        self.loadObjects()
+    }
+    
+    func cancelSearch() {
+        searchBar.resignFirstResponder()
+    }
+    
+    //Table Views
+    override func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath, object: PFObject?) -> PFTableViewCell? {
+        let cell = tableView.dequeueReusableCellWithIdentifier("CoffeeShopsCell", forIndexPath: indexPath) as! CoffeeShopsCell
         
         cell.coffeeShopName?.text = object?.objectForKey("shopName") as? String
         cell.locationLabel?.text = object?.objectForKey("location") as? String
@@ -53,7 +77,6 @@ class CoffeeBradsTableViewController: PFQueryTableViewController {
     
     override func tableView(tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         if ((self.objects?.count) != nil) {
-            print(self.objects?.count)
             return (self.objects?.count)!
         }else {
             return 0

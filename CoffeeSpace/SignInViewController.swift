@@ -15,6 +15,10 @@ class SignInViewController: UIViewController {
     @IBOutlet weak var userNameTextView: UITextField!
     @IBOutlet weak var passWordTextView: UITextField!
     @IBOutlet weak var signinButton: UIButton!
+    @IBOutlet weak var signupButton: UIButton!
+    @IBOutlet weak var coffeetitleLabel: UILabel!
+    @IBOutlet weak var spacetitleLAbel: UILabel!
+    @IBOutlet weak var bigsigninButton: UIButton!
     
     @IBOutlet weak var buttonsUIView: UIView!
     @IBOutlet weak var textfieldsUIView: UIView!
@@ -25,9 +29,8 @@ class SignInViewController: UIViewController {
 
         // Do any additional setup after loading the view.
         
-        userNameTextView.alpha = 0
-        passWordTextView.alpha = 0
         textfieldsUIView.alpha = 0
+        buttonsUIView.alpha = 0
         
     }
 
@@ -37,42 +40,54 @@ class SignInViewController: UIViewController {
     }
     
 
-    override func touchesBegan(touches: Set<UITouch>, withEvent event: UIEvent?) {
-        self.view.endEditing(true)
-    }
    
-    @IBAction func onSignUp(sender: AnyObject) {
+    
+    @IBAction func onSignUp(sender: UIButton) {
+        UIView.animateWithDuration(0.4, animations: {
+            self.signupButton.backgroundColor = UIColor(red: 136, green: 96, blue: 82, alpha: 1)
+        })
+    }
+
+    
+    @IBAction func onSignIn(sender: UIButton) {
+        
+        PFUser.logInWithUsernameInBackground(userNameTextView.text!, password: passWordTextView.text!) { (user: PFUser?, error: NSError?) -> Void in
+            if (user != nil)
+            {
+                print("You are Signed in to CoffeeSpace! ")
+                
+                self.performSegueWithIdentifier("signInSegue", sender: nil)
+            }
+        
+
+        }
+
+        
+        sender.setTitle("Log In", forState: .Normal)
         
     }
     
-    @IBAction func onSignIn(sender: AnyObject) {
-        
-        if signinButton.titleForState(.Normal) == "Log In" {
-            
-            PFUser.logInWithUsernameInBackground(userNameTextView.text!, password: passWordTextView.text!) { (user: PFUser?, error: NSError?) -> Void in
-                if (user != nil)
-                {
-                    print("You are Signed in to CoffeeSpace! ")
-                    
-                    self.performSegueWithIdentifier("signInSegue", sender: nil)
-                }
-            }
-
-        }
-        
+    @IBAction func pressSignin(sender: UIButton) {
         UIView.animateWithDuration(0.4, animations: {
-            self.buttonsUIView.frame = CGRectMake(40, 202, self.buttonsUIView.frame.width, self.buttonsUIView.frame.height)
+            self.buttonsUIView.frame = CGRectMake(20, 202, 280, 128)
+            self.buttonsUIView.alpha = 1
             
             self.textfieldsUIView.alpha = 1
-            self.textfieldsUIView.frame = CGRectMake(20, 0, self.textfieldsUIView.frame.width, self.textfieldsUIView.frame.height)
+            self.userNameTextView.alpha = 1
+            self.passWordTextView.alpha = 1
+            self.signupButton.alpha = 0
+            self.bigsigninButton.alpha = 0
+            self.coffeetitleLabel.alpha = 0
+            self.spacetitleLAbel.alpha = 0
             
-            
-            
+            self.textfieldsUIView.frame = CGRectMake(20, 20, self.textfieldsUIView.frame.width, self.textfieldsUIView.frame.height)
         })
-        
-        signinButton.setTitle("Log In", forState: .Normal)
-        
+
     }
+    override func touchesBegan(touches: Set<UITouch>, withEvent event: UIEvent?) {
+        self.view.endEditing(true)
+    }
+    
     /*
     // MARK: - Navigation
 

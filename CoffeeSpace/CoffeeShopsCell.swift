@@ -10,7 +10,7 @@ import UIKit
 import Parse
 import ParseUI
 
-class CoffeeBrandsCell: PFTableViewCell {
+class CoffeeShopsCell: PFTableViewCell {
 
     @IBOutlet weak var CoffeeShopImageView: UIButton!
     @IBOutlet weak var coffeeShopName: UILabel!
