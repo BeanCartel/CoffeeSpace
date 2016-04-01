@@ -53,11 +53,11 @@ class CoffeeShopCollectionViewController: UICollectionViewController {
                 print("Error")
             }
             print(brand.objectForKey("brandTitle"))
-            cell.brandTitleLabel.text = brand.objectForKey("brandTitle") as? String
+            cell.BrandNameLabel.text = brand.objectForKey("brandTitle") as? String
             brand["brandImage"].getDataInBackgroundWithBlock { (imageData: NSData?, error:NSError?) -> Void in
                 if error == nil {
                     let image = UIImage(data: imageData!)
-                    cell.brandImageView.image = image
+                    cell.BrandImageView.image = image
                 }
             }
         

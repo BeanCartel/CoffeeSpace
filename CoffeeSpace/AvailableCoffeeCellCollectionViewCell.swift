@@ -10,9 +10,9 @@ import UIKit
 
 class AvailableCoffeeCellCollectionViewCell: UICollectionViewCell {
     
-    @IBOutlet weak var brandImageView: UIImageView!
+    @IBOutlet weak var BrandImageView: UIImageView!
     
-    @IBOutlet weak var brandTitleLabel: UILabel!
+    @IBOutlet weak var BrandNameLabel: UILabel!
     
     override func awakeFromNib() {
         super.awakeFromNib()
