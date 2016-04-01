@@ -13,13 +13,14 @@ import Parse
 class CoffeeShopsTableViewController: PFQueryTableViewController, UISearchBarDelegate {
     
     @IBOutlet var tableview: UITableView!
-    @IBOutlet weak var searchBar: UISearchBar!
     
+    var shopId: String! = ""
     var shopName: String! = ""
     var shopLocation: String! = ""
     var shopDescription: String! = ""
     
     var searchText: String? = nil
+    var searchBar = UISearchBar()
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -88,6 +89,7 @@ class CoffeeShopsTableViewController: PFQueryTableViewController, UISearchBarDel
         let object = objectAtIndexPath(indexPath)
         
         self.shopName = object?.objectForKey("shopName") as? String
+        self.shopId = object?.objectId!
         self.shopLocation = object?.objectForKey("location") as? String
         self.shopDescription = object?.objectForKey("description") as? String
         
@@ -104,6 +106,7 @@ class CoffeeShopsTableViewController: PFQueryTableViewController, UISearchBarDel
                 
                 singleCoffeeShopController.shopDescription = "\(self.shopDescription)"
                 singleCoffeeShopController.shopName = "\(self.shopName)"
+                singleCoffeeShopController.shopId = "\(self.shopId)"
                 singleCoffeeShopController.shopLocation = "\(self.shopLocation)"
                 
                 tableView.deselectRowAtIndexPath(indexPath, animated: true)
