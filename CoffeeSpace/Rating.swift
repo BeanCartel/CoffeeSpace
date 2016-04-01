@@ -12,23 +12,31 @@ import Parse
 class Rating: NSObject {
     class func postRating(shopId: String!, userId: String!, rating: Double!, withCompletion completion: PFBooleanResultBlock?) {
         let shopRating = PFObject(className: "shopRatings")
-        //let shopRatingQuery = PFQuery(className: "shopRatings")
+        let shopRatingQuery = PFQuery(className: "shopRatings")
         
         shopRating["shopId"] = shopId
         shopRating["userId"] = userId
         shopRating["rating"] = rating
         print("we got a new rating on shop: \(shopId). The user: \(userId) gave it a \(rating)")
         
-        /*shopRatingQuery.whereKey("shopId", equalTo: shopId)
+        shopRatingQuery.whereKey("shopId", equalTo: shopId)
         shopRatingQuery.whereKey("userId", equalTo: userId)
         
         do {
-            try shopRatingQuery.findObjects()
-        } catch _ {
-            print("error")
-        }*/
+            let vari = try shopRatingQuery.findObjects()
+            if(vari.count>0) {
+                vari[0]["rating"] = rating
+                vari[0].saveInBackgroundWithBlock(completion)
+                print("updated rating")
+            } else {
+                shopRating.saveInBackgroundWithBlock(completion)
+                print("added rating")
+            }
+        } catch _ {}
         
-        shopRating.saveInBackgroundWithBlock(completion)
+        
+        
+        
         
     }
 }
