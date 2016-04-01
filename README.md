@@ -25,6 +25,9 @@
             -Word Reviews
             -Profile Pic
 - [ ] Search by CoffeeShop's location (Address only), name and their coffee's brand
+        - [x]Name
+        - [x]Brand
+        - []Location
 - [X] Display CoffeeShops and Brands in tableview/Collection View
 - [X] Login page 
 - [ ] Crowdsource system to authenticate the information provided by the users (Coffee Brand and other details)
@@ -39,7 +42,7 @@
 
 ## Video Walkthrough 
 
-<img src='https://giant.gfycat.com/EthicalConsiderateCrownofthornsstarfish.gif'/>
+<img src='http://i.imgur.com/bK3bqBb.gif'/>
 
 ## Notes
 - On the walkthrough we didn't show the views to add the data partlly because thats just for the admins to see and won't be on the final build. Lot's of changes to UI to come.
