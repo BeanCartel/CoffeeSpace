@@ -1,5 +1,6 @@
 PODS:
   - Bolts/Tasks (1.6.0)
+  - Cosmos (1.2.2)
   - Parse (1.12.0):
     - Bolts/Tasks (~> 1.5)
   - ParseUI (1.2.0):
@@ -7,11 +8,13 @@ PODS:
     - Parse (~> 1.9)
 
 DEPENDENCIES:
+  - Cosmos
   - Parse
   - ParseUI
 
 SPEC CHECKSUMS:
   Bolts: f52a250053bb517ca874523c3913776359ab3def
+  Cosmos: 87c49100c69d2cb2eebfa4eb8d1e801fe29ff774
   Parse: de2c52a9a1421b91ae7594ab8ce191afd184f19b
   ParseUI: af2eba584799da4a9fbdac0e178662d7438b502e
 

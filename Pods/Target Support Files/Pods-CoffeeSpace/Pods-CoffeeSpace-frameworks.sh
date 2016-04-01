@@ -85,11 +85,13 @@ strip_invalid_archs() {
 
 if [[ "$CONFIGURATION" == "Debug" ]]; then
   install_framework "Pods-CoffeeSpace/Bolts.framework"
+  install_framework "Pods-CoffeeSpace/Cosmos.framework"
   install_framework "Pods-CoffeeSpace/Parse.framework"
   install_framework "Pods-CoffeeSpace/ParseUI.framework"
 fi
 if [[ "$CONFIGURATION" == "Release" ]]; then
   install_framework "Pods-CoffeeSpace/Bolts.framework"
+  install_framework "Pods-CoffeeSpace/Cosmos.framework"
   install_framework "Pods-CoffeeSpace/Parse.framework"
   install_framework "Pods-CoffeeSpace/ParseUI.framework"
 fi

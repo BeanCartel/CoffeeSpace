@@ -5,6 +5,7 @@ use_frameworks!
 
 target 'CoffeeSpace' do
 	pod 'Parse'
-        pod 'ParseUI'
+    pod 'ParseUI'
+	pod 'Cosmos'
 end
 
