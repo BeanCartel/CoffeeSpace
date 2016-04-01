@@ -9,20 +9,22 @@
 import UIKit
 import Parse
 import ParseUI
+import Cosmos
 
 class singleCoffeeShopViewController: UIViewController {
     
     var shopName: String! = ""
+    var shopId: String! = "" 
     var shopLocation: String! = ""
     var shopDescription: String! = ""
+    var avgRating: Double! = 3.7
+    var currentRating: Double! = 0
     
-    
-    
-   
     @IBOutlet weak var shopNameLabel: UILabel!
     @IBOutlet weak var shopImageView: UIImageView!
     @IBOutlet weak var ratingLabel: UILabel!
     @IBOutlet weak var descriptionLabel: UILabel!
+    @IBOutlet weak var ratingView: CosmosView!
     
     /**
     override func queryForCollection() -> PFQuery {
@@ -62,6 +64,26 @@ class singleCoffeeShopViewController: UIViewController {
         
         shopNameLabel.text = "\(shopName)"
         descriptionLabel.text = "\(shopDescription)"
+        
+        //Settings for stars
+        ratingView.settings.fillMode = .Half
+        ratingView.settings.starSize = 30
+        ratingView.settings.starMargin = 5
+        ratingView.settings.filledColor = UIColor.grayColor()
+        ratingView.settings.emptyBorderColor = UIColor.blackColor()
+        ratingView.settings.filledBorderColor = UIColor.blackColor()
+        
+        ratingView.rating = avgRating
+        ratingView.text = "\(avgRating)"
+        ratingView.didTouchCosmos = { rating in
+            self.ratingView.settings.filledColor = UIColor.orangeColor()
+            self.ratingView.settings.emptyBorderColor = UIColor.orangeColor()
+            self.ratingView.settings.filledBorderColor = UIColor.orangeColor()
+        }
+        ratingView.didFinishTouchingCosmos = {rating in self.currentRating = rating
+            Rating.postRating(self.shopId, userId: PFUser.currentUser()?.objectId!, rating: rating, withCompletion: nil)
+        }
+        
     }
 
     override func didReceiveMemoryWarning() {

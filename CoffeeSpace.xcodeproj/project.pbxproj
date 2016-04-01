@@ -24,6 +24,7 @@
 		0CEF4CAD1C923FBD0079C63A /* CoffeeBrand.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0CEF4CAC1C923FBD0079C63A /* CoffeeBrand.swift */; };
 		0CEF4CAF1C9249F50079C63A /* addCoffeeBrandViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0CEF4CAE1C9249F50079C63A /* addCoffeeBrandViewController.swift */; };
 		1557B1A0ACAFAD57CED61F1A /* Pods_CoffeeSpace.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6FC86957997950D8136D8802 /* Pods_CoffeeSpace.framework */; };
+		A062B49E1CADC7FB001C7E04 /* Rating.swift in Sources */ = {isa = PBXBuildFile; fileRef = A062B49D1CADC7FB001C7E04 /* Rating.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -47,6 +48,7 @@
 		0CEF4CAE1C9249F50079C63A /* addCoffeeBrandViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = addCoffeeBrandViewController.swift; sourceTree = "<group>"; };
 		4113EB292DF2F71BBAAE2207 /* Pods-CoffeeSpace.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-CoffeeSpace.debug.xcconfig"; path = "Pods/Target Support Files/Pods-CoffeeSpace/Pods-CoffeeSpace.debug.xcconfig"; sourceTree = "<group>"; };
 		6FC86957997950D8136D8802 /* Pods_CoffeeSpace.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_CoffeeSpace.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		A062B49D1CADC7FB001C7E04 /* Rating.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Rating.swift; sourceTree = "<group>"; };
 		BEFA1903A1CDB448E131AE35 /* Pods-CoffeeSpace.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-CoffeeSpace.release.xcconfig"; path = "Pods/Target Support Files/Pods-CoffeeSpace/Pods-CoffeeSpace.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -100,6 +102,7 @@
 			children = (
 				0CBD41F81C94C4940072787F /* GlobalFuncs.swift */,
 				0CAD75101C93921500CFAFB6 /* Shops.swift */,
+				A062B49D1CADC7FB001C7E04 /* Rating.swift */,
 				0CEF4CAC1C923FBD0079C63A /* CoffeeBrand.swift */,
 			);
 			name = Model;
@@ -282,6 +285,7 @@
 				0CBD41F91C94C4940072787F /* addCoffeeShopViewController.swift in Sources */,
 				0C1C27931C961BAE0041B06F /* CoffeeShopsTableViewController.swift in Sources */,
 				0CBD41FA1C94C4940072787F /* GlobalFuncs.swift in Sources */,
+				A062B49E1CADC7FB001C7E04 /* Rating.swift in Sources */,
 				0CAD75111C93921500CFAFB6 /* Shops.swift in Sources */,
 				0CEF4CAF1C9249F50079C63A /* addCoffeeBrandViewController.swift in Sources */,
 				0CEF4CA71C91F3030079C63A /* SignUpViewController.swift in Sources */,
