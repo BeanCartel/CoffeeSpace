@@ -45,6 +45,7 @@ class CoffeeShopsTableViewController: PFQueryTableViewController, UISearchBarDel
         return query
     }
     
+    
     //Search
     func search(searchText: String? = nil) {
         self.searchText = searchText
@@ -103,6 +104,8 @@ class CoffeeShopsTableViewController: PFQueryTableViewController, UISearchBarDel
             let cell = sender as! UITableViewCell
             if let indexPath = tableView.indexPathForCell(cell) {
                 let singleCoffeeShopController = segue.destinationViewController as! singleCoffeeShopViewController
+                
+                singleCoffeeShopController.shopObject = objectAtIndexPath(indexPath)
                 
                 singleCoffeeShopController.shopDescription = "\(self.shopDescription)"
                 singleCoffeeShopController.shopName = "\(self.shopName)"

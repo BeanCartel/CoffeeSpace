@@ -11,10 +11,15 @@
 		0C1C27951C98D73B0041B06F /* CoffeeShopsCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0C1C27941C98D73B0041B06F /* CoffeeShopsCell.swift */; };
 		0C1C27971C9A11AF0041B06F /* CoffeeBrandsCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0C1C27961C9A11AE0041B06F /* CoffeeBrandsCollectionViewCell.swift */; };
 		0C1C27991C9A13490041B06F /* CoffeeBrandsCollectionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0C1C27981C9A13490041B06F /* CoffeeBrandsCollectionViewController.swift */; };
+		0C5FAF031CADC4120076E7EB /* emailTextBox.png in Resources */ = {isa = PBXBuildFile; fileRef = 0C5FAF021CADC4120076E7EB /* emailTextBox.png */; };
+		0C5FAF051CADC5600076E7EB /* CoffeeShopCollectionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0C5FAF041CADC5600076E7EB /* CoffeeShopCollectionViewController.swift */; };
+		0C5FAF071CADF33E0076E7EB /* appicon.png in Resources */ = {isa = PBXBuildFile; fileRef = 0C5FAF061CADF33E0076E7EB /* appicon.png */; };
+		0C5FAF091CADF3430076E7EB /* appicon3x.png in Resources */ = {isa = PBXBuildFile; fileRef = 0C5FAF081CADF3430076E7EB /* appicon3x.png */; };
 		0C9135551C8FABFF0074CD93 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0C9135541C8FABFF0074CD93 /* AppDelegate.swift */; };
 		0C91355A1C8FABFF0074CD93 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 0C9135581C8FABFF0074CD93 /* Main.storyboard */; };
 		0C91355C1C8FABFF0074CD93 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 0C91355B1C8FABFF0074CD93 /* Assets.xcassets */; };
 		0C91355F1C8FABFF0074CD93 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 0C91355D1C8FABFF0074CD93 /* LaunchScreen.storyboard */; };
+		0CA8B46C1CAEF5B900E277A8 /* AvailableCoffeeCellCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0CA8B46B1CAEF5B900E277A8 /* AvailableCoffeeCellCollectionViewCell.swift */; };
 		0CAD75111C93921500CFAFB6 /* Shops.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0CAD75101C93921500CFAFB6 /* Shops.swift */; };
 		0CBD41F91C94C4940072787F /* addCoffeeShopViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0CBD41F71C94C4940072787F /* addCoffeeShopViewController.swift */; };
 		0CBD41FA1C94C4940072787F /* GlobalFuncs.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0CBD41F81C94C4940072787F /* GlobalFuncs.swift */; };
@@ -32,12 +37,17 @@
 		0C1C27941C98D73B0041B06F /* CoffeeShopsCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CoffeeShopsCell.swift; sourceTree = "<group>"; };
 		0C1C27961C9A11AE0041B06F /* CoffeeBrandsCollectionViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CoffeeBrandsCollectionViewCell.swift; sourceTree = "<group>"; };
 		0C1C27981C9A13490041B06F /* CoffeeBrandsCollectionViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CoffeeBrandsCollectionViewController.swift; sourceTree = "<group>"; };
+		0C5FAF021CADC4120076E7EB /* emailTextBox.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = emailTextBox.png; path = "../../../Downloads/Flat Design UI Components/emailTextBox.png"; sourceTree = "<group>"; };
+		0C5FAF041CADC5600076E7EB /* CoffeeShopCollectionViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CoffeeShopCollectionViewController.swift; sourceTree = "<group>"; };
+		0C5FAF061CADF33E0076E7EB /* appicon.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = appicon.png; path = ../../../Downloads/appicon.png; sourceTree = "<group>"; };
+		0C5FAF081CADF3430076E7EB /* appicon3x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = appicon3x.png; path = ../../../Downloads/appicon3x.png; sourceTree = "<group>"; };
 		0C9135511C8FABFF0074CD93 /* CoffeeSpace.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = CoffeeSpace.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		0C9135541C8FABFF0074CD93 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		0C9135591C8FABFF0074CD93 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		0C91355B1C8FABFF0074CD93 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		0C91355E1C8FABFF0074CD93 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		0C9135601C8FABFF0074CD93 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		0CA8B46B1CAEF5B900E277A8 /* AvailableCoffeeCellCollectionViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AvailableCoffeeCellCollectionViewCell.swift; sourceTree = "<group>"; };
 		0CAD75101C93921500CFAFB6 /* Shops.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Shops.swift; sourceTree = "<group>"; };
 		0CBD41F71C94C4940072787F /* addCoffeeShopViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = addCoffeeShopViewController.swift; sourceTree = "<group>"; };
 		0CBD41F81C94C4940072787F /* GlobalFuncs.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GlobalFuncs.swift; sourceTree = "<group>"; };
@@ -91,10 +101,31 @@
 				0C9135541C8FABFF0074CD93 /* AppDelegate.swift */,
 				0C9135581C8FABFF0074CD93 /* Main.storyboard */,
 				0C91355B1C8FABFF0074CD93 /* Assets.xcassets */,
+				0C5FAF061CADF33E0076E7EB /* appicon.png */,
+				0C5FAF081CADF3430076E7EB /* appicon3x.png */,
+				0C5FAF021CADC4120076E7EB /* emailTextBox.png */,
 				0C91355D1C8FABFF0074CD93 /* LaunchScreen.storyboard */,
 				0C9135601C8FABFF0074CD93 /* Info.plist */,
 			);
 			path = CoffeeSpace;
+			sourceTree = "<group>";
+		};
+		0CA8B4691CAEF01D00E277A8 /* SIgnIN/SignUp */ = {
+			isa = PBXGroup;
+			children = (
+				0CEF4CA61C91F3030079C63A /* SignUpViewController.swift */,
+				0CEF4CA41C91EF3B0079C63A /* SignInViewController.swift */,
+			);
+			name = SIgnIN/SignUp;
+			sourceTree = "<group>";
+		};
+		0CA8B46A1CAEF04400E277A8 /* SingleView */ = {
+			isa = PBXGroup;
+			children = (
+				0C5FAF041CADC5600076E7EB /* CoffeeShopCollectionViewController.swift */,
+				0CEF4CAA1C923D240079C63A /* singleCoffeeShopViewController.swift */,
+			);
+			name = SingleView;
 			sourceTree = "<group>";
 		};
 		0CBD41FB1C94C4C00072787F /* Model */ = {
@@ -111,10 +142,9 @@
 		0CBD41FD1C94C4CE0072787F /* Controller */ = {
 			isa = PBXGroup;
 			children = (
+				0CA8B46A1CAEF04400E277A8 /* SingleView */,
+				0CA8B4691CAEF01D00E277A8 /* SIgnIN/SignUp */,
 				A03211111CA04A0900D94186 /* Admin Controllers */,
-				0CEF4CA41C91EF3B0079C63A /* SignInViewController.swift */,
-				0CEF4CA61C91F3030079C63A /* SignUpViewController.swift */,
-				0CEF4CAA1C923D240079C63A /* singleCoffeeShopViewController.swift */,
 				0C1C27921C961BAE0041B06F /* CoffeeShopsTableViewController.swift */,
 				0C1C27981C9A13490041B06F /* CoffeeBrandsCollectionViewController.swift */,
 			);
@@ -135,6 +165,7 @@
 			children = (
 				0C1C27941C98D73B0041B06F /* CoffeeShopsCell.swift */,
 				0C1C27961C9A11AE0041B06F /* CoffeeBrandsCollectionViewCell.swift */,
+				0CA8B46B1CAEF5B900E277A8 /* AvailableCoffeeCellCollectionViewCell.swift */,
 			);
 			name = Views;
 			sourceTree = "<group>";
@@ -191,7 +222,7 @@
 				TargetAttributes = {
 					0C9135501C8FABFF0074CD93 = {
 						CreatedOnToolsVersion = 7.2;
-						DevelopmentTeam = LZC5C8PJ6Y;
+						DevelopmentTeam = 39C65TSQEG;
 					};
 				};
 			};
@@ -218,7 +249,10 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				0C5FAF071CADF33E0076E7EB /* appicon.png in Resources */,
 				0C91355F1C8FABFF0074CD93 /* LaunchScreen.storyboard in Resources */,
+				0C5FAF031CADC4120076E7EB /* emailTextBox.png in Resources */,
+				0C5FAF091CADF3430076E7EB /* appicon3x.png in Resources */,
 				0C91355C1C8FABFF0074CD93 /* Assets.xcassets in Resources */,
 				0C91355A1C8FABFF0074CD93 /* Main.storyboard in Resources */,
 			);
@@ -283,11 +317,13 @@
 				0C9135551C8FABFF0074CD93 /* AppDelegate.swift in Sources */,
 				0C1C27951C98D73B0041B06F /* CoffeeShopsCell.swift in Sources */,
 				0CBD41F91C94C4940072787F /* addCoffeeShopViewController.swift in Sources */,
+				0CA8B46C1CAEF5B900E277A8 /* AvailableCoffeeCellCollectionViewCell.swift in Sources */,
 				0C1C27931C961BAE0041B06F /* CoffeeShopsTableViewController.swift in Sources */,
 				0CBD41FA1C94C4940072787F /* GlobalFuncs.swift in Sources */,
 				A062B49E1CADC7FB001C7E04 /* Rating.swift in Sources */,
 				0CAD75111C93921500CFAFB6 /* Shops.swift in Sources */,
 				0CEF4CAF1C9249F50079C63A /* addCoffeeBrandViewController.swift in Sources */,
+				0C5FAF051CADC5600076E7EB /* CoffeeShopCollectionViewController.swift in Sources */,
 				0CEF4CA71C91F3030079C63A /* SignUpViewController.swift in Sources */,
 				0C1C27991C9A13490041B06F /* CoffeeBrandsCollectionViewController.swift in Sources */,
 				0C1C27971C9A11AF0041B06F /* CoffeeBrandsCollectionViewCell.swift in Sources */,
@@ -408,7 +444,7 @@
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				INFOPLIST_FILE = CoffeeSpace/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = vila.CoffeeSpace;
+				PRODUCT_BUNDLE_IDENTIFIER = Lanista.CoffeeSpace;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE = "";
 			};
@@ -423,7 +459,7 @@
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				INFOPLIST_FILE = CoffeeSpace/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = vila.CoffeeSpace;
+				PRODUCT_BUNDLE_IDENTIFIER = Lanista.CoffeeSpace;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE = "";
 			};

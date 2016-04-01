@@ -25,6 +25,8 @@ class CoffeeBrandsCollectionViewController: PFQueryCollectionViewController, UIS
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+        
         if(comesFromAddCoffeeShop) {
 //                let doneBtn : UIBarButtonItem = UIBarButtonItem(title: "Done", style: UIBarButtonItemStyle.Plain, target: self, action: #selector(CoffeeBrandsCollectionViewController.done(_:)))
 //               self.navigationItem.rightBarButtonItem = doneBtn

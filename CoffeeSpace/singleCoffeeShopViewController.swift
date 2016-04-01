@@ -20,6 +20,14 @@ class singleCoffeeShopViewController: UIViewController {
     var avgRating: Double! = 3.7
     var currentRating: Double! = 0
     
+<<<<<<< Updated upstream
+=======
+    var shopObject: PFObject?
+    
+    
+    
+   
+>>>>>>> Stashed changes
     @IBOutlet weak var shopNameLabel: UILabel!
     @IBOutlet weak var shopImageView: UIImageView!
     @IBOutlet weak var ratingLabel: UILabel!
@@ -91,14 +99,16 @@ class singleCoffeeShopViewController: UIViewController {
         // Dispose of any resources that can be recreated.
     }
     
-    /*
-    // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
+   
     override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
         // Get the new view controller using segue.destinationViewController.
-        // Pass the selected object to the new view controller.
+        // Pass the selected object to the new view controller.  coffeeAvailableSegue
+        
+        if segue.identifier == "coffeeAvailableSegue" {
+                let availableCoffeeShopsCollection = segue.destinationViewController as! CoffeeShopCollectionViewController
+            availableCoffeeShopsCollection.shopObject = self.shopObject
+            
     }
-    */
 
+}
 }

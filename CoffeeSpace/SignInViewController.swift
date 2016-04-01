@@ -50,7 +50,6 @@ class SignInViewController: UIViewController {
 
     
     @IBAction func onSignIn(sender: UIButton) {
-        
         PFUser.logInWithUsernameInBackground(userNameTextView.text!, password: passWordTextView.text!) { (user: PFUser?, error: NSError?) -> Void in
             if (user != nil)
             {
@@ -58,7 +57,6 @@ class SignInViewController: UIViewController {
                 
                 self.performSegueWithIdentifier("signInSegue", sender: nil)
             }
-        
 
         }
 
