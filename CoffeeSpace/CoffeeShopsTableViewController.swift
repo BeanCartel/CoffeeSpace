@@ -68,12 +68,12 @@ class CoffeeShopsTableViewController: PFQueryTableViewController, UISearchBarDel
         cell.locationLabel?.text = object?.objectForKey("location") as? String
         cell.descriptionLabel?.text = object?.objectForKey("description") as? String
         
-        /*object!["shopPic"].getDataInBackgroundWithBlock { (imageData: NSData?, error:NSError?) -> Void in
+        object?.objectForKey("shopPic")!.getDataInBackgroundWithBlock { (imageData: NSData?, error:NSError?) -> Void in
             if error == nil {
-                let image = UIImage(data: (imageData)!)
+                let image = UIImage(data: imageData!)
                 cell.CoffeeShopImageView.setBackgroundImage(image, forState: UIControlState.Normal)
             }
-        }*/
+        }
         return cell
     }
     
@@ -109,7 +109,7 @@ class CoffeeShopsTableViewController: PFQueryTableViewController, UISearchBarDel
                 
                 singleCoffeeShopController.shopDescription = "\(self.shopDescription)"
                 singleCoffeeShopController.shopName = "\(self.shopName)"
-                singleCoffeeShopController.shopId = "\(self.shopId)"
+                //singleCoffeeShopController.shopId = "\(self.shopId)"
                 singleCoffeeShopController.shopLocation = "\(self.shopLocation)"
                 
                 tableView.deselectRowAtIndexPath(indexPath, animated: true)
