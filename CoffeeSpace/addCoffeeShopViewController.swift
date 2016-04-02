@@ -43,7 +43,7 @@ class addCoffeeShopViewController: UIViewController, UIImagePickerControllerDele
     }
     
     @IBAction func submitButton(sender: AnyObject) {
-        Shops.postShop(shopNameField.text, description: descriptionTextView.text, shopImage: profileImageView.image, availableCoffee: arrayOfSelectedCoffees, facebook: facebookField.text, withCompletion: nil)
+        Shops.postShop(shopNameField.text, description: descriptionTextView.text, shopImage: profileImageView.image, shopLocation: locationField.text, availableCoffee: arrayOfSelectedCoffees, facebook: facebookField.text, withCompletion: nil)
         print("finished opening shop")
         dismissViewControllerAnimated(true, completion: nil)
     }

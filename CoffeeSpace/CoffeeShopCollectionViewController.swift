@@ -22,7 +22,8 @@ class CoffeeShopCollectionViewController: UICollectionViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         coffeeBrands = shopObject?.valueForKey("availableCoffee") as? [PFObject]
-       
+       // collectionview.alwaysBounceHorizontal = true
+        
         // Do any additional setup after loading the view.
     }
 

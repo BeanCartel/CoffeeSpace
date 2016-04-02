@@ -25,7 +25,7 @@ class Shops: NSObject {
 //    
 //    }
     
-    class func postShop(name: String!, description: String!, shopImage: UIImage?, availableCoffee: [PFObject]?, facebook: String?, withCompletion completion: PFBooleanResultBlock?) {
+    class func postShop(name: String!, description: String!, shopImage: UIImage?, shopLocation:String?, availableCoffee: [PFObject]?, facebook: String?, withCompletion completion: PFBooleanResultBlock?) {
         
         let size = CGSizeMake(400, 400)
         let image = GlobalFuncs.resizeImg(shopImage!, newSize: size)
@@ -34,6 +34,7 @@ class Shops: NSObject {
         
         shop["shopName"] = name
         shop["description"] = description
+        shop["shopLocation"] = shopLocation
         shop["rating"] = 0
         shop["shopPic"] = GlobalFuncs.getPFFileFromImage(image)
        // shop["coffees"] = coffees

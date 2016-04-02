@@ -17,7 +17,10 @@ class singleCoffeeShopViewController: UIViewController {
     var shopId: String! = "" 
     var shopLocation: String! = ""
     var shopDescription: String! = ""
-    var avgRating: Double! = 3.7
+    
+    var shopImage: UIImage?
+    
+    var avgRating: Double! = 2.5
     var currentRating: Double! = 0
     
     var shopObject: PFObject?
@@ -27,10 +30,10 @@ class singleCoffeeShopViewController: UIViewController {
    
     @IBOutlet weak var shopNameLabel: UILabel!
     @IBOutlet weak var shopImageView: UIImageView!
-    @IBOutlet weak var ratingLabel: UILabel!
     @IBOutlet weak var descriptionLabel: UILabel!
     @IBOutlet weak var ratingView: CosmosView!
     
+    @IBOutlet weak var locarionLabel: UILabel!
  
 
     override func viewDidLoad() {
@@ -38,6 +41,8 @@ class singleCoffeeShopViewController: UIViewController {
         
         shopNameLabel.text = "\(shopName)"
         descriptionLabel.text = "\(shopDescription)"
+        locarionLabel.text = "\(shopLocation)"
+        shopImageView.image = shopImage
         
         //Settings for stars
         ratingView.settings.fillMode = .Half
