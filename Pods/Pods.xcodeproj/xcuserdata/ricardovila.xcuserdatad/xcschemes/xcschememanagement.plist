@@ -9,10 +9,20 @@
 			<key>orderHint</key>
 			<integer>1</integer>
 		</dict>
+		<key>Cosmos.xcscheme</key>
+		<dict>
+			<key>orderHint</key>
+			<integer>5</integer>
+		</dict>
 		<key>Parse.xcscheme</key>
 		<dict>
 			<key>orderHint</key>
 			<integer>2</integer>
+		</dict>
+		<key>ParseUI.xcscheme</key>
+		<dict>
+			<key>orderHint</key>
+			<integer>4</integer>
 		</dict>
 		<key>Pods-CoffeeSpace.xcscheme</key>
 		<dict>
@@ -27,12 +37,32 @@
 			<key>primary</key>
 			<true/>
 		</dict>
+		<key>608B49B5DDACC601EE8044A1931993F9</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
+		<key>AF1E606D4F925439F983D43831E8D46C</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
 		<key>B0214E86E9E229E292863BC821997C4D</key>
 		<dict>
 			<key>primary</key>
 			<true/>
 		</dict>
 		<key>BCA053B6430690326435042FEB61B458</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
+		<key>E1F78B1C5F8F2CCD0E68552EAF2B9B52</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
+		<key>EDA557B96CBC384C52F64682A482C4E1</key>
 		<dict>
 			<key>primary</key>
 			<true/>
