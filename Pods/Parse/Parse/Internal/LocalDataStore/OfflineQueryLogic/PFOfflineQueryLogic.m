@@ -24,7 +24,6 @@
 #import "PFQueryPrivate.h"
 #import "PFRelation.h"
 #import "PFRelationPrivate.h"
-#import "PFQueryConstants.h"
 
 typedef BOOL (^PFComparatorDeciderBlock)(id value, id constraint);
 typedef BOOL (^PFSubQueryMatcherBlock)(id object, NSArray *results);

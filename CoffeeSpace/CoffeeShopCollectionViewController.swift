@@ -46,7 +46,7 @@ class CoffeeShopCollectionViewController: UICollectionViewController {
         for p in coffeeBrands!{
         let id = p.valueForKey("objectId") as? String
         //let query = PFQuery(className: "coffeeBrand")
-        let brand = PFObject(outDataWithClassName: "coffeeBrand", objectId: id)
+        let brand = PFObject(withoutDataWithClassName: "coffeeBrand", objectId: id)
            
             do {
                 try brand.fetchIfNeeded()

@@ -5,10 +5,7 @@ use_frameworks!
 
 target 'CoffeeSpace' do
 	pod 'Parse'
-        pod 'ParseUI'
+    pod 'ParseUI'
 	pod 'Cosmos'
-	pod 'AFNetworking'
-	pod 'BDBOAuth1Manager'
-	pod 'MBProgressHUD'
 end
 

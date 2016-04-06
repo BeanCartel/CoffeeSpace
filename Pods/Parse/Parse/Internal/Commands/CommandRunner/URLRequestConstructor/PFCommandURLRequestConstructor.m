@@ -115,7 +115,7 @@
 ///--------------------------------------
 
 + (NSDictionary *)defaultURLRequestHeadersForApplicationId:(NSString *)applicationId
-                                                 clientKey:(nullable NSString *)clientKey
+                                                 clientKey:(NSString *)clientKey
                                                     bundle:(NSBundle *)bundle {
 #if TARGET_OS_IOS
     NSString *versionPrefix = @"i";
@@ -130,9 +130,7 @@
     NSMutableDictionary *mutableHeaders = [NSMutableDictionary dictionary];
 
     mutableHeaders[PFCommandHeaderNameApplicationId] = applicationId;
-    if (clientKey) {
-        mutableHeaders[PFCommandHeaderNameClientKey] = clientKey;
-    }
+    mutableHeaders[PFCommandHeaderNameClientKey] = clientKey;
 
     mutableHeaders[PFCommandHeaderNameClientVersion] = [versionPrefix stringByAppendingString:PARSE_VERSION];
     mutableHeaders[PFCommandHeaderNameOSVersion] = [PFDevice currentDevice].operatingSystemFullVersion;

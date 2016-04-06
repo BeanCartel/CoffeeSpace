@@ -49,7 +49,7 @@ NS_ASSUME_NONNULL_BEGIN
 
 @protocol PFEventuallyQueueProvider <NSObject>
 
-@property (null_resettable, nonatomic, strong, readonly) PFEventuallyQueue *eventuallyQueue;
+@property (nonatomic, strong, readonly) PFEventuallyQueue *eventuallyQueue;
 
 @end
 

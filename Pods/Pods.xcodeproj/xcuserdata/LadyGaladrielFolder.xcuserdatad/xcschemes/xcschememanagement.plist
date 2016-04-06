@@ -4,27 +4,7 @@
 <dict>
 	<key>SchemeUserState</key>
 	<dict>
-		<key>AFNetworking.xcscheme</key>
-		<dict>
-			<key>isShown</key>
-			<false/>
-		</dict>
-		<key>BDBOAuth1Manager.xcscheme</key>
-		<dict>
-			<key>isShown</key>
-			<false/>
-		</dict>
 		<key>Bolts.xcscheme</key>
-		<dict>
-			<key>isShown</key>
-			<false/>
-		</dict>
-		<key>Cosmos.xcscheme</key>
-		<dict>
-			<key>isShown</key>
-			<false/>
-		</dict>
-		<key>MBProgressHUD.xcscheme</key>
 		<dict>
 			<key>isShown</key>
 			<false/>
@@ -47,32 +27,22 @@
 	</dict>
 	<key>SuppressBuildableAutocreation</key>
 	<dict>
-		<key>1C3436CEA5C3D39764C5F54374794ECB</key>
-		<dict>
-			<key>primary</key>
-			<true/>
-		</dict>
-		<key>2C8AA1BAF35413BDB954A1DF93576ED1</key>
-		<dict>
-			<key>primary</key>
-			<true/>
-		</dict>
-		<key>4445436A901EB3382825A67965F11FB9</key>
-		<dict>
-			<key>primary</key>
-			<true/>
-		</dict>
-		<key>445B3D47256376A8FB06D383FDBEA0C4</key>
-		<dict>
-			<key>primary</key>
-			<true/>
-		</dict>
 		<key>608B49B5DDACC601EE8044A1931993F9</key>
 		<dict>
 			<key>primary</key>
 			<true/>
 		</dict>
-		<key>B272B33F162D6E5C3510BA50ECF2684B</key>
+		<key>AF1E606D4F925439F983D43831E8D46C</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
+		<key>B0214E86E9E229E292863BC821997C4D</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
+		<key>BCA053B6430690326435042FEB61B458</key>
 		<dict>
 			<key>primary</key>
 			<true/>
@@ -82,7 +52,7 @@
 			<key>primary</key>
 			<true/>
 		</dict>
-		<key>E61CE3B6DFA1FE6B3E296965C76C0E10</key>
+		<key>EDA557B96CBC384C52F64682A482C4E1</key>
 		<dict>
 			<key>primary</key>
 			<true/>

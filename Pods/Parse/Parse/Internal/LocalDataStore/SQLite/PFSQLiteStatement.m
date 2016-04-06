@@ -36,7 +36,7 @@
         }
 
         int resultCode = sqlite3_finalize(_sqliteStatement);
-        _sqliteStatement = NULL;
+        _sqliteStatement = nil;
 
         return (resultCode == SQLITE_OK || resultCode == SQLITE_DONE);
     });

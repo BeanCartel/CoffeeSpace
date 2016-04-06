@@ -8,7 +8,6 @@
  */
 
 #import "PFMutableQueryState.h"
-#import "PFQueryConstants.h"
 
 #import "PFQueryState_Private.h"
 
@@ -104,7 +103,7 @@
     NSMutableDictionary *condition = [NSMutableDictionary dictionaryWithCapacity:2];
     condition[@"object"] = object;
     condition[@"key"] = key;
-    [self setEqualityConditionWithObject:condition forKey:PFQueryKeyRelatedTo];
+    [self setEqualityConditionWithObject:condition forKey:@"$relatedTo"];
 }
 
 - (void)removeAllConditions {
@@ -149,14 +148,6 @@
         _includedKeys = [NSMutableSet setWithObject:key];
     } else {
         [_includedKeys addObject:key];
-    }
-}
-
-- (void)includeKeys:(NSArray<NSString *> *)keys {
-    if (!_includedKeys) {
-        _includedKeys = [NSMutableSet setWithArray:keys];
-    } else {
-        [_includedKeys addObjectsFromArray:keys];
     }
 }
 

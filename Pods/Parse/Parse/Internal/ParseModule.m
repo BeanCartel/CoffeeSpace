@@ -9,8 +9,6 @@
 
 #import "ParseModule.h"
 
-NS_ASSUME_NONNULL_BEGIN
-
 ///--------------------------------------
 #pragma mark - ParseModuleCollection
 ///--------------------------------------
@@ -32,11 +30,10 @@ typedef void (^ParseModuleEnumerationBlock)(id<ParseModule> module, BOOL *stop, 
 
 - (instancetype)init {
     self = [super init];
-    if (!self) return self;
-
-    _collectionQueue = dispatch_queue_create("com.parse.ParseModuleCollection", DISPATCH_QUEUE_SERIAL);
-    _modules = [NSPointerArray weakObjectsPointerArray];
-
+    if (self) {
+        _collectionQueue = dispatch_queue_create("com.parse.ParseModuleCollection", DISPATCH_QUEUE_SERIAL);
+        _modules = [NSPointerArray weakObjectsPointerArray];
+    }
     return self;
 }
 
@@ -45,12 +42,20 @@ typedef void (^ParseModuleEnumerationBlock)(id<ParseModule> module, BOOL *stop, 
 ///--------------------------------------
 
 - (void)addParseModule:(id<ParseModule>)module {
+    if (module == nil) {
+        return;
+    }
+
     [self performCollectionAccessBlock:^{
         [self.modules addPointer:(__bridge void *)module];
     }];
 }
 
 - (void)removeParseModule:(id<ParseModule>)module {
+    if (module == nil) {
+        return;
+    }
+
     [self enumerateModulesWithBlock:^(id<ParseModule> enumeratedModule, BOOL *stop, BOOL *remove) {
         *remove = (module == enumeratedModule);
     }];
@@ -75,7 +80,7 @@ typedef void (^ParseModuleEnumerationBlock)(id<ParseModule> module, BOOL *stop, 
 #pragma mark - ParseModule
 ///--------------------------------------
 
-- (void)parseDidInitializeWithApplicationId:(NSString *)applicationId clientKey:(nullable NSString *)clientKey {
+- (void)parseDidInitializeWithApplicationId:(NSString *)applicationId clientKey:(NSString *)clientKey {
     dispatch_async(dispatch_get_main_queue(), ^{
         [self enumerateModulesWithBlock:^(id<ParseModule> module, BOOL *stop, BOOL *remove) {
             [module parseDidInitializeWithApplicationId:applicationId clientKey:clientKey];
@@ -127,5 +132,3 @@ typedef void (^ParseModuleEnumerationBlock)(id<ParseModule> module, BOOL *stop, 
 }
 
 @end
-
-NS_ASSUME_NONNULL_END

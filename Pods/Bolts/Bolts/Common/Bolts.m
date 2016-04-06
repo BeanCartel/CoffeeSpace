@@ -10,8 +10,10 @@
 
 #import "Bolts.h"
 
-NS_ASSUME_NONNULL_BEGIN
+@implementation Bolts
 
-NSString *const BoltsFrameworkVersionString = @"1.7.0";
++ (NSString *)version {
+    return BOLTS_VERSION;
+}
 
-NS_ASSUME_NONNULL_END
+@end

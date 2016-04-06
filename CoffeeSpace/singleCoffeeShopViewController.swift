@@ -17,36 +17,65 @@ class singleCoffeeShopViewController: UIViewController {
     var shopId: String! = "" 
     var shopLocation: String! = ""
     var shopDescription: String! = ""
-    
-    var shopImage: UIImage?
-    
-    var avgRating: Double! = 2.5
+    var avgRating: Double! = 3.7
     var currentRating: Double! = 0
     
+<<<<<<< Updated upstream
+=======
     var shopObject: PFObject?
     
     
     
    
+>>>>>>> Stashed changes
     @IBOutlet weak var shopNameLabel: UILabel!
     @IBOutlet weak var shopImageView: UIImageView!
+    @IBOutlet weak var ratingLabel: UILabel!
     @IBOutlet weak var descriptionLabel: UILabel!
     @IBOutlet weak var ratingView: CosmosView!
     
-    @IBOutlet weak var locarionLabel: UILabel!
- 
+    /**
+    override func queryForCollection() -> PFQuery {
+        let query = PFQuery(className: "coffeeShop")
+        
+        query.cachePolicy = .NetworkElseCache
+        
+        query.orderByDescending("createdAt")
+        self.paginationEnabled = false
+        self.objectsPerPage = 25
+        return query
+        
+    }
+    
+    override func collectionView(collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
+        //#warning Incomplete method implementation -- Return the number of items in the section
+        return self.objects.count
+    }
+    
+   override func collectionView(collectionView: UICollectionView, cellForItemAtIndexPath indexPath: NSIndexPath, object: PFObject?) -> PFCollectionViewCell? {
+        
+        let cell = collectionView.dequeueReusableCellWithReuseIdentifier("CoffeeBrandsCollectionViewCell", forIndexPath: indexPath) as! CoffeeBrandsCollectionViewCell
+        //let arr = object!["availableCoffee"]
+        
+        //cell.BrandNameLabel.text = object?.objectForKey("brandTitle") as? String
+        object!["availableCoffee"].getDataInBackgroundWithBlock { (imageData: NSData?, error:NSError?) -> Void in
+            if error == nil {
+                let image = UIImage(data: imageData!)
+                cell.BrandImageView.image = image
+            }
+        }
+        return cell}
+    **/
 
     override func viewDidLoad() {
         super.viewDidLoad()
         
         shopNameLabel.text = "\(shopName)"
         descriptionLabel.text = "\(shopDescription)"
-        locarionLabel.text = "\(shopLocation)"
-        shopImageView.image = shopImage
         
         //Settings for stars
         ratingView.settings.fillMode = .Half
-        ratingView.settings.starSize = 15
+        ratingView.settings.starSize = 30
         ratingView.settings.starMargin = 5
         ratingView.settings.filledColor = UIColor.grayColor()
         ratingView.settings.emptyBorderColor = UIColor.blackColor()

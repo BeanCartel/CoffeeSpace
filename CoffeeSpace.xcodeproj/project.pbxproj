@@ -11,7 +11,6 @@
 		0C1C27951C98D73B0041B06F /* CoffeeShopsCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0C1C27941C98D73B0041B06F /* CoffeeShopsCell.swift */; };
 		0C1C27971C9A11AF0041B06F /* CoffeeBrandsCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0C1C27961C9A11AE0041B06F /* CoffeeBrandsCollectionViewCell.swift */; };
 		0C1C27991C9A13490041B06F /* CoffeeBrandsCollectionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0C1C27981C9A13490041B06F /* CoffeeBrandsCollectionViewController.swift */; };
-		0C37E5B51CB4D28F0078183F /* Yelp_Client_Prep.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0C37E5B41CB4D28F0078183F /* Yelp_Client_Prep.swift */; };
 		0C5FAF031CADC4120076E7EB /* emailTextBox.png in Resources */ = {isa = PBXBuildFile; fileRef = 0C5FAF021CADC4120076E7EB /* emailTextBox.png */; };
 		0C5FAF051CADC5600076E7EB /* CoffeeShopCollectionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0C5FAF041CADC5600076E7EB /* CoffeeShopCollectionViewController.swift */; };
 		0C5FAF071CADF33E0076E7EB /* appicon.png in Resources */ = {isa = PBXBuildFile; fileRef = 0C5FAF061CADF33E0076E7EB /* appicon.png */; };
@@ -38,7 +37,6 @@
 		0C1C27941C98D73B0041B06F /* CoffeeShopsCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CoffeeShopsCell.swift; sourceTree = "<group>"; };
 		0C1C27961C9A11AE0041B06F /* CoffeeBrandsCollectionViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CoffeeBrandsCollectionViewCell.swift; sourceTree = "<group>"; };
 		0C1C27981C9A13490041B06F /* CoffeeBrandsCollectionViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CoffeeBrandsCollectionViewController.swift; sourceTree = "<group>"; };
-		0C37E5B41CB4D28F0078183F /* Yelp_Client_Prep.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Yelp_Client_Prep.swift; sourceTree = "<group>"; };
 		0C5FAF021CADC4120076E7EB /* emailTextBox.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = emailTextBox.png; path = "../../../Downloads/Flat Design UI Components/emailTextBox.png"; sourceTree = "<group>"; };
 		0C5FAF041CADC5600076E7EB /* CoffeeShopCollectionViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CoffeeShopCollectionViewController.swift; sourceTree = "<group>"; };
 		0C5FAF061CADF33E0076E7EB /* appicon.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = appicon.png; path = ../../../Downloads/appicon.png; sourceTree = "<group>"; };
@@ -76,14 +74,6 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
-		0C37E5B31CB4CCF10078183F /* API */ = {
-			isa = PBXGroup;
-			children = (
-				0C37E5B41CB4D28F0078183F /* Yelp_Client_Prep.swift */,
-			);
-			name = API;
-			sourceTree = "<group>";
-		};
 		0C9135481C8FABFF0074CD93 = {
 			isa = PBXGroup;
 			children = (
@@ -152,7 +142,6 @@
 		0CBD41FD1C94C4CE0072787F /* Controller */ = {
 			isa = PBXGroup;
 			children = (
-				0C37E5B31CB4CCF10078183F /* API */,
 				0CA8B46A1CAEF04400E277A8 /* SingleView */,
 				0CA8B4691CAEF01D00E277A8 /* SIgnIN/SignUp */,
 				A03211111CA04A0900D94186 /* Admin Controllers */,
@@ -333,7 +322,6 @@
 				0CBD41FA1C94C4940072787F /* GlobalFuncs.swift in Sources */,
 				A062B49E1CADC7FB001C7E04 /* Rating.swift in Sources */,
 				0CAD75111C93921500CFAFB6 /* Shops.swift in Sources */,
-				0C37E5B51CB4D28F0078183F /* Yelp_Client_Prep.swift in Sources */,
 				0CEF4CAF1C9249F50079C63A /* addCoffeeBrandViewController.swift in Sources */,
 				0C5FAF051CADC5600076E7EB /* CoffeeShopCollectionViewController.swift in Sources */,
 				0CEF4CA71C91F3030079C63A /* SignUpViewController.swift in Sources */,

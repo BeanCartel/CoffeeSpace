@@ -18,7 +18,7 @@ class CoffeeShopsTableViewController: PFQueryTableViewController, UISearchBarDel
     var shopName: String! = ""
     var shopLocation: String! = ""
     var shopDescription: String! = ""
-    var shopImage: UIImage?
+    
     var searchText: String? = nil
     var searchBar = UISearchBar()
     
@@ -37,7 +37,7 @@ class CoffeeShopsTableViewController: PFQueryTableViewController, UISearchBarDel
         query.cachePolicy = .CacheThenNetwork
         query.orderByDescending("createdAt")
         self.paginationEnabled = false
-        self.objectsPerPage = 20
+        self.objectsPerPage = 25
         
         if(searchText != nil){
             query.whereKey("shopName", containsString: searchText)
@@ -65,10 +65,10 @@ class CoffeeShopsTableViewController: PFQueryTableViewController, UISearchBarDel
         let cell = tableView.dequeueReusableCellWithIdentifier("CoffeeShopsCell", forIndexPath: indexPath) as! CoffeeShopsCell
         
         cell.coffeeShopName?.text = object?.objectForKey("shopName") as? String
-        cell.locationLabel?.text = object?.objectForKey("shopLocation") as? String
+        cell.locationLabel?.text = object?.objectForKey("location") as? String
         cell.descriptionLabel?.text = object?.objectForKey("description") as? String
         
-        object?.objectForKey("shopPic")!.getDataInBackgroundWithBlock { (imageData: NSData?, error:NSError?) -> Void in
+        object!["shopPic"].getDataInBackgroundWithBlock { (imageData: NSData?, error:NSError?) -> Void in
             if error == nil {
                 let image = UIImage(data: imageData!)
                 cell.CoffeeShopImageView.setBackgroundImage(image, forState: UIControlState.Normal)
@@ -91,14 +91,9 @@ class CoffeeShopsTableViewController: PFQueryTableViewController, UISearchBarDel
         
         self.shopName = object?.objectForKey("shopName") as? String
         self.shopId = object?.objectId!
-        self.shopLocation = object?.objectForKey("shopLocation") as? String
+        self.shopLocation = object?.objectForKey("location") as? String
         self.shopDescription = object?.objectForKey("description") as? String
         
-        object?.objectForKey("shopPic")!.getDataInBackgroundWithBlock { (imageData: NSData?, error:NSError?) -> Void in
-            if error == nil {
-                 self.shopImage = UIImage(data: imageData!)
-            }
-        }
         tableView.deselectRowAtIndexPath(indexPath, animated: false)
     }
     
@@ -114,9 +109,8 @@ class CoffeeShopsTableViewController: PFQueryTableViewController, UISearchBarDel
                 
                 singleCoffeeShopController.shopDescription = "\(self.shopDescription)"
                 singleCoffeeShopController.shopName = "\(self.shopName)"
-                //singleCoffeeShopController.shopId = "\(self.shopId)"
+                singleCoffeeShopController.shopId = "\(self.shopId)"
                 singleCoffeeShopController.shopLocation = "\(self.shopLocation)"
-                singleCoffeeShopController.shopImage = self.shopImage
                 
                 tableView.deselectRowAtIndexPath(indexPath, animated: true)
             }
