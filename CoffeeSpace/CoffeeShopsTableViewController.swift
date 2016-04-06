@@ -25,9 +25,16 @@ class CoffeeShopsTableViewController: PFQueryTableViewController, UISearchBarDel
     override func viewDidLoad() {
         super.viewDidLoad()
         searchBar.delegate = self
-        let barButton = UIBarButtonItem(title: "Cancel", style: UIBarButtonItemStyle.Done, target: self, action: "cancelSearch")
+        let barButton = UIBarButtonItem(title: "Sign Out", style: UIBarButtonItemStyle.Done, target: self, action: "SignOut")
         self.navigationItem.rightBarButtonItem = barButton
         self.navigationItem.titleView = searchBar
+    }
+    
+    func SignOut() {
+        PFUser.logOut()
+        let loginVC: UIViewController? = (self.storyboard?.instantiateViewControllerWithIdentifier("SignInViewController"))! as UIViewController
+        
+        self.presentViewController(loginVC!, animated: true, completion: nil)
     }
     
     //Query
@@ -45,7 +52,6 @@ class CoffeeShopsTableViewController: PFQueryTableViewController, UISearchBarDel
         return query
     }
     
-    
     //Search
     func search(searchText: String? = nil) {
         self.searchText = searchText
@@ -54,10 +60,6 @@ class CoffeeShopsTableViewController: PFQueryTableViewController, UISearchBarDel
     func searchBar(searchBar: UISearchBar, textDidChange searchText: String) {
         search(searchText)
         self.loadObjects()
-    }
-    
-    func cancelSearch() {
-        searchBar.resignFirstResponder()
     }
     
     //Table Views
