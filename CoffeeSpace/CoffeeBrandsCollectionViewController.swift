@@ -32,10 +32,19 @@ class CoffeeBrandsCollectionViewController: PFQueryCollectionViewController, UIS
 //               self.navigationItem.rightBarButtonItem = doneBtn
 //               self.brandsCollectionView.allowsMultipleSelection = true
         }
+        
+        let barButton = UIBarButtonItem(title: "Sign Out", style: UIBarButtonItemStyle.Done, target: self, action: "SignOut")
+        
         searchBar.delegate = self
-        let barButton = UIBarButtonItem(title: "Cancel", style: UIBarButtonItemStyle.Done, target: self, action: "cancelSearch")
         self.navigationItem.rightBarButtonItem = barButton
         self.navigationItem.titleView = searchBar
+    }
+    
+    func SignOut() {
+        PFUser.logOut()
+        let loginVC: UIViewController? = (self.storyboard?.instantiateViewControllerWithIdentifier("SignInViewController"))! as UIViewController
+        
+        self.presentViewController(loginVC!, animated: true, completion: nil)
     }
     
     @IBAction func done(sender: AnyObject) {
@@ -68,10 +77,6 @@ class CoffeeBrandsCollectionViewController: PFQueryCollectionViewController, UIS
     func searchBar(searchBar: UISearchBar, textDidChange searchText: String) {
         search(searchText)
         self.loadObjects()
-    }
-    
-    func cancelSearch() {
-        searchBar.resignFirstResponder()
     }
     
     //Collection View

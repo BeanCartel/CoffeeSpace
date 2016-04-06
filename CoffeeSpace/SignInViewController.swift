@@ -65,6 +65,10 @@ class SignInViewController: UIViewController {
         
     }
     
+    //Button for Facebook Sign In
+    @IBAction func onSignInFB(sender: AnyObject) {
+        print("facebooook")
+    }
     @IBAction func pressSignin(sender: UIButton) {
         UIView.animateWithDuration(0.4, animations: {
             self.buttonsUIView.frame = CGRectMake(20, 202, 280, 128)
