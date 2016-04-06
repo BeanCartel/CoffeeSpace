@@ -32,6 +32,7 @@ class SignInViewController: UIViewController {
         textfieldsUIView.alpha = 0
         buttonsUIView.alpha = 0
         
+        
     }
 
     override func didReceiveMemoryWarning() {

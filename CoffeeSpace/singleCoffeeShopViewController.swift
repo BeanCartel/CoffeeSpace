@@ -46,7 +46,7 @@ class singleCoffeeShopViewController: UIViewController {
         
         //Settings for stars
         ratingView.settings.fillMode = .Half
-        ratingView.settings.starSize = 30
+        ratingView.settings.starSize = 15
         ratingView.settings.starMargin = 5
         ratingView.settings.filledColor = UIColor.grayColor()
         ratingView.settings.emptyBorderColor = UIColor.blackColor()
