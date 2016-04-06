@@ -26,7 +26,9 @@ class SignUpViewController: UIViewController, UITextFieldDelegate {
     @IBOutlet weak var checkmarkusername: UIImageView!
     @IBOutlet weak var checkmarkpassword: UIImageView!
     @IBOutlet weak var checkmarkemail: UIImageView!
-    
+    @IBOutlet weak var firstcontinueButton: UIButton!
+    @IBOutlet weak var secondcontinueButton: UIButton!
+    @IBOutlet weak var signupButton: UIButton!
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -49,11 +51,13 @@ class SignUpViewController: UIViewController, UITextFieldDelegate {
         
         //newNameTextView.becomeFirstResponder()
         
-        checkmarkImage.alpha = 0
         smallcheckmarkImage.alpha = 0
         checkmarkemail.alpha = 0
         checkmarkusername.alpha = 0
         checkmarkpassword.alpha = 0
+        firstcontinueButton.alpha = 0
+        signupButton.alpha = 0
+        secondcontinueButton.alpha = 0
         
         
     }
@@ -97,6 +101,7 @@ class SignUpViewController: UIViewController, UITextFieldDelegate {
                 self.checkmarkemail.alpha = 1
                 
                 self.newEmailTextView.background = UIImage(named: "activeText")
+                self.secondcontinueButton.alpha = 1
             })
             
         } else if ((self.newEmailTextView.text?.containsString("@") == false) || (self.newEmailTextView.text?.containsString(".") == false) && (self.newEmailTextView.text!.characters.count >= 1) ) {
@@ -109,11 +114,18 @@ class SignUpViewController: UIViewController, UITextFieldDelegate {
     }
     
     @IBAction func namedidChange(sender: AnyObject) {
-        if ((self.newNameTextView.text!.characters.count) >= 1) {
+        if ((self.newNameTextView.text!.characters.count) >= 2) {
             UIView.animateWithDuration(0.4, animations: {
-                self.checkmarkImage.alpha = 1
+                
                 self.smallcheckmarkImage.alpha = 1
                 self.newNameTextView.background = UIImage(named: "activeText")
+                self.firstcontinueButton.alpha = 1
+            })
+        } else if ((self.newNameTextView.text!.characters.count) == 1) {
+            UIView.animateWithDuration(0.4, animations: {
+                
+                self.smallcheckmarkImage.alpha = 0
+                self.newNameTextView.background = UIImage(named: "errorText")
             })
         }
     }
@@ -135,11 +147,12 @@ class SignUpViewController: UIViewController, UITextFieldDelegate {
     }
     
     @IBAction func passwordChanged(sender: AnyObject) {
-        if (self.newPasswordTextView.text!.characters.count >= 4) && (self.newPasswordTextView.text!.characters.count < 21) {
+        if (((self.newPasswordTextView.text!.characters.count >= 4) && (self.newPasswordTextView.text!.characters.count < 21)) && (firstcontinueButton.alpha == 1 && secondcontinueButton.alpha == 1)) {
             UIView.animateWithDuration(0.4, animations: {
                 self.checkmarkpassword.alpha = 1
                 
                 self.newPasswordTextView.background = UIImage(named: "activeText")
+                self.signupButton.alpha = 1
             })
         } else if (self.newPasswordTextView.text!.characters.count < 4) || (self.newUserNameTextView.text!.characters.count > 21) {
             UIView.animateWithDuration(0.4, animations: {
@@ -148,12 +161,28 @@ class SignUpViewController: UIViewController, UITextFieldDelegate {
                 self.newPasswordTextView.background = UIImage(named: "errorText")
             })
         }
+        
+        
     }
     
     override func touchesBegan(touches: Set<UITouch>, withEvent event: UIEvent?) {
         self.view.endEditing(true)
     }
     
+    @IBAction func nameContinueButton(sender: UIButton) {
+        UIView.animateWithDuration(0.4, animations: {
+            self.scrollView.contentOffset.x = self.firstView.frame.width
+        })
+
+        
+    }
+    
+    
+    @IBAction func emailContinueButton(sender: UIButton) {
+        UIView.animateWithDuration(0.4, animations: {
+            self.scrollView.contentOffset.x = 640
+        })
+    }
     /*
     // MARK: - Navigation
 
