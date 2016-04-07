@@ -19,20 +19,15 @@ class singleCoffeeShopViewController: UIViewController {
     var shopDescription: String! = ""
     var avgRating: Double! = 3.7
     var currentRating: Double! = 0
-    
-<<<<<<< Updated upstream
-=======
     var shopObject: PFObject?
     
-    
-    
-   
->>>>>>> Stashed changes
     @IBOutlet weak var shopNameLabel: UILabel!
     @IBOutlet weak var shopImageView: UIImageView!
     @IBOutlet weak var ratingLabel: UILabel!
     @IBOutlet weak var descriptionLabel: UILabel!
     @IBOutlet weak var ratingView: CosmosView!
+    @IBOutlet weak var locarionLabel: UILabel!
+    
     
     /**
     override func queryForCollection() -> PFQuery {
