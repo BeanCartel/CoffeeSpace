@@ -13,7 +13,9 @@ import Parse
 class CoffeeShopsTableViewController: PFQueryTableViewController, UISearchBarDelegate {
     
     @IBOutlet var tableview: UITableView!
+   
     
+    var businesses: [ShopsWithYelp]!
     var shopId: String! = ""
     var shopName: String! = ""
     var shopLocation: String! = ""
@@ -21,11 +23,21 @@ class CoffeeShopsTableViewController: PFQueryTableViewController, UISearchBarDel
     
     var searchText: String? = nil
     var searchBar = UISearchBar()
+    var resultSearchController = UISearchController()
+    let apiConsoleInfo = YelpAPIConsole()
     
+    let client = YelpAPIClient()
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+         let parameters = ["ll": "37.788022,-122.399797", "term": "coffee", "radius_filter": "3000", "sort": "0"]
+        client.searchPlacesWithParameters(parameters, successSearch: { (data, response) -> Void in
+            print(NSString(data: data as! NSData, encoding: NSUTF8StringEncoding))
+        }) { (error) -> Void in
+            print(error)
+        }
         searchBar.delegate = self
-        let barButton = UIBarButtonItem(title: "Sign Out", style: UIBarButtonItemStyle.Done, target: self, action: "SignOut")
+        let barButton = UIBarButtonItem(title: "Sign Out", style: UIBarButtonItemStyle.Done, target: self, action: #selector(CoffeeShopsTableViewController.SignOut))
         self.navigationItem.rightBarButtonItem = barButton
         self.navigationItem.titleView = searchBar
     }
@@ -81,7 +93,10 @@ class CoffeeShopsTableViewController: PFQueryTableViewController, UISearchBarDel
     
     override func tableView(tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         if ((self.objects?.count) != nil) {
-            return (self.objects?.count)!
+            var sumCount = self.objects?.count
+            
+            sumCount = sumCount!
+            return sumCount!
         }else {
             return 0
         }

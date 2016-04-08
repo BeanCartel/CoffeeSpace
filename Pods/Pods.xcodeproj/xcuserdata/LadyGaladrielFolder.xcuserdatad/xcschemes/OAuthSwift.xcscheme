@@ -14,10 +14,10 @@
             buildForArchiving = "YES">
             <BuildableReference
                BuildableIdentifier = 'primary'
-               BlueprintIdentifier = '3255950715AA4EA746C5B188'
-               BlueprintName = 'Pods-CoffeeSpace'
+               BlueprintIdentifier = 'D7C5D4FB413BFC83B1988532'
+               BlueprintName = 'OAuthSwift'
                ReferencedContainer = 'container:Pods.xcodeproj'
-               BuildableName = 'Pods_CoffeeSpace.framework'>
+               BuildableName = 'OAuthSwift.framework'>
             </BuildableReference>
          </BuildActionEntry>
       </BuildActionEntries>

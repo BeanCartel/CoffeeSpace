@@ -165,9 +165,8 @@ class SignUpViewController: UIViewController, UITextFieldDelegate {
         
     }
     
-    override func touchesBegan(touches: Set<UITouch>, withEvent event: UIEvent?) {
-        self.view.endEditing(true)
-    }
+   
+    
     
     @IBAction func nameContinueButton(sender: UIButton) {
         UIView.animateWithDuration(0.4, animations: {

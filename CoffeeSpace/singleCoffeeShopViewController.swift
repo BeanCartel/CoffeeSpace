@@ -28,39 +28,6 @@ class singleCoffeeShopViewController: UIViewController {
     @IBOutlet weak var ratingView: CosmosView!
     @IBOutlet weak var locarionLabel: UILabel!
     
-    
-    /**
-    override func queryForCollection() -> PFQuery {
-        let query = PFQuery(className: "coffeeShop")
-        
-        query.cachePolicy = .NetworkElseCache
-        
-        query.orderByDescending("createdAt")
-        self.paginationEnabled = false
-        self.objectsPerPage = 25
-        return query
-        
-    }
-    
-    override func collectionView(collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
-        //#warning Incomplete method implementation -- Return the number of items in the section
-        return self.objects.count
-    }
-    
-   override func collectionView(collectionView: UICollectionView, cellForItemAtIndexPath indexPath: NSIndexPath, object: PFObject?) -> PFCollectionViewCell? {
-        
-        let cell = collectionView.dequeueReusableCellWithReuseIdentifier("CoffeeBrandsCollectionViewCell", forIndexPath: indexPath) as! CoffeeBrandsCollectionViewCell
-        //let arr = object!["availableCoffee"]
-        
-        //cell.BrandNameLabel.text = object?.objectForKey("brandTitle") as? String
-        object!["availableCoffee"].getDataInBackgroundWithBlock { (imageData: NSData?, error:NSError?) -> Void in
-            if error == nil {
-                let image = UIImage(data: imageData!)
-                cell.BrandImageView.image = image
-            }
-        }
-        return cell}
-    **/
 
     override func viewDidLoad() {
         super.viewDidLoad()

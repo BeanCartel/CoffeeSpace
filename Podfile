@@ -10,5 +10,6 @@ target 'CoffeeSpace' do
 	pod 'AFNetworking'
 	pod 'BDBOAuth1Manager'
 	pod 'MBProgressHUD'
+	pod 'OAuthSwift'
 end
 

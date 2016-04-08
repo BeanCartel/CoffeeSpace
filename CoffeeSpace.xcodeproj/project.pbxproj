@@ -12,6 +12,8 @@
 		0C1C27971C9A11AF0041B06F /* CoffeeBrandsCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0C1C27961C9A11AE0041B06F /* CoffeeBrandsCollectionViewCell.swift */; };
 		0C1C27991C9A13490041B06F /* CoffeeBrandsCollectionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0C1C27981C9A13490041B06F /* CoffeeBrandsCollectionViewController.swift */; };
 		0C5FAF051CADC5600076E7EB /* CoffeeShopCollectionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0C5FAF041CADC5600076E7EB /* CoffeeShopCollectionViewController.swift */; };
+		0C6452221CB72BE7009DF20D /* YelpAPIClient.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0C6452211CB72BE7009DF20D /* YelpAPIClient.swift */; };
+		0C6452231CB73303009DF20D /* ShopsWithYelp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0C6F34A11CB6D24900E81131 /* ShopsWithYelp.swift */; };
 		0C9135551C8FABFF0074CD93 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0C9135541C8FABFF0074CD93 /* AppDelegate.swift */; };
 		0C91355A1C8FABFF0074CD93 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 0C9135581C8FABFF0074CD93 /* Main.storyboard */; };
 		0C91355C1C8FABFF0074CD93 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 0C91355B1C8FABFF0074CD93 /* Assets.xcassets */; };
@@ -35,6 +37,10 @@
 		0C1C27961C9A11AE0041B06F /* CoffeeBrandsCollectionViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CoffeeBrandsCollectionViewCell.swift; sourceTree = "<group>"; };
 		0C1C27981C9A13490041B06F /* CoffeeBrandsCollectionViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CoffeeBrandsCollectionViewController.swift; sourceTree = "<group>"; };
 		0C5FAF041CADC5600076E7EB /* CoffeeShopCollectionViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CoffeeShopCollectionViewController.swift; sourceTree = "<group>"; };
+		0C6452211CB72BE7009DF20D /* YelpAPIClient.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = YelpAPIClient.swift; sourceTree = "<group>"; };
+		0C6F349F1CB6BFA700E81131 /* Yelp_Client.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Yelp_Client.swift; sourceTree = "<group>"; };
+		0C6F34A11CB6D24900E81131 /* ShopsWithYelp.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ShopsWithYelp.swift; sourceTree = "<group>"; };
+		0C6F34A31CB6FD6A00E81131 /* BDBOAuth1Manager.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = BDBOAuth1Manager.framework; path = "../../Library/Developer/Xcode/DerivedData/CoffeeSpace-baokygiuqchitddqbkvrxggilkcl/Build/Products/Debug-iphoneos/BDBOAuth1Manager.framework"; sourceTree = "<group>"; };
 		0C9135511C8FABFF0074CD93 /* CoffeeSpace.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = CoffeeSpace.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		0C9135541C8FABFF0074CD93 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		0C9135591C8FABFF0074CD93 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
@@ -68,6 +74,15 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		0C6F349E1CB6BF8D00E81131 /* API */ = {
+			isa = PBXGroup;
+			children = (
+				0C6F349F1CB6BFA700E81131 /* Yelp_Client.swift */,
+				0C6452211CB72BE7009DF20D /* YelpAPIClient.swift */,
+			);
+			name = API;
+			sourceTree = "<group>";
+		};
 		0C9135481C8FABFF0074CD93 = {
 			isa = PBXGroup;
 			children = (
@@ -122,10 +137,12 @@
 		0CBD41FB1C94C4C00072787F /* Model */ = {
 			isa = PBXGroup;
 			children = (
+				0C6F349E1CB6BF8D00E81131 /* API */,
 				0CBD41F81C94C4940072787F /* GlobalFuncs.swift */,
 				0CAD75101C93921500CFAFB6 /* Shops.swift */,
 				A062B49D1CADC7FB001C7E04 /* Rating.swift */,
 				0CEF4CAC1C923FBD0079C63A /* CoffeeBrand.swift */,
+				0C6F34A11CB6D24900E81131 /* ShopsWithYelp.swift */,
 			);
 			name = Model;
 			sourceTree = "<group>";
@@ -173,6 +190,7 @@
 		DA3F386C0F25D7DFBAFFA89A /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				0C6F34A31CB6FD6A00E81131 /* BDBOAuth1Manager.framework */,
 				6FC86957997950D8136D8802 /* Pods_CoffeeSpace.framework */,
 			);
 			name = Frameworks;
@@ -314,9 +332,11 @@
 				0C5FAF051CADC5600076E7EB /* CoffeeShopCollectionViewController.swift in Sources */,
 				0CEF4CA71C91F3030079C63A /* SignUpViewController.swift in Sources */,
 				0C1C27991C9A13490041B06F /* CoffeeBrandsCollectionViewController.swift in Sources */,
+				0C6452231CB73303009DF20D /* ShopsWithYelp.swift in Sources */,
 				0C1C27971C9A11AF0041B06F /* CoffeeBrandsCollectionViewCell.swift in Sources */,
 				0CEF4CA51C91EF3B0079C63A /* SignInViewController.swift in Sources */,
 				0CEF4CAD1C923FBD0079C63A /* CoffeeBrand.swift in Sources */,
+				0C6452221CB72BE7009DF20D /* YelpAPIClient.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

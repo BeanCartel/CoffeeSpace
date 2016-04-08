@@ -89,6 +89,7 @@ if [[ "$CONFIGURATION" == "Debug" ]]; then
   install_framework "Pods-CoffeeSpace/Bolts.framework"
   install_framework "Pods-CoffeeSpace/Cosmos.framework"
   install_framework "Pods-CoffeeSpace/MBProgressHUD.framework"
+  install_framework "Pods-CoffeeSpace/OAuthSwift.framework"
   install_framework "Pods-CoffeeSpace/Parse.framework"
   install_framework "Pods-CoffeeSpace/ParseUI.framework"
 fi
@@ -98,6 +99,7 @@ if [[ "$CONFIGURATION" == "Release" ]]; then
   install_framework "Pods-CoffeeSpace/Bolts.framework"
   install_framework "Pods-CoffeeSpace/Cosmos.framework"
   install_framework "Pods-CoffeeSpace/MBProgressHUD.framework"
+  install_framework "Pods-CoffeeSpace/OAuthSwift.framework"
   install_framework "Pods-CoffeeSpace/Parse.framework"
   install_framework "Pods-CoffeeSpace/ParseUI.framework"
 fi
