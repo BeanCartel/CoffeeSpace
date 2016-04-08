@@ -28,15 +28,14 @@
         - [x]Name
         - [x]Brand
         - []Location
-- [X] Display CoffeeShops and Brands in tableview/Collection View
+- [X] Display CoffeeShops and Brands in tableview/Collection View (Luis, Jorge)
 - [x] CoffeeShops display Coffeebrands sold in a collectionview inside detail view
 - [x] Detail view for shops 
-- [x] Ratings (Not yet on brands)
-- [x] Search by name for shops and brands
-- [ ] brands
-- [X] Login/ Sign up page 
-- [x] Admin page to add CoffeeShops and CoffeeBrands
-- [x] Favorites page for the saved restaurants and coffee brands 
+- [x] Ratings (Not yet on brands) (Luis)
+- [x] Logo (Ricardo Vila)
+- [X] Login/ Sign up page (ricardo Vila)
+- [x] Admin page to add CoffeeShops and CoffeeBrands (Jorge, Luis)
+- [x] Favorites page for the saved restaurants and coffee brands  (Luis)
 
 ### *Optionals* 
 
