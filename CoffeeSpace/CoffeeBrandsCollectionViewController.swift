@@ -19,6 +19,7 @@ class CoffeeBrandsCollectionViewController: PFQueryCollectionViewController, UIS
     weak var mDelegate:MyProtocol?
     var comesFromAddCoffeeShop = false
     var selectedCoffee = [PFObject]()
+    var brandId: String = ""
     
     var searchText: String? = nil
     var searchBar = UISearchBar()
@@ -125,16 +126,32 @@ class CoffeeBrandsCollectionViewController: PFQueryCollectionViewController, UIS
         }
         return cell
     }
+    
+    override func collectionView(collectionView: UICollectionView, didHighlightItemAtIndexPath indexPath: NSIndexPath) {
+        let object = objectAtIndexPath(indexPath)
+        
+        self.brandId = object!.objectId!
+        
+        brandsCollectionView.deselectItemAtIndexPath(indexPath, animated: false)
+        
+    }
    
-    /*
     // MARK: - Navigation
 
     // In a storyboard-based application, you will often want to do a little preparation before navigation
     override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
-        // Get the new view controller using segue.destinationViewController.
-        // Pass the selected object to the new view controller.
+        if segue.identifier == "SingleBrandView" {
+            let cell = sender as! UICollectionViewCell
+            if let indexPath = brandsCollectionView.indexPathForCell(cell) {
+                let singleBrandController = segue.destinationViewController as! SingleBrandViewController
+                
+                singleBrandController.brandId = self.brandId
+                
+                brandsCollectionView.deselectItemAtIndexPath(indexPath, animated: true)
+            }
+        }
     }
-    */
+
 
 }
 

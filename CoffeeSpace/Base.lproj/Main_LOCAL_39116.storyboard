@@ -419,7 +419,7 @@
                                             </attributedString>
                                             <nil key="highlightedColor"/>
                                         </label>
-                                        <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="318425B1-4ACE-4E44-B985-F24ABE11A6B7" translatesAutoresizingMaskIntoConstraints="NO" id="hXZ-b2-F6L">
+                                        <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="D042C76A-D629-4487-A995-325A5AD27131" translatesAutoresizingMaskIntoConstraints="NO" id="hXZ-b2-F6L">
                                             <rect key="frame" x="0.0" y="0.0" width="154" height="124"/>
                                         </imageView>
                                     </subviews>
@@ -429,7 +429,7 @@
                                 <connections>
                                     <outlet property="BrandImageView" destination="hXZ-b2-F6L" id="JCW-Cl-cBj"/>
                                     <outlet property="BrandNameLabel" destination="Q52-Ia-Q03" id="WdI-wr-Uhb"/>
-                                    <segue destination="jyD-c2-i5T" kind="push" identifier="SingleBrandView" id="0pe-hf-QSb"/>
+                                    <segue destination="jyD-c2-i5T" kind="push" id="0pe-hf-QSb"/>
                                 </connections>
                             </collectionViewCell>
                         </cells>

@@ -419,7 +419,11 @@
                                             </attributedString>
                                             <nil key="highlightedColor"/>
                                         </label>
+<<<<<<< HEAD
+                                        <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="D042C76A-D629-4487-A995-325A5AD27131" translatesAutoresizingMaskIntoConstraints="NO" id="hXZ-b2-F6L">
+=======
                                         <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="318425B1-4ACE-4E44-B985-F24ABE11A6B7" translatesAutoresizingMaskIntoConstraints="NO" id="hXZ-b2-F6L">
+>>>>>>> 4d435810c8fae0d0e5c24a55012b6ee367425fd4
                                             <rect key="frame" x="0.0" y="0.0" width="154" height="124"/>
                                         </imageView>
                                     </subviews>
@@ -977,10 +981,14 @@
         </scene>
     </scenes>
     <resources>
+<<<<<<< HEAD
         <image name="Admin" width="50" height="50"/>
         <image name="CoffeeBean" width="30" height="30"/>
         <image name="CoffeeCup" width="24" height="30"/>
         <image name="D042C76A-D629-4487-A995-325A5AD27131" width="338" height="362">
+=======
+        <image name="318425B1-4ACE-4E44-B985-F24ABE11A6B7" width="338" height="362">
+>>>>>>> 4d435810c8fae0d0e5c24a55012b6ee367425fd4
             <mutableData key="keyedArchiveRepresentation">
 YnBsaXN0MDDUAQIDBAUGPT5YJHZlcnNpb25YJG9iamVjdHNZJGFyY2hpdmVyVCR0b3ASAAGGoK4HCBMU
 GR4fIyQrLjE3OlUkbnVsbNUJCgsMDQ4PEBESVk5TU2l6ZVYkY2xhc3NcTlNJbWFnZUZsYWdzVk5TUmVw
