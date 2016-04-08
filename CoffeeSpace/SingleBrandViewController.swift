@@ -7,16 +7,17 @@
 //
 
 import UIKit
+import Parse
 
 class SingleBrandViewController: UIViewController {
-
+    var brandId:String = ""
+    
     @IBOutlet weak var brandImageView: UIImageView!
     @IBOutlet weak var brandLabel: UILabel!
     
     override func viewDidLoad() {
         super.viewDidLoad()
-
-        // Do any additional setup after loading the view.
+        checkFavorited()
     }
 
     override func didReceiveMemoryWarning() {
@@ -25,9 +26,24 @@ class SingleBrandViewController: UIViewController {
     }
     
     @IBAction func onFavBrand(sender: AnyObject) {
-    
+        Favorites.postBrandFav(brandId, userId: PFUser.currentUser()?.objectId, withCompletion: nil)
     }
-
+    
+    func checkFavorited() {
+        let query = PFQuery(className: "userFavorites")
+        query.whereKey("brandId", containsString: self.brandId)
+        
+        query.countObjectsInBackgroundWithBlock {
+            (count: Int32, error: NSError?) -> Void in
+            if error == nil && count > 0 {
+                print("There's a favorite")
+            } else if(count>1) {
+                print("there's a fav, but weird, there's more than one")
+            } else {
+                print("no favorite here")
+            }
+        }
+    }
     /*
     // MARK: - Navigation
 
