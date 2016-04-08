@@ -29,15 +29,21 @@
         - [x]Brand
         - []Location
 - [X] Display CoffeeShops and Brands in tableview/Collection View
-- [X] Login page 
-- [ ] Crowdsource system to authenticate the information provided by the users (Coffee Brand and other details)
-- [ ] Favorites page for the saved restaurants and coffee brands 
+- [x] CoffeeShops display Coffeebrands sold in a collectionview inside detail view
+- [x] Detail view for shops 
+- [x] Ratings (Not yet on brands)
+- [x] Search by name for shops and brands
+- [ ] brands
+- [X] Login/ Sign up page 
+- [x] Admin page to add CoffeeShops and CoffeeBrands
+- [x] Favorites page for the saved restaurants and coffee brands 
 
 ### *Optionals* 
 
 - [ ] Display nearby coffeeshops in a Map 
 - [ ] Login with Facebook 
 - [ ] Cool animations 
+- [ ] Yelp Integration
 
 
 ## Video Walkthrough 
