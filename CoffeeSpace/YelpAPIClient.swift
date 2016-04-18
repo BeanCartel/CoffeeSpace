@@ -22,6 +22,20 @@ class YelpAPIClient: NSObject {
     let clientOAuth: OAuthSwiftClient?
     let apiConsoleInfo: YelpAPIConsole
     
+    class var sharedInstance : YelpAPIClient {
+        struct Static {
+            static var token : dispatch_once_t = 0
+            static var instance : YelpAPIClient? = nil
+        }
+        
+        dispatch_once(&Static.token) {
+            Static.instance = YelpAPIClient()
+        }
+        return Static.instance!
+    }
+    
+    
+    
     override init() {
         apiConsoleInfo = YelpAPIConsole()
         self.clientOAuth = OAuthSwiftClient(consumerKey: apiConsoleInfo.consumerKey, consumerSecret: apiConsoleInfo.consumerSecret, accessToken: apiConsoleInfo.accessToken, accessTokenSecret: apiConsoleInfo.accessTokenSecret)
@@ -77,14 +91,14 @@ class YelpAPIClient: NSObject {
      
      */
     
-    func getBusinessInformationOf(businessId: String, localeParameters: Dictionary<String, String>? = nil, successSearch: (data: NSData, response: NSHTTPURLResponse) -> Void, failureSearch: (error: NSError) -> Void) {
+    func getBusinessInformationOf(businessId: String, localeParameters: Dictionary<String, String>? = nil, completion: (data: NSData, response: NSHTTPURLResponse) -> Void, failureSearch: (error: NSError) -> Void) {
         let businessInformationUrl = APIBaseUrl + "business/" + businessId
         var parameters = localeParameters
         
         if parameters == nil {
             parameters = Dictionary<String, String>()
         }
-        clientOAuth!.get(businessInformationUrl, parameters: parameters!, success: successSearch, failure: failureSearch)
+        clientOAuth!.get(businessInformationUrl, parameters: parameters!, success: completion, failure: failureSearch)
        
     }
     

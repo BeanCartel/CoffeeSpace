@@ -24,18 +24,41 @@ class CoffeeShopsTableViewController: PFQueryTableViewController, UISearchBarDel
     var searchText: String? = nil
     var searchBar = UISearchBar()
     var resultSearchController = UISearchController()
-    let apiConsoleInfo = YelpAPIConsole()
+
     
-    let client = YelpAPIClient()
+    override func viewWillAppear(animated: Bool) {
+        ShopsWithYelp.searchWithTerm("Coffee", completion: { (businesses: [ShopsWithYelp]!, error: NSError!) -> Void in
+            self.businesses = businesses
+            self.tableView.reloadData()
+            print(self.businesses)
+        })
+
+    }
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         
-         let parameters = ["ll": "37.788022,-122.399797", "term": "coffee", "radius_filter": "3000", "sort": "0"]
+        // let parameters = ["ll": "37.788022,-122.399797", "term": "coffee", "radius_filter": "3000", "sort": "0"]
+    
+       
+    /**
         client.searchPlacesWithParameters(parameters, successSearch: { (data, response) -> Void in
             print(NSString(data: data as! NSData, encoding: NSUTF8StringEncoding))
+            //let dictionary = NSKeyedUnarchiver.unarchiveObjectWithData(data as! NSData)! as? NSDictionary
+            let sureData = data as! NSData
+            let dictionaries = sureData.va
+            print(dictionaries)
+            
         }) { (error) -> Void in
             print(error)
         }
+        
+        ShopsWithYelp.searchWithTerm(parameters, completion:  { (businesses: [ShopsWithYelp]!, error: NSError!) in
+            self.businesses = businesses
+            print( businesses)
+            print("In here, just hard to display")
+        })
+        **/
         searchBar.delegate = self
         let barButton = UIBarButtonItem(title: "Sign Out", style: UIBarButtonItemStyle.Done, target: self, action: #selector(CoffeeShopsTableViewController.SignOut))
         self.navigationItem.rightBarButtonItem = barButton
@@ -88,15 +111,23 @@ class CoffeeShopsTableViewController: PFQueryTableViewController, UISearchBarDel
                 cell.CoffeeShopImageView.setBackgroundImage(image, forState: UIControlState.Normal)
             }
         }
+    
+       print("index is "  )
+        print(indexPath.row)
+        if(self.businesses != nil &&  indexPath.row >= objects!.count){
+         cell.shop = self.businesses[indexPath.row]
+        }
         return cell
     }
     
     override func tableView(tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         if ((self.objects?.count) != nil) {
-            var sumCount = self.objects?.count
-            
-            sumCount = sumCount!
-            return sumCount!
+            var sumCount = (self.objects?.count)!
+            if(self.businesses?.count != nil)
+            {
+                sumCount = sumCount + (self.businesses?.count)!
+            }
+            return sumCount
         }else {
             return 0
         }
@@ -114,6 +145,7 @@ class CoffeeShopsTableViewController: PFQueryTableViewController, UISearchBarDel
         tableView.deselectRowAtIndexPath(indexPath, animated: false)
     }
     
+    
     // MARK: - Navigation
     // In a storyboard-based application, you will often want to do a little preparation before navigation
     override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
@@ -123,11 +155,6 @@ class CoffeeShopsTableViewController: PFQueryTableViewController, UISearchBarDel
                 let singleCoffeeShopController = segue.destinationViewController as! singleCoffeeShopViewController
                 
                 singleCoffeeShopController.shopObject = objectAtIndexPath(indexPath)
-                
-                singleCoffeeShopController.shopDescription = "\(self.shopDescription)"
-                singleCoffeeShopController.shopName = "\(self.shopName)"
-                singleCoffeeShopController.shopId = "\(self.shopId)"
-                singleCoffeeShopController.shopLocation = "\(self.shopLocation)"
                 
                 tableView.deselectRowAtIndexPath(indexPath, animated: true)
             }

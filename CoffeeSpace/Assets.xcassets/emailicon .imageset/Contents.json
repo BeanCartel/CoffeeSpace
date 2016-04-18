@@ -2,7 +2,7 @@
   "images" : [
     {
       "idiom" : "universal",
-      "filename" : "emailicon .png",
+      "filename" : "32x32_mail.png",
       "scale" : "1x"
     },
     {
@@ -11,6 +11,7 @@
     },
     {
       "idiom" : "universal",
+      "filename" : "1459938768_mail.png",
       "scale" : "3x"
     }
   ],

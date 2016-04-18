@@ -10,18 +10,15 @@ import UIKit
 
 class ShopsWithYelp: NSObject {
     let name: String?
+    
     let address: String?
     let imageURL: NSURL?
     let categories: String?
     let distance: String?
     let ratingImageURL: NSURL?
     let reviewCount: NSNumber?
-    let apiConsoleInfo = YelpAPIConsole()
     
-    let client = YelpAPIClient()
-
     init(dictionary: NSDictionary) {
-        
         
         
         name = dictionary["name"] as? String
@@ -88,22 +85,18 @@ class ShopsWithYelp: NSObject {
             shops.append(shop)
         }
         return shops
+        
     }
     
-     func searchWithTerm(params: Dictionary<String, String>, completion: ([ShopsWithYelp]!, NSError!) -> Void) {
-        
-        client.searchPlacesWithParameters(params, successSearch: { (data, response) in
-            let dictionaries = data["businesses"] as? [NSDictionary]
-            if dictionaries != nil {
-                completion(ShopsWithYelp.Shops(array: dictionaries!), nil)
-            }
-        }) { (error) in
-           print("No luck")
-        }
-        }
+    class func searchWithTerm(term: String, completion: ([ShopsWithYelp]!, NSError!) -> Void) {
+        Yelp_Client.sharedInstance.searchWithTerm(term, completion: completion)
+    }
     
-    
+   
+/**
+
      //func searchWithTerm(term: String, sort: YelpSortMode?, categories: [String]?, deals: Bool?, completion: ([ShopsWithYelp]!, NSError!) -> Void) -> Void {
         //Yelp_Client.sharedInstance.searchWithTerm(term, sort: sort, categories: categories, deals: deals, completion: completion)
     //}
+ **/
 }

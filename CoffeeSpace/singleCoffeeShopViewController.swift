@@ -14,11 +14,13 @@ import Cosmos
 class singleCoffeeShopViewController: UIViewController {
     
     var shopName: String! = ""
-    var shopId: String! = "" 
+    var shopId: String! = ""
+    var imageURL: NSURL!
     var shopLocation: String! = ""
-    var shopDescription: String! = ""
+    var reviews: String! = ""
     var avgRating: Double! = 3.7
     var currentRating: Double! = 0
+    
     var shopObject: PFObject?
     
     @IBOutlet weak var shopNameLabel: UILabel!
@@ -29,15 +31,34 @@ class singleCoffeeShopViewController: UIViewController {
     @IBOutlet weak var locarionLabel: UILabel!
     
 
+    var shop: ShopsWithYelp! {
+        didSet {
+            
+            self.shopName = shop.name
+            self.imageURL = shop.imageURL
+            
+            //categoriesLabel.text = business.categories
+            self.shopLocation = shop.address
+            self.reviews = "\(shop.reviewCount!) Reviews"
+            //ratingImageView.setImageWithURL(business.ratingImageURL!)
+            //distanceLabel.text = business.distance
+            
+        }
+    }
+
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        shopNameLabel.text = "\(shopName)"
-        descriptionLabel.text = "\(shopDescription)"
-        
+       shopNameLabel.text = shopName
+        if(self.imageURL != nil){
+            self.shopImageView.setImageWithURL(self.imageURL)
+        }
+        self.locarionLabel.text = self.shopLocation
+        //self.ratingLabel.text = self.reviews
         //Settings for stars
         ratingView.settings.fillMode = .Half
-        ratingView.settings.starSize = 30
+        ratingView.settings.starSize = 15
         ratingView.settings.starMargin = 5
         ratingView.settings.filledColor = UIColor.grayColor()
         ratingView.settings.emptyBorderColor = UIColor.blackColor()
@@ -61,7 +82,8 @@ class singleCoffeeShopViewController: UIViewController {
         // Dispose of any resources that can be recreated.
     }
     
-   
+   /**  This commented until collection view works
+     
     override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
         // Get the new view controller using segue.destinationViewController.
         // Pass the selected object to the new view controller.  coffeeAvailableSegue
@@ -72,5 +94,5 @@ class singleCoffeeShopViewController: UIViewController {
             
     }
 
-}
+} **/
 }

@@ -7,12 +7,11 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		0C1C27931C961BAE0041B06F /* CoffeeShopsTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0C1C27921C961BAE0041B06F /* CoffeeShopsTableViewController.swift */; };
+		0C0EFA311CC1FDEB0006FAE6 /* CoffeeShopsWithYelpViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0C0EFA301CC1FDEB0006FAE6 /* CoffeeShopsWithYelpViewController.swift */; };
 		0C1C27951C98D73B0041B06F /* CoffeeShopsCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0C1C27941C98D73B0041B06F /* CoffeeShopsCell.swift */; };
 		0C1C27971C9A11AF0041B06F /* CoffeeBrandsCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0C1C27961C9A11AE0041B06F /* CoffeeBrandsCollectionViewCell.swift */; };
 		0C1C27991C9A13490041B06F /* CoffeeBrandsCollectionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0C1C27981C9A13490041B06F /* CoffeeBrandsCollectionViewController.swift */; };
-		0C5FAF051CADC5600076E7EB /* CoffeeShopCollectionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0C5FAF041CADC5600076E7EB /* CoffeeShopCollectionViewController.swift */; };
-		0C6452221CB72BE7009DF20D /* YelpAPIClient.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0C6452211CB72BE7009DF20D /* YelpAPIClient.swift */; };
+		0C4702D61CB87CC20015C72C /* Icons in Resources */ = {isa = PBXBuildFile; fileRef = 0C4702D51CB87CC20015C72C /* Icons */; };
 		0C6452231CB73303009DF20D /* ShopsWithYelp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0C6F34A11CB6D24900E81131 /* ShopsWithYelp.swift */; };
 		0C9135551C8FABFF0074CD93 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0C9135541C8FABFF0074CD93 /* AppDelegate.swift */; };
 		0C91355A1C8FABFF0074CD93 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 0C9135581C8FABFF0074CD93 /* Main.storyboard */; };
@@ -22,6 +21,7 @@
 		0CAD75111C93921500CFAFB6 /* Shops.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0CAD75101C93921500CFAFB6 /* Shops.swift */; };
 		0CBD41F91C94C4940072787F /* addCoffeeShopViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0CBD41F71C94C4940072787F /* addCoffeeShopViewController.swift */; };
 		0CBD41FA1C94C4940072787F /* GlobalFuncs.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0CBD41F81C94C4940072787F /* GlobalFuncs.swift */; };
+		0CBFEC511CBE147300C7B7CE /* Yelp_Client.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0C6F349F1CB6BFA700E81131 /* Yelp_Client.swift */; };
 		0CEF4CA51C91EF3B0079C63A /* SignInViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0CEF4CA41C91EF3B0079C63A /* SignInViewController.swift */; };
 		0CEF4CA71C91F3030079C63A /* SignUpViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0CEF4CA61C91F3030079C63A /* SignUpViewController.swift */; };
 		0CEF4CAB1C923D240079C63A /* singleCoffeeShopViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0CEF4CAA1C923D240079C63A /* singleCoffeeShopViewController.swift */; };
@@ -34,10 +34,12 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		0C0EFA301CC1FDEB0006FAE6 /* CoffeeShopsWithYelpViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CoffeeShopsWithYelpViewController.swift; sourceTree = "<group>"; };
 		0C1C27921C961BAE0041B06F /* CoffeeShopsTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CoffeeShopsTableViewController.swift; sourceTree = "<group>"; };
 		0C1C27941C98D73B0041B06F /* CoffeeShopsCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CoffeeShopsCell.swift; sourceTree = "<group>"; };
 		0C1C27961C9A11AE0041B06F /* CoffeeBrandsCollectionViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CoffeeBrandsCollectionViewCell.swift; sourceTree = "<group>"; };
 		0C1C27981C9A13490041B06F /* CoffeeBrandsCollectionViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CoffeeBrandsCollectionViewController.swift; sourceTree = "<group>"; };
+		0C4702D51CB87CC20015C72C /* Icons */ = {isa = PBXFileReference; lastKnownFileType = folder; path = Icons; sourceTree = "<group>"; };
 		0C5FAF041CADC5600076E7EB /* CoffeeShopCollectionViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CoffeeShopCollectionViewController.swift; sourceTree = "<group>"; };
 		0C6452211CB72BE7009DF20D /* YelpAPIClient.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = YelpAPIClient.swift; sourceTree = "<group>"; };
 		0C6F349F1CB6BFA700E81131 /* Yelp_Client.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Yelp_Client.swift; sourceTree = "<group>"; };
@@ -113,6 +115,7 @@
 				0CBD41FB1C94C4C00072787F /* Model */,
 				0C9135541C8FABFF0074CD93 /* AppDelegate.swift */,
 				0C9135581C8FABFF0074CD93 /* Main.storyboard */,
+				0C4702D51CB87CC20015C72C /* Icons */,
 				0C91355B1C8FABFF0074CD93 /* Assets.xcassets */,
 				0C91355D1C8FABFF0074CD93 /* LaunchScreen.storyboard */,
 				0C9135601C8FABFF0074CD93 /* Info.plist */,
@@ -161,6 +164,7 @@
 				A03211111CA04A0900D94186 /* Admin Controllers */,
 				0C1C27921C961BAE0041B06F /* CoffeeShopsTableViewController.swift */,
 				0C1C27981C9A13490041B06F /* CoffeeBrandsCollectionViewController.swift */,
+				0C0EFA301CC1FDEB0006FAE6 /* CoffeeShopsWithYelpViewController.swift */,
 			);
 			name = Controller;
 			sourceTree = "<group>";
@@ -265,6 +269,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				0C91355F1C8FABFF0074CD93 /* LaunchScreen.storyboard in Resources */,
+				0C4702D61CB87CC20015C72C /* Icons in Resources */,
 				0C91355C1C8FABFF0074CD93 /* Assets.xcassets in Resources */,
 				0C91355A1C8FABFF0074CD93 /* Main.storyboard in Resources */,
 			);
@@ -325,26 +330,25 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				0C0EFA311CC1FDEB0006FAE6 /* CoffeeShopsWithYelpViewController.swift in Sources */,
 				0CEF4CAB1C923D240079C63A /* singleCoffeeShopViewController.swift in Sources */,
 				0C9135551C8FABFF0074CD93 /* AppDelegate.swift in Sources */,
 				0C1C27951C98D73B0041B06F /* CoffeeShopsCell.swift in Sources */,
+				0CBFEC511CBE147300C7B7CE /* Yelp_Client.swift in Sources */,
 				0CBD41F91C94C4940072787F /* addCoffeeShopViewController.swift in Sources */,
 				0CA8B46C1CAEF5B900E277A8 /* AvailableCoffeeCellCollectionViewCell.swift in Sources */,
 				A0EA7C321CB74132003F4105 /* SingleBrandViewController.swift in Sources */,
-				0C1C27931C961BAE0041B06F /* CoffeeShopsTableViewController.swift in Sources */,
 				0CBD41FA1C94C4940072787F /* GlobalFuncs.swift in Sources */,
 				A062B49E1CADC7FB001C7E04 /* Rating.swift in Sources */,
 				A0EA7C341CB74252003F4105 /* Favorites.swift in Sources */,
 				0CAD75111C93921500CFAFB6 /* Shops.swift in Sources */,
 				0CEF4CAF1C9249F50079C63A /* addCoffeeBrandViewController.swift in Sources */,
-				0C5FAF051CADC5600076E7EB /* CoffeeShopCollectionViewController.swift in Sources */,
 				0CEF4CA71C91F3030079C63A /* SignUpViewController.swift in Sources */,
 				0C1C27991C9A13490041B06F /* CoffeeBrandsCollectionViewController.swift in Sources */,
 				0C6452231CB73303009DF20D /* ShopsWithYelp.swift in Sources */,
 				0C1C27971C9A11AF0041B06F /* CoffeeBrandsCollectionViewCell.swift in Sources */,
 				0CEF4CA51C91EF3B0079C63A /* SignInViewController.swift in Sources */,
 				0CEF4CAD1C923FBD0079C63A /* CoffeeBrand.swift in Sources */,
-				0C6452221CB72BE7009DF20D /* YelpAPIClient.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

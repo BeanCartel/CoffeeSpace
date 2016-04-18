@@ -21,7 +21,24 @@ class CoffeeShopCollectionViewController: UICollectionViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
+        
         coffeeBrands = shopObject?.valueForKey("availableCoffee") as? [PFObject]
+        
+        // Was trying to add an element to collectionview to show one item. didnt work, remove when working
+        let query = PFQuery(className: "coffeeBrand")
+        var stock : PFObject
+        do {
+        try stock = query.getFirstObject()
+            print(stock.valueForKey("brandTitle"))
+            coffeeBrands?.append(stock)
+        }
+            catch {
+                print("error")
+        }
+        
+        
+        
+        
        // collectionview.alwaysBounceHorizontal = true
         
         // Do any additional setup after loading the view.
@@ -34,7 +51,10 @@ class CoffeeShopCollectionViewController: UICollectionViewController {
     
     override func collectionView(collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
         //#warning Incomplete method implementation -- Return the number of items in the section
-        return coffeeBrands!.count
+        
+            return 1
+       
+        
     }
     
    override func collectionView(collectionView: UICollectionView, cellForItemAtIndexPath indexPath: NSIndexPath) -> UICollectionViewCell {

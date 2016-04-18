@@ -2,7 +2,7 @@
   "images" : [
     {
       "idiom" : "universal",
-      "filename" : "passwordicon.png",
+      "filename" : "32x32_unlocked.png",
       "scale" : "1x"
     },
     {
@@ -11,6 +11,7 @@
     },
     {
       "idiom" : "universal",
+      "filename" : "1459938823_unlocked.png",
       "scale" : "3x"
     }
   ],

@@ -9,7 +9,7 @@
 import UIKit
 import AFNetworking
 import BDBOAuth1Manager
-//////////////////////////////////////THIS CLASS IS NOT BEING USED FOR THE APP, SEE OTHER CLIENT FOR THAT////////////////////////////////
+//////////////////////////////////////THIS CLASS IS THE CLIENT BEING USED FOR THE APP////////////////////////////////
 
 //This key was generated for CoffeeSpace
 let yelpConsumerKey = "cm0UQ3yr5FSBBENLE5-EIw"
@@ -46,11 +46,15 @@ class Yelp_Client: BDBOAuth1SessionManager {
         self.accessToken = accessToken
         self.accessSecret = accessSecret
         let baseUrl = NSURL(string: "https://api.yelp.com/v2/")
-        //super.init(baseURL: baseUrl, sessionConfiguration: NSURLSessionConfiguration?)
-        super.init(baseURL: baseUrl, consumerKey: key, consumerSecret: secret);
+        //let SC = NSURLSessionConfiguration.init()
+        //super.init(baseURL: baseUrl, sessionConfiguration: SC)
+        super.init(baseURL: baseUrl, consumerKey: key, consumerSecret: secret)
         
         let token = BDBOAuth1Credential(token: accessToken, secret: accessSecret, expiration: nil)
         self.requestSerializer.saveAccessToken(token)
+    }
+    override init(baseURL url: NSURL!, sessionConfiguration configuration: NSURLSessionConfiguration!) {
+        super.init(baseURL: url, sessionConfiguration: configuration)
     }
     
     func searchWithTerm(term: String, completion: ([ShopsWithYelp]!, NSError!) -> Void) -> NSURLSessionDataTask {
@@ -75,11 +79,11 @@ class Yelp_Client: BDBOAuth1SessionManager {
             parameters["deals_filter"] = deals!
         }
         
-        print(parameters)
         
         return self.GET("search", parameters: parameters, success: { (task: NSURLSessionDataTask, response: AnyObject?) in
             let dictionaries = response!["businesses"] as? [NSDictionary]
             if dictionaries != nil {
+               
                 completion(ShopsWithYelp.Shops(array: dictionaries!), nil)
             }
             }, failure: { (operation: NSURLSessionDataTask?, error: NSError) in
