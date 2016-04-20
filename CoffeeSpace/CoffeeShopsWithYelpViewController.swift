@@ -9,10 +9,12 @@
 import AFNetworking
 import Parse
 
-class CoffeeShopsWithYelpViewController: UITableViewController, UISearchBarDelegate {
+class CoffeeShopsWithYelpViewController: UIViewController, UISearchBarDelegate, UITableViewDelegate, UITableViewDataSource {
 
     
-    @IBOutlet var tableview: UITableView!
+    
+    @IBOutlet weak var tableview: UITableView!
+
     
     var shopsWithYelp: [ShopsWithYelp]!
     
@@ -23,9 +25,9 @@ class CoffeeShopsWithYelpViewController: UITableViewController, UISearchBarDeleg
     override func viewWillAppear(animated: Bool) {
         ShopsWithYelp.searchWithTerm("Coffee", completion: { (businesses: [ShopsWithYelp]!, error: NSError!) -> Void in
             self.shopsWithYelp = businesses
-            self.tableView.reloadData()
-            
+            self.tableview.reloadData()
         })
+        
     }
     
     //Search
@@ -53,7 +55,7 @@ class CoffeeShopsWithYelpViewController: UITableViewController, UISearchBarDeleg
         self.navigationItem.titleView = searchBar
     }
     
-    override func tableView(tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+     func tableView(tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         if shopsWithYelp?.count > 0 {
             return (shopsWithYelp?.count)!
         }else {
@@ -62,7 +64,7 @@ class CoffeeShopsWithYelpViewController: UITableViewController, UISearchBarDeleg
         }
     }
     
-    override func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
+     func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
         let cell = tableview.dequeueReusableCellWithIdentifier("CoffeeShopsCell", forIndexPath: indexPath) as! CoffeeShopsCell
         
         cell.shop = self.shopsWithYelp[indexPath.row]
@@ -71,7 +73,7 @@ class CoffeeShopsWithYelpViewController: UITableViewController, UISearchBarDeleg
         return cell
         
     }
-    override func tableView(tableView: UITableView, didSelectRowAtIndexPath indexPath: NSIndexPath) {
+     func tableView(tableView: UITableView, didSelectRowAtIndexPath indexPath: NSIndexPath) {
         tableview.deselectRowAtIndexPath(indexPath, animated: true)
     }
     
@@ -79,10 +81,10 @@ class CoffeeShopsWithYelpViewController: UITableViewController, UISearchBarDeleg
     
     // MARK: - Navigation
     // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
+     override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
         if segue.identifier == "singleCoffeeShopViewController" {
             let cell = sender as! UITableViewCell
-            if let indexPath = tableView.indexPathForCell(cell) {
+            if let indexPath = tableview.indexPathForCell(cell) {
                 let singleCoffeeShopController = segue.destinationViewController as! singleCoffeeShopViewController
                 
                  let shop = self.shopsWithYelp[indexPath.row]
@@ -93,7 +95,7 @@ class CoffeeShopsWithYelpViewController: UITableViewController, UISearchBarDeleg
                 print(name)
                 
                 
-                tableView.deselectRowAtIndexPath(indexPath, animated: true)
+                tableview.deselectRowAtIndexPath(indexPath, animated: true)
             }
         }
     }

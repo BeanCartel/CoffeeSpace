@@ -9,10 +9,10 @@
 import UIKit
 
 class ShopsWithYelp: NSObject {
-    let id: String?
     let name: String?
     
     let address: String?
+    var coordinates: NSDictionary?
     let imageURL: NSURL?
     let categories: String?
     let distance: String?
@@ -21,7 +21,7 @@ class ShopsWithYelp: NSObject {
     
     init(dictionary: NSDictionary) {
         
-        id = dictionary["id"] as? String
+        coordinates = nil
         name = dictionary["name"] as? String
         
         let imageURLString = dictionary["image_url"] as? String
@@ -37,6 +37,12 @@ class ShopsWithYelp: NSObject {
             let addressArray = location!["address"] as? NSArray
             if addressArray != nil && addressArray!.count > 0 {
                 address = addressArray![0] as! String
+            }
+            let coordinatesDictionary = location!["coordinate"] as? NSDictionary
+            if(coordinatesDictionary != nil){
+                self.coordinates = coordinatesDictionary!
+            } else {
+                self.coordinates = nil
             }
             
             let neighborhoods = location!["neighborhoods"] as? NSArray
@@ -84,8 +90,6 @@ class ShopsWithYelp: NSObject {
         for dictionary in array {
             let shop = ShopsWithYelp(dictionary: dictionary)
             shops.append(shop)
-            
-            ShopLinkBrand.postShopBrandLink(shop.id!, brandId: ["000"], withCompletion: nil)
         }
         return shops
         

@@ -1,8 +1,8 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="9531" systemVersion="15E65" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" initialViewController="BYZ-38-t0r">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="10116" systemVersion="15D21" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" initialViewController="BYZ-38-t0r">
     <dependencies>
         <deployment identifier="iOS"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="9529"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="10085"/>
     </dependencies>
     <scenes>
         <!--Sign In View Controller-->
@@ -498,13 +498,14 @@
                         <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" usesAttributedText="YES" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Jwc-B3-vOe">
-                                <rect key="frame" x="20" y="222" width="86" height="20"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" usesAttributedText="YES" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Znh-8r-gNf">
+                                <rect key="frame" x="85" y="187" width="99" height="23"/>
                                 <attributedString key="attributedText">
-                                    <fragment content="Description">
+                                    <fragment content="Shop Name">
                                         <attributes>
-                                            <color key="NSColor" red="0.3960784375667572" green="0.25882354378700256" blue="0.21960784494876862" alpha="1" colorSpace="calibratedRGB"/>
-                                            <font key="NSFont" size="17" name="ArialMT"/>
+                                            <color key="NSColor" red="0.60392159223556519" green="0.65882354974746704" blue="0.60392159223556519" alpha="1" colorSpace="calibratedRGB"/>
+                                            <font key="NSFont" size="19" name="Arial-BoldMT"/>
+                                            <paragraphStyle key="NSParagraphStyle" alignment="right" lineBreakMode="wordWrapping" baseWritingDirection="natural" tighteningFactorForTruncation="0.0"/>
                                         </attributes>
                                     </fragment>
                                 </attributedString>
@@ -523,8 +524,8 @@
                                 <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <view alpha="0.90000000000000002" contentMode="scaleAspectFit" horizontalHuggingPriority="253" horizontalCompressionResistancePriority="753" translatesAutoresizingMaskIntoConstraints="NO" id="jDw-j4-xaT" customClass="CosmosView" customModule="Cosmos">
-                                <rect key="frame" x="216" y="254" width="96" height="15"/>
+                            <view alpha="0.90000000000000002" contentMode="scaleAspectFit" horizontalHuggingPriority="253" horizontalCompressionResistancePriority="753" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="jDw-j4-xaT" customClass="CosmosView" customModule="Cosmos">
+                                <rect key="frame" x="216" y="255" width="96" height="15"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <constraints>
                                     <constraint firstAttribute="width" constant="96" id="80i-eE-yNZ"/>
@@ -561,32 +562,26 @@
                                     <segue destination="wgq-cE-HLC" kind="embed" identifier="coffeeAvailableSegue" id="xGJ-32-Dih"/>
                                 </connections>
                             </containerView>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" usesAttributedText="YES" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="aSk-rN-nKD">
-                                <rect key="frame" x="20" y="250" width="66" height="20"/>
-                                <attributedString key="attributedText">
-                                    <fragment content="Location">
-                                        <attributes>
-                                            <color key="NSColor" red="0.3960784375667572" green="0.25882354378700256" blue="0.21960784494876862" alpha="1" colorSpace="calibratedRGB"/>
-                                            <font key="NSFont" size="17" name="ArialMT"/>
-                                        </attributes>
-                                    </fragment>
-                                </attributedString>
-                                <nil key="highlightedColor"/>
-                            </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Available Coffees" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="gzi-gw-USu">
                                 <rect key="frame" x="94" y="346" width="132" height="21"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" usesAttributedText="YES" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Znh-8r-gNf">
-                                <rect key="frame" x="85" y="187" width="99" height="23"/>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ZqX-m3-eYe">
+                                <rect key="frame" x="20" y="248" width="46" height="30"/>
+                                <state key="normal" title="Location"/>
+                                <connections>
+                                    <segue destination="Tsd-oV-Yn9" kind="push" identifier="mapViewSegue" id="p7k-dZ-ypg"/>
+                                </connections>
+                            </button>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" usesAttributedText="YES" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Jwc-B3-vOe">
+                                <rect key="frame" x="20" y="220" width="86" height="20"/>
                                 <attributedString key="attributedText">
-                                    <fragment content="Shop Name">
+                                    <fragment content="Description">
                                         <attributes>
-                                            <color key="NSColor" red="0.60392159223556519" green="0.65882354974746704" blue="0.60392159223556519" alpha="1" colorSpace="calibratedRGB"/>
-                                            <font key="NSFont" size="19" name="Arial-BoldMT"/>
-                                            <paragraphStyle key="NSParagraphStyle" alignment="right" lineBreakMode="wordWrapping" baseWritingDirection="natural" tighteningFactorForTruncation="0.0"/>
+                                            <color key="NSColor" red="0.3960784375667572" green="0.25882354378700256" blue="0.21960784494876862" alpha="1" colorSpace="calibratedRGB"/>
+                                            <font key="NSFont" size="17" name="ArialMT"/>
                                         </attributes>
                                     </fragment>
                                 </attributedString>
@@ -599,8 +594,6 @@
                             <constraint firstAttribute="trailing" relation="greaterThanOrEqual" secondItem="Jwc-B3-vOe" secondAttribute="trailing" constant="8" id="5Q6-7t-qFi"/>
                             <constraint firstItem="jDw-j4-xaT" firstAttribute="top" secondItem="sqd-Pl-6Z3" secondAttribute="bottom" constant="139" id="8aI-S8-HXk"/>
                             <constraint firstItem="6lW-Ee-dnW" firstAttribute="top" secondItem="I5V-1C-7TJ" secondAttribute="bottom" constant="8" id="9Gx-FL-yrc"/>
-                            <constraint firstItem="aSk-rN-nKD" firstAttribute="leading" secondItem="YgD-lL-jRK" secondAttribute="leading" constant="20" id="CGr-Po-FMP"/>
-                            <constraint firstItem="aSk-rN-nKD" firstAttribute="top" secondItem="Jwc-B3-vOe" secondAttribute="bottom" constant="8" id="DwK-B6-VWc"/>
                             <constraint firstAttribute="trailing" secondItem="1yq-T2-sXa" secondAttribute="trailing" id="Gdg-Ha-baw"/>
                             <constraint firstAttribute="trailing" secondItem="sqd-Pl-6Z3" secondAttribute="trailing" id="Klp-qi-A9I"/>
                             <constraint firstAttribute="trailing" secondItem="jDw-j4-xaT" secondAttribute="trailing" constant="8" id="ThF-B6-gY6"/>
@@ -608,7 +601,6 @@
                             <constraint firstItem="I5V-1C-7TJ" firstAttribute="top" secondItem="1yq-T2-sXa" secondAttribute="bottom" constant="8" id="XmA-nC-ZDO"/>
                             <constraint firstItem="sqd-Pl-6Z3" firstAttribute="top" secondItem="5T5-DX-env" secondAttribute="bottom" constant="-20" id="aax-O2-IrS"/>
                             <constraint firstAttribute="trailing" relation="greaterThanOrEqual" secondItem="Znh-8r-gNf" secondAttribute="trailing" constant="15" id="c26-Jg-XHQ"/>
-                            <constraint firstItem="jDw-j4-xaT" firstAttribute="leading" relation="greaterThanOrEqual" secondItem="aSk-rN-nKD" secondAttribute="trailing" constant="8" id="cJu-0b-tPl"/>
                             <constraint firstItem="I5V-1C-7TJ" firstAttribute="leading" secondItem="YgD-lL-jRK" secondAttribute="leading" constant="15" id="ipA-s4-cvk"/>
                             <constraint firstItem="1yq-T2-sXa" firstAttribute="top" secondItem="gzi-gw-USu" secondAttribute="bottom" constant="8" id="kv2-aM-UkQ"/>
                             <constraint firstItem="Znh-8r-gNf" firstAttribute="leading" secondItem="YgD-lL-jRK" secondAttribute="leading" constant="85" id="nFa-d1-RmL"/>
@@ -624,7 +616,7 @@
                     <navigationItem key="navigationItem" title="Shop" id="Wfg-S4-jJ9"/>
                     <connections>
                         <outlet property="descriptionLabel" destination="Jwc-B3-vOe" id="xQc-3i-ub2"/>
-                        <outlet property="locarionLabel" destination="aSk-rN-nKD" id="VRg-ui-I6U"/>
+                        <outlet property="locationButton" destination="ZqX-m3-eYe" id="Jhl-eP-NhX"/>
                         <outlet property="ratingView" destination="jDw-j4-xaT" id="zcb-hh-9jW"/>
                         <outlet property="shopImageView" destination="sqd-Pl-6Z3" id="baA-Tv-rWi"/>
                         <outlet property="shopNameLabel" destination="Znh-8r-gNf" id="8Gd-kQ-Kdw"/>
@@ -633,6 +625,60 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="vQH-IX-jCZ" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="1981" y="1592"/>
+        </scene>
+        <!--Single View Map-->
+        <scene sceneID="CMy-us-oGa">
+            <objects>
+                <viewController id="Tsd-oV-Yn9" customClass="singleViewMap" customModule="CoffeeSpace" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="edd-hX-z4K"/>
+                        <viewControllerLayoutGuide type="bottom" id="Rn5-aq-Nkw"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="TgY-tx-xcw">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <mapView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" mapType="standard" translatesAutoresizingMaskIntoConstraints="NO" id="3rs-fN-8JH">
+                                <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                            </mapView>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    </view>
+                    <navigationItem key="navigationItem" id="lWg-Fl-N9h"/>
+                    <connections>
+                        <outlet property="mapView" destination="3rs-fN-8JH" id="Goj-yJ-Xs1"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="e5x-0a-qXX" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1770" y="2382"/>
+        </scene>
+        <!--Single View Map-->
+        <scene sceneID="CMy-us-oGa">
+            <objects>
+                <viewController id="Tsd-oV-Yn9" customClass="singleViewMap" customModule="CoffeeSpace" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="edd-hX-z4K"/>
+                        <viewControllerLayoutGuide type="bottom" id="Rn5-aq-Nkw"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="TgY-tx-xcw">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <mapView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" mapType="standard" translatesAutoresizingMaskIntoConstraints="NO" id="3rs-fN-8JH">
+                                <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                            </mapView>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    </view>
+                    <navigationItem key="navigationItem" id="lWg-Fl-N9h"/>
+                    <connections>
+                        <outlet property="mapView" destination="3rs-fN-8JH" id="Goj-yJ-Xs1"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="e5x-0a-qXX" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1770" y="2382"/>
         </scene>
         <!--Shops-->
         <scene sceneID="OQ7-S2-cUk">

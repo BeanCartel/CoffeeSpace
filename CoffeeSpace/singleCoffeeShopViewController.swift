@@ -28,7 +28,8 @@ class singleCoffeeShopViewController: UIViewController {
     @IBOutlet weak var ratingLabel: UILabel!
     @IBOutlet weak var descriptionLabel: UILabel!
     @IBOutlet weak var ratingView: CosmosView!
-    @IBOutlet weak var locarionLabel: UILabel!
+   
+    @IBOutlet weak var locationButton: UIButton!
     
 
     var shop: ShopsWithYelp! {
@@ -54,7 +55,8 @@ class singleCoffeeShopViewController: UIViewController {
         if(self.imageURL != nil){
             self.shopImageView.setImageWithURL(self.imageURL)
         }
-        self.locarionLabel.text = self.shopLocation
+        self.locationButton.setTitle(self.shopLocation, forState: UIControlState.Normal)
+        
         //self.ratingLabel.text = self.reviews
         //Settings for stars
         ratingView.settings.fillMode = .Half
@@ -82,17 +84,20 @@ class singleCoffeeShopViewController: UIViewController {
         // Dispose of any resources that can be recreated.
     }
     
-   /**  This commented until collection view works
+    
      
     override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
         // Get the new view controller using segue.destinationViewController.
         // Pass the selected object to the new view controller.  coffeeAvailableSegue
         
-        if segue.identifier == "coffeeAvailableSegue" {
-                let availableCoffeeShopsCollection = segue.destinationViewController as! CoffeeShopCollectionViewController
-            availableCoffeeShopsCollection.shopObject = self.shopObject
+        //if segue.identifier == "coffeeAvailableSegue" {
+        //        let availableCoffeeShopsCollection = segue.destinationViewController as! CoffeeShopCollectionViewController
+        //    availableCoffeeShopsCollection.shopObject = self.shopObject}
+        
+        if segue.identifier == "mapViewSegue" {
+            let mapViewController = segue.destinationViewController as! singleViewMap
+            mapViewController.shop = self.shop
             
+        }
     }
-
-} **/
 }
