@@ -9,6 +9,7 @@
 import UIKit
 
 class ShopsWithYelp: NSObject {
+    let id: String?
     let name: String?
     
     let address: String?
@@ -20,7 +21,7 @@ class ShopsWithYelp: NSObject {
     
     init(dictionary: NSDictionary) {
         
-        
+        id = dictionary["id"] as? String
         name = dictionary["name"] as? String
         
         let imageURLString = dictionary["image_url"] as? String
@@ -83,6 +84,8 @@ class ShopsWithYelp: NSObject {
         for dictionary in array {
             let shop = ShopsWithYelp(dictionary: dictionary)
             shops.append(shop)
+            
+            ShopLinkBrand.postShopBrandLink(shop.id!, brandId: ["000"], withCompletion: nil)
         }
         return shops
         
