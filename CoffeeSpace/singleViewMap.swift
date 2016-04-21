@@ -15,8 +15,9 @@ class singleViewMap: UIViewController, MKMapViewDelegate {
     var lat: Double = 0
     var long: Double = 0
     
-    
     @IBOutlet weak var mapView: MKMapView!
+    
+   
     
     
     var shop: ShopsWithYelp! {

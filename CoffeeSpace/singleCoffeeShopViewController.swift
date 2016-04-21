@@ -29,7 +29,8 @@ class singleCoffeeShopViewController: UIViewController {
     @IBOutlet weak var descriptionLabel: UILabel!
     @IBOutlet weak var ratingView: CosmosView!
    
-    //@IBOutlet weak var locationButton: UIButton!
+    @IBOutlet weak var locationButton: UIButton!
+    
     
 
     var shop: ShopsWithYelp! {
@@ -55,7 +56,7 @@ class singleCoffeeShopViewController: UIViewController {
         if(self.imageURL != nil){
             self.shopImageView.setImageWithURL(self.imageURL)
         }
-       // self.locationButton.setTitle(self.shopLocation, forState: UIControlState.Normal)
+        self.locationButton.setTitle(self.shopLocation, forState: UIControlState.Normal)
         
         //self.ratingLabel.text = self.reviews
         //Settings for stars
