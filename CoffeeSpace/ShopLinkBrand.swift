@@ -48,16 +48,17 @@ class ShopLinkBrand: NSObject {
     }
     
     //Fetch the list of brands ids returns a dictionary with all the brands
-    class func getBrandsForShops(shopId: String? withCompletion completion: PFBooleanResultBlock?) -> [String]? {
+    class func getBrandsForShops(shopId: String?, withCompletion completion: PFBooleanResultBlock?) -> [String]? {
         var brands: [String]? = []
         
         let ShopBrandsTable = PFQuery(className: "ShopLinkBrand")
         
         ShopBrandsTable.whereKey("shopId", equalTo: shopId!)
-        
+
         ShopBrandsTable.getFirstObjectInBackgroundWithBlock({ (result, error) -> Void in
             //gives me a list of results 
-            brands += getBrandsInfo(results["brandId"])
+            print("welcome to hell nigga")
+            //brands += getBrandsInfo(result["brandId"])
         })
         
         
@@ -68,11 +69,11 @@ class ShopLinkBrand: NSObject {
     class func getBrandsInfo(brandIds: [String]?)  {
         let ShopBrandsTable = PFQuery(className: "coffeeBrand")
         
-        ShopBrandsTable.whereKey("_id", containedIn: brandIds)
+        ShopBrandsTable.whereKey("_id", containedIn: brandIds!)
         
         ShopBrandsTable.getFirstObjectInBackgroundWithBlock({ (result, error) -> Void in
             //gives me a list of all info with cooffeebrands
-            getBrandsInfo(results)
+            //getBrandsInfo(result)
         })
     }
 }
