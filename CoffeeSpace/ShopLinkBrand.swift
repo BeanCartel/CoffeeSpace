@@ -48,32 +48,31 @@ class ShopLinkBrand: NSObject {
     }
     
     //Fetch the list of brands ids returns a dictionary with all the brands
-    class func getBrandsForShops(shopId: String?, withCompletion completion: PFBooleanResultBlock?) -> [String]? {
-        var brands: [String]? = []
+    class func getBrandsForShops(shopId: String?, withCompletion completion: PFBooleanResultBlock?) -> [PFObject]? {
+        var returnBrands: [PFObject]? = []
         
-        let ShopBrandsTable = PFQuery(className: "ShopLinkBrand")
+        var ShopBrandsTable = PFQuery(className: "ShopLinkBrand")
         
         ShopBrandsTable.whereKey("shopId", equalTo: shopId!)
 
-        ShopBrandsTable.getFirstObjectInBackgroundWithBlock({ (result, error) -> Void in
-            //gives me a list of results 
-            print("welcome to hell nigga")
-            //brands += getBrandsInfo(result["brandId"])
-        })
+        do {
+            let brands = try ShopBrandsTable.getFirstObject()
+            
+            ShopBrandsTable = PFQuery(className: "coffeeBrand")
+            
+            let brandlist = brands["brandId"] as! [String]
+            
+            ShopBrandsTable.whereKey("_id", containedIn: brandlist)
+            
+            do {
+                returnBrands = try ShopBrandsTable.findObjects()
+            } catch _ {
+                print("error")
+            }
+        } catch _ {
+            print("top error")
+        }
         
-        
-        return brands
-    }
-    
-    //Gets list of brands information using brand ids
-    class func getBrandsInfo(brandIds: [String]?)  {
-        let ShopBrandsTable = PFQuery(className: "coffeeBrand")
-        
-        ShopBrandsTable.whereKey("_id", containedIn: brandIds!)
-        
-        ShopBrandsTable.getFirstObjectInBackgroundWithBlock({ (result, error) -> Void in
-            //gives me a list of all info with cooffeebrands
-            //getBrandsInfo(result)
-        })
+        return returnBrands
     }
 }

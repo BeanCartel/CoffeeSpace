@@ -26,8 +26,7 @@ class CoffeeShopsWithYelpViewController: UIViewController, UISearchBarDelegate, 
         ShopsWithYelp.searchWithTerm("Coffee", completion: { (businesses: [ShopsWithYelp]!, error: NSError!) -> Void in
             self.shopsWithYelp = businesses
             self.tableview.reloadData()
-        })
-        
+        })        
     }
     
     //Search

@@ -36,6 +36,7 @@ class singleCoffeeShopViewController: UIViewController {
     var shop: ShopsWithYelp! {
         didSet {
             
+            self.shopId = shop.id
             self.shopName = shop.name
             self.imageURL = shop.imageURL
             
@@ -57,6 +58,8 @@ class singleCoffeeShopViewController: UIViewController {
             self.shopImageView.setImageWithURL(self.imageURL)
         }
         self.locationButton.setTitle(self.shopLocation, forState: UIControlState.Normal)
+        
+        ShopLinkBrand.getBrandsForShops(shopId, withCompletion: nil)
         
         //self.ratingLabel.text = self.reviews
         //Settings for stars
