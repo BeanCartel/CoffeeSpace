@@ -31,8 +31,6 @@ class singleCoffeeShopViewController: UIViewController {
    
     @IBOutlet weak var locationButton: UIButton!
     
-    
-
     var shop: ShopsWithYelp! {
         didSet {
             
@@ -49,7 +47,6 @@ class singleCoffeeShopViewController: UIViewController {
         }
     }
 
-    
     override func viewDidLoad() {
         super.viewDidLoad()
         
@@ -59,7 +56,7 @@ class singleCoffeeShopViewController: UIViewController {
         }
         self.locationButton.setTitle(self.shopLocation, forState: UIControlState.Normal)
         
-        ShopLinkBrand.getBrandsForShops(shopId, withCompletion: nil)
+        //ShopLinkBrand.getBrandsForShops(self.shopId, withCompletion: nil)
         
         //self.ratingLabel.text = self.reviews
         //Settings for stars
