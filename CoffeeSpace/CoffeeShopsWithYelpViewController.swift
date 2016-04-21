@@ -10,34 +10,13 @@ import AFNetworking
 import Parse
 
 class CoffeeShopsWithYelpViewController: UIViewController, UISearchBarDelegate, UITableViewDelegate, UITableViewDataSource {
-
-    
-    
     @IBOutlet weak var tableview: UITableView!
-
     
     var shopsWithYelp: [ShopsWithYelp]!
+    var filteredShop: [ShopsWithYelp]!
     
     var searchText: String? = nil
     var searchBar = UISearchBar()
-    var resultSearchController = UISearchController()
-    
-    override func viewWillAppear(animated: Bool) {
-        ShopsWithYelp.searchWithTerm("Coffee", completion: { (businesses: [ShopsWithYelp]!, error: NSError!) -> Void in
-            self.shopsWithYelp = businesses
-            self.tableview.reloadData()
-        })        
-    }
-    
-    //Search
-    func search(searchText: String? = nil) {
-        self.searchText = searchText
-    }
-    
-    func searchBar(searchBar: UISearchBar, textDidChange searchText: String) {
-        search(searchText)
-    }
-
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -48,17 +27,56 @@ class CoffeeShopsWithYelpViewController: UIViewController, UISearchBarDelegate, 
         tableview.rowHeight = UITableViewAutomaticDimension
         tableview.estimatedRowHeight = 150
         
+        ShopsWithYelp.searchWithTerm("Coffee", completion: { (businesses: [ShopsWithYelp]!, error: NSError!) -> Void in
+            self.shopsWithYelp = businesses
+            self.filteredShop = businesses
+            self.tableview.reloadData()
+        })
+        
         searchBar.delegate = self
+        
+        let barButton = UIBarButtonItem(title: "Sign Out", style: UIBarButtonItemStyle.Done, target: self, action: "SignOut")
+        self.navigationItem.rightBarButtonItem = barButton
         //let barButton = UIBarButtonItem(title: "Sign Out", style: UIBarButtonItemStyle.Done, target: self, action: #selector(CoffeeShopsWithYelpViewController.SignOut))
         //self.navigationItem.rightBarButtonItem = barButton
         self.navigationItem.titleView = searchBar
     }
     
+    func SignOut() {
+        PFUser.logOut()
+        let loginVC: UIViewController? = (self.storyboard?.instantiateViewControllerWithIdentifier("SignInViewController"))! as UIViewController
+        
+        self.presentViewController(loginVC!, animated: true, completion: nil)
+    }
+    
+    //Search
+    func search(searchText: String? = nil) {
+        self.searchText = searchText
+        
+        if(!(self.searchText == nil)) {
+            print("we have someting.")
+            
+            self.filteredShop = self.shopsWithYelp.filter({ (dataString: ShopsWithYelp) -> Bool in
+                let name = dataString.name! as String
+                
+                if(!((name.rangeOfString(searchText!, options: .CaseInsensitiveSearch)) == nil)) {
+                    return true
+                } else {
+                    return false
+                }
+            })
+        }
+    }
+    
+    func searchBar(searchBar: UISearchBar, textDidChange searchText: String) {
+        search(searchText)
+        self.tableview.reloadData()
+    }
+    
      func tableView(tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         if shopsWithYelp?.count > 0 {
-            return (shopsWithYelp?.count)!
-        }else {
-            
+            return (filteredShop?.count)!
+        } else {
             return 0
         }
     }
@@ -66,8 +84,7 @@ class CoffeeShopsWithYelpViewController: UIViewController, UISearchBarDelegate, 
      func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
         let cell = tableview.dequeueReusableCellWithIdentifier("CoffeeShopsCell", forIndexPath: indexPath) as! CoffeeShopsCell
         
-        cell.shop = self.shopsWithYelp[indexPath.row]
-        
+        cell.shop = self.filteredShop[indexPath.row]
         
         return cell
         
