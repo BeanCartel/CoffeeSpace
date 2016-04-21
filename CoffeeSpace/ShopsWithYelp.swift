@@ -94,7 +94,6 @@ class ShopsWithYelp: NSObject {
             shops.append(shop)
         }
         return shops
-        
     }
     
     class func searchWithTerm(term: String, completion: ([ShopsWithYelp]!, NSError!) -> Void) {

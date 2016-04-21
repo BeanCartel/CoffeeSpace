@@ -16,6 +16,7 @@ class singleCoffeeShopViewController: UIViewController {
     var shopName: String! = ""
     var shopId: String! = ""
     var imageURL: NSURL!
+    var ratingImageURL: NSURL!
     var shopLocation: String! = ""
     var reviews: String! = ""
     var avgRating: Double! = 3.7
@@ -28,8 +29,8 @@ class singleCoffeeShopViewController: UIViewController {
     @IBOutlet weak var shopImageView: UIImageView!
     @IBOutlet weak var ratingLabel: UILabel!
     @IBOutlet weak var descriptionLabel: UILabel!
-    @IBOutlet weak var ratingView: CosmosView!
-   
+    @IBOutlet weak var ratingImageView: UIImageView!
+    
     @IBOutlet weak var locationButton: UIButton!
     
     var shop: ShopsWithYelp! {
@@ -38,11 +39,15 @@ class singleCoffeeShopViewController: UIViewController {
             self.shopId = shop.id
             self.shopName = shop.name
             self.imageURL = shop.imageURL
+            self.ratingImageURL = shop.ratingImageURL
             
             //categoriesLabel.text = business.categories
             self.shopLocation = shop.address
             self.reviews = "\(shop.reviewCount!) Reviews"
-            //ratingImageView.setImageWithURL(business.ratingImageURL!)
+            
+            //categoriesLabel.text = business.categories
+            self.shopLocation = shop.address
+            self.reviews = "\(shop.reviewCount!) Reviews"
             //distanceLabel.text = business.distance
             
         }
@@ -55,13 +60,18 @@ class singleCoffeeShopViewController: UIViewController {
         if(self.imageURL != nil){
             self.shopImageView.setImageWithURL(self.imageURL)
         }
+        
+        if(self.ratingImageURL != nil){
+            self.ratingImageView.setImageWithURL(self.ratingImageURL)
+        }
+        
         self.locationButton.setTitle(self.shopLocation, forState: UIControlState.Normal)
         
         //ShopLinkBrand.getBrandsForShops(self.shopId, withCompletion: nil)
         
         //self.ratingLabel.text = self.reviews
         //Settings for stars
-        ratingView.settings.fillMode = .Half
+/*ratingView.settings.fillMode = .Half
         ratingView.settings.starSize = 15
         ratingView.settings.starMargin = 5
         ratingView.settings.filledColor = UIColor.grayColor()
@@ -77,7 +87,7 @@ class singleCoffeeShopViewController: UIViewController {
         }
         ratingView.didFinishTouchingCosmos = {rating in self.currentRating = rating
             Rating.postRating(self.shopId, userId: PFUser.currentUser()?.objectId!, rating: rating, withCompletion: nil)
-        }
+        }*/
     }
 
     override func didReceiveMemoryWarning() {
