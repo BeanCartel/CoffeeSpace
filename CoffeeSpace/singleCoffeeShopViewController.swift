@@ -77,7 +77,6 @@ class singleCoffeeShopViewController: UIViewController {
         ratingView.didFinishTouchingCosmos = {rating in self.currentRating = rating
             Rating.postRating(self.shopId, userId: PFUser.currentUser()?.objectId!, rating: rating, withCompletion: nil)
         }
-        
     }
 
     override func didReceiveMemoryWarning() {
