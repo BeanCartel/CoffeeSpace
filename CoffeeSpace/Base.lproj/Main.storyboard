@@ -499,7 +499,7 @@
                         <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="elY-a8-zti">
+                            <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="elY-a8-zti">
                                 <rect key="frame" x="0.0" y="76" width="320" height="587"/>
                                 <subviews>
                                     <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="2bD-FK-xk3">
@@ -703,12 +703,12 @@
                         <constraints>
                             <constraint firstItem="sqd-Pl-6Z3" firstAttribute="top" secondItem="YgD-lL-jRK" secondAttribute="top" constant="20" symbolic="YES" id="3d8-Hy-wry"/>
                             <constraint firstItem="elY-a8-zti" firstAttribute="trailing" secondItem="sqd-Pl-6Z3" secondAttribute="trailing" id="6Ne-Ig-3lM"/>
+                            <constraint firstAttribute="bottomMargin" secondItem="elY-a8-zti" secondAttribute="bottom" id="7NV-MB-qQb"/>
                             <constraint firstItem="elY-a8-zti" firstAttribute="top" secondItem="5T5-DX-env" secondAttribute="bottom" constant="12" id="AUH-Dx-DCN"/>
                             <constraint firstItem="sqd-Pl-6Z3" firstAttribute="leading" secondItem="YgD-lL-jRK" secondAttribute="leading" id="DsW-c0-Khs"/>
                             <constraint firstItem="6lW-Ee-dnW" firstAttribute="top" secondItem="sqd-Pl-6Z3" secondAttribute="bottom" constant="433" id="M8q-gl-k1h"/>
                             <constraint firstItem="sqd-Pl-6Z3" firstAttribute="leading" secondItem="elY-a8-zti" secondAttribute="leading" id="a6F-WY-EAC"/>
                             <constraint firstAttribute="trailing" secondItem="sqd-Pl-6Z3" secondAttribute="trailing" id="ihh-rh-8Tx"/>
-                            <constraint firstAttribute="bottomMargin" secondItem="elY-a8-zti" secondAttribute="bottom" constant="-95" id="zbP-1l-iQV"/>
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" title="Shop" id="Wfg-S4-jJ9"/>
@@ -769,7 +769,7 @@
                         <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <tableView clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="none" rowHeight="92" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="XsM-1u-AIb">
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" misplaced="YES" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="none" rowHeight="92" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="XsM-1u-AIb">
                                 <rect key="frame" x="0.0" y="0.0" width="320" height="519"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <prototypes>
@@ -838,6 +838,12 @@
                             </tableView>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstAttribute="trailingMargin" secondItem="XsM-1u-AIb" secondAttribute="trailing" constant="-20" id="SSg-P7-73d"/>
+                            <constraint firstItem="XsM-1u-AIb" firstAttribute="leading" secondItem="mvf-IT-96b" secondAttribute="leadingMargin" constant="-20" id="fKp-3N-zxh"/>
+                            <constraint firstItem="BxQ-XV-3Da" firstAttribute="top" secondItem="XsM-1u-AIb" secondAttribute="bottom" id="ien-ee-JaF"/>
+                            <constraint firstItem="XsM-1u-AIb" firstAttribute="top" secondItem="mvf-IT-96b" secondAttribute="topMargin" id="zt5-02-QMC"/>
+                        </constraints>
                     </view>
                     <navigationItem key="navigationItem" title="Shops" id="62Y-ux-fyN"/>
                     <connections>
