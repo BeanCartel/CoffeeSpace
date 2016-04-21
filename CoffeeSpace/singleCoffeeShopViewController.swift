@@ -20,7 +20,8 @@ class singleCoffeeShopViewController: UIViewController {
     var reviews: String! = ""
     var avgRating: Double! = 3.7
     var currentRating: Double! = 0
-    
+    var shopReference: PFObject?
+    var brandIds: NSArray?
     var shopObject: PFObject?
     
     @IBOutlet weak var shopNameLabel: UILabel!
@@ -84,14 +85,38 @@ class singleCoffeeShopViewController: UIViewController {
         // Dispose of any resources that can be recreated.
     }
     
+    func findBrands(ID: String )
+    {
+        let query = PFQuery(className: "ShopLinkBrand")
+        
+        query.whereKey("shopId", equalTo: ID)
+        
+        
+        do {
+            self.shopReference = try query.getFirstObject()
+        } catch _ {
+            print("error")
+        }
+        self.brandIds = self.shopReference?.mutableArrayValueForKeyPath("brandId")
+        print(self.brandIds![0])
     
-     
+    }
+
     override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
         // Get the new view controller using segue.destinationViewController.
         // Pass the selected object to the new view controller.  coffeeAvailableSegue
         
         if segue.identifier == "coffeeAvailableSegue" {
-                _ = segue.destinationViewController as! CoffeeShopCollectionViewController
+                let availableCoffeeShopsCollection = segue.destinationViewController as! CoffeeShopCollectionViewController
+            availableCoffeeShopsCollection.shopId = self.shopId
+            findBrands(self.shopId)
+            
+           
+            availableCoffeeShopsCollection.brandId = self.brandIds![0] as? String
+            
+            
+              //print(self.brandIds![0])
+            //availableCoffeeShopsCollection.brandId = self.brandIds![0] as? String
            }
         
         if segue.identifier == "mapViewSegue" {

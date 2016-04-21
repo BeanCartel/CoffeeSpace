@@ -7,8 +7,11 @@
 //
 
 import UIKit
+import ParseUI
+import Parse
 
-class AvailableCoffeeCellCollectionViewCell: UICollectionViewCell {
+class AvailableCoffeeCellCollectionViewCell: PFCollectionViewCell {
+    
     
     @IBOutlet weak var BrandImageView: UIImageView!
     

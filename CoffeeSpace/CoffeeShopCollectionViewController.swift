@@ -13,41 +13,28 @@ import ParseUI
 class CoffeeShopCollectionViewController: PFQueryCollectionViewController, UISearchBarDelegate {
     
     var shopId: String? = ""
-    
-    
+    var shopReference: PFObject?
+    var brandId: String?
     @IBOutlet var brandsCollectionView: UICollectionView!
-    
-    
-    var selectedCoffee = [PFObject]()
-    var brandId: String = ""
     
     var searchText: String? = nil
     var searchBar = UISearchBar()
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        
+       
         
     }
-    
     override func queryForCollection() -> PFQuery {
-        var query = PFQuery(className: "ShopLinkBrand")
         
-        query.cachePolicy = .NetworkElseCache
-        query.whereKey("shopId", equalTo: shopId!)
+        let query = PFQuery(className: "coffeeBrand")
         
-        query.getFirstObjectInBackgroundWithBlock { (shopbrand, error) -> Void in
-            query = PFQuery(className: "coffeeBrand")
-            
-            let brandlist = shopbrand!["brandId"] as! [String]
-            
-            query.whereKey("_id", containedIn: brandlist)
-            
-            query.findObjectsInBackgroundWithBlock({ (brands, error) -> Void in
-                print(brands)
-            })
+        if(brandId != nil){
+        query.whereKey("_id", equalTo: brandId!)
         }
-        return query
+        
+            return query
+      
     }
     
     override func collectionView(collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
@@ -57,7 +44,7 @@ class CoffeeShopCollectionViewController: PFQueryCollectionViewController, UISea
     
     override func collectionView(collectionView: UICollectionView, cellForItemAtIndexPath indexPath: NSIndexPath, object: PFObject?) -> PFCollectionViewCell? {
         
-        let cell = collectionView.dequeueReusableCellWithReuseIdentifier("CoffeeBrandsCollectionViewCell", forIndexPath: indexPath) as! CoffeeBrandsCollectionViewCell
+        let cell = collectionView.dequeueReusableCellWithReuseIdentifier("AvailableCoffeeCellCollectionViewCell", forIndexPath: indexPath) as! AvailableCoffeeCellCollectionViewCell
         
         
         cell.BrandNameLabel.text = object?.objectForKey("brandTitle") as? String

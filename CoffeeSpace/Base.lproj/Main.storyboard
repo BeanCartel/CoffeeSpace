@@ -901,6 +901,7 @@
                                 </view>
                                 <color key="backgroundColor" red="0.3960784375667572" green="0.25882354378700256" blue="0.21960784494876862" alpha="1" colorSpace="calibratedRGB"/>
                                 <connections>
+                                    <outlet property="BrandImageView" destination="zrq-mc-8GM" id="O2R-GK-rfk"/>
                                     <outlet property="BrandNameLabel" destination="ygy-b8-57z" id="XlL-Xz-5G8"/>
                                 </connections>
                             </collectionViewCell>
@@ -910,6 +911,11 @@
                             <outlet property="delegate" destination="wgq-cE-HLC" id="vXz-SU-cOC"/>
                         </connections>
                     </collectionView>
+                    <userDefinedRuntimeAttributes>
+                        <userDefinedRuntimeAttribute type="boolean" keyPath="loadingViewEnabled" value="NO"/>
+                        <userDefinedRuntimeAttribute type="boolean" keyPath="pullToRefreshEnabled" value="NO"/>
+                        <userDefinedRuntimeAttribute type="boolean" keyPath="paginationEnabled" value="NO"/>
+                    </userDefinedRuntimeAttributes>
                     <connections>
                         <outlet property="CollectionView" destination="TlN-SV-K9k" id="gL4-ER-IWv"/>
                         <outlet property="brandsCollectionView" destination="TlN-SV-K9k" id="R3C-UM-AcS"/>
