@@ -13,6 +13,7 @@
 		0C1C27991C9A13490041B06F /* CoffeeBrandsCollectionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0C1C27981C9A13490041B06F /* CoffeeBrandsCollectionViewController.swift */; };
 		0C202BB61CC7152A002BB03E /* singleViewMap.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0C202BB51CC7152A002BB03E /* singleViewMap.swift */; };
 		0C4702D61CB87CC20015C72C /* Icons in Resources */ = {isa = PBXBuildFile; fileRef = 0C4702D51CB87CC20015C72C /* Icons */; };
+		0C4F194F1CC893040016B5FD /* CoffeeShopCollectionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0C5FAF041CADC5600076E7EB /* CoffeeShopCollectionViewController.swift */; };
 		0C6452231CB73303009DF20D /* ShopsWithYelp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0C6F34A11CB6D24900E81131 /* ShopsWithYelp.swift */; };
 		0C9135551C8FABFF0074CD93 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0C9135541C8FABFF0074CD93 /* AppDelegate.swift */; };
 		0C91355A1C8FABFF0074CD93 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 0C9135581C8FABFF0074CD93 /* Main.storyboard */; };
@@ -340,6 +341,7 @@
 				0CEF4CAB1C923D240079C63A /* singleCoffeeShopViewController.swift in Sources */,
 				0C9135551C8FABFF0074CD93 /* AppDelegate.swift in Sources */,
 				0C1C27951C98D73B0041B06F /* CoffeeShopsCell.swift in Sources */,
+				0C4F194F1CC893040016B5FD /* CoffeeShopCollectionViewController.swift in Sources */,
 				0CBFEC511CBE147300C7B7CE /* Yelp_Client.swift in Sources */,
 				0C202BB61CC7152A002BB03E /* singleViewMap.swift in Sources */,
 				0CBD41F91C94C4940072787F /* addCoffeeShopViewController.swift in Sources */,

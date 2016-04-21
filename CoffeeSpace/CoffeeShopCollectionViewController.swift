@@ -10,12 +10,13 @@ import UIKit
 import Parse
 import ParseUI
 
-class CoffeeShopCollectionViewController: PFQueryCollectionViewController, UISearchBarDelegate, {
+class CoffeeShopCollectionViewController: PFQueryCollectionViewController, UISearchBarDelegate {
     
     var shopId: String? = ""
     
-    @IBOutlet weak var brandsCell: AvailableCoffeeCellCollectionViewCell!
-    @IBOutlet var CollectionView: UICollectionView!
+    
+    @IBOutlet var brandsCollectionView: UICollectionView!
+    
     
     var selectedCoffee = [PFObject]()
     var brandId: String = ""
@@ -46,8 +47,29 @@ class CoffeeShopCollectionViewController: PFQueryCollectionViewController, UISea
                 print(brands)
             })
         }
-        
+        return query
     }
+    
+    override func collectionView(collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
+        //#warning Incomplete method implementation -- Return the number of items in the section
+        return self.objects.count
+    }
+    
+    override func collectionView(collectionView: UICollectionView, cellForItemAtIndexPath indexPath: NSIndexPath, object: PFObject?) -> PFCollectionViewCell? {
+        
+        let cell = collectionView.dequeueReusableCellWithReuseIdentifier("CoffeeBrandsCollectionViewCell", forIndexPath: indexPath) as! CoffeeBrandsCollectionViewCell
+        
+        
+        cell.BrandNameLabel.text = object?.objectForKey("brandTitle") as? String
+        object!["brandImage"].getDataInBackgroundWithBlock { (imageData: NSData?, error:NSError?) -> Void in
+            if error == nil {
+                let image = UIImage(data: imageData!)
+                cell.BrandImageView.image = image
+            }
+        }
+        return cell
+    }
+
     
     // MARK: - Navigation
     

@@ -1,8 +1,8 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="9531" systemVersion="15E65" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" initialViewController="BYZ-38-t0r">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="10116" systemVersion="15D21" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" initialViewController="BYZ-38-t0r">
     <dependencies>
         <deployment identifier="iOS"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="9529"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="10085"/>
         <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
     </dependencies>
     <scenes>
@@ -912,7 +912,8 @@
                     </collectionView>
                     <connections>
                         <outlet property="CollectionView" destination="TlN-SV-K9k" id="gL4-ER-IWv"/>
-                        <outlet property="collectionView" destination="TlN-SV-K9k" id="1UK-Zz-obf"/>
+                        <outlet property="brandsCollectionView" destination="TlN-SV-K9k" id="R3C-UM-AcS"/>
+                        <outlet property="collectionView" destination="TlN-SV-K9k" id="kO5-PW-0tj"/>
                     </connections>
                 </collectionViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="gTO-R2-yVn" userLabel="First Responder" sceneMemberID="firstResponder"/>

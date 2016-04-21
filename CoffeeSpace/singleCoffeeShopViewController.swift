@@ -90,9 +90,9 @@ class singleCoffeeShopViewController: UIViewController {
         // Get the new view controller using segue.destinationViewController.
         // Pass the selected object to the new view controller.  coffeeAvailableSegue
         
-        //if segue.identifier == "coffeeAvailableSegue" {
-        //        let availableCoffeeShopsCollection = segue.destinationViewController as! CoffeeShopCollectionViewController
-        //    availableCoffeeShopsCollection.shopObject = self.shopObject}
+        if segue.identifier == "coffeeAvailableSegue" {
+                _ = segue.destinationViewController as! CoffeeShopCollectionViewController
+           }
         
         if segue.identifier == "mapViewSegue" {
             let mapViewController = segue.destinationViewController as! singleViewMap
