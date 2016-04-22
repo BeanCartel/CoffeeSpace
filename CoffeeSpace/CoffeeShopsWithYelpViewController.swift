@@ -26,34 +26,15 @@ class CoffeeShopsWithYelpViewController: UIViewController, UISearchBarDelegate, 
     @IBOutlet weak var tableview: UITableView!
     @IBOutlet weak var searchBar: UISearchBar!
     @IBOutlet weak var brandsButton: UIButton!
-
     
     var shopsWithYelp: [ShopsWithYelp]!
+    var filteredShop: [ShopsWithYelp]!
     
     var searchText: String? = nil
-    //var searchBar = UISearchBar()
     var resultSearchController = UISearchController()
     
     var filtersOut: Bool?
-    
-    override func viewWillAppear(animated: Bool) {
-        ShopsWithYelp.searchWithTerm("Coffee", completion: { (businesses: [ShopsWithYelp]!, error: NSError!) -> Void in
-            self.shopsWithYelp = businesses
-            self.tableview.reloadData()
-        })
         
-    }
-    
-    //Search
-    func search(searchText: String? = nil) {
-        self.searchText = searchText
-    }
-    
-    func searchBar(searchBar: UISearchBar, textDidChange searchText: String) {
-        search(searchText)
-    }
-
-    
     override func viewDidLoad() {
         super.viewDidLoad()
         
@@ -68,24 +49,31 @@ class CoffeeShopsWithYelpViewController: UIViewController, UISearchBarDelegate, 
         //self.navigationItem.rightBarButtonItem = barButton
         //self.navigationItem.titleView = searchBar
         
-        let barButton = UIBarButtonItem(title: "Sign Out", style: UIBarButtonItemStyle.Done, target: self, action: "signoutButton" )
-        self.navigationItem.rightBarButtonItem = barButton
+        ShopsWithYelp.searchWithTerm("Coffee", completion: { (businesses: [ShopsWithYelp]!, error: NSError!) -> Void in
+            self.shopsWithYelp = businesses
+            self.filteredShop = businesses
+            self.tableview.reloadData()
+        })
+        
+        //let barButton = UIBarButtonItem(title: "Sign Out", style: UIBarButtonItemStyle.Done, target: self, action: "signoutButton" )
+        //self.navigationItem.rightBarButtonItem = barButton
         
         filterView.alpha = 0
         filtersOut = false
         
-
     }
     
-    func signoutButton() {
+    @IBAction func onSignOut(sender: AnyObject) {
+        PFUser.logOut()
+        let loginVC: UIViewController? = (self.storyboard?.instantiateViewControllerWithIdentifier("SignInViewController"))! as UIViewController
         
+        self.presentViewController(loginVC!, animated: true, completion: nil)
     }
     
      func tableView(tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        if shopsWithYelp?.count > 0 {
-            return (shopsWithYelp?.count)!
+        if filteredShop?.count > 0 {
+            return (filteredShop?.count)!
         }else {
-            
             return 0
         }
     }
@@ -93,8 +81,8 @@ class CoffeeShopsWithYelpViewController: UIViewController, UISearchBarDelegate, 
      func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
         let cell = tableview.dequeueReusableCellWithIdentifier("CoffeeShopsCell", forIndexPath: indexPath) as! CoffeeShopsCell
         
-        cell.shop = self.shopsWithYelp[indexPath.row]
-        
+        print(indexPath.row)
+        cell.shop = self.filteredShop[indexPath.row]
         
         return cell
         
@@ -120,13 +108,6 @@ class CoffeeShopsWithYelpViewController: UIViewController, UISearchBarDelegate, 
             filterView.alpha = 0
             filtersOut = false
         }
-        
-        
-        
-        
-        
-        
-        
     }
     
     
@@ -135,10 +116,6 @@ class CoffeeShopsWithYelpViewController: UIViewController, UISearchBarDelegate, 
             sender.alpha = 0
             self.searchtextField.alpha = 1
         })
-        
-        
-        
-        
     }
     
     
@@ -146,6 +123,21 @@ class CoffeeShopsWithYelpViewController: UIViewController, UISearchBarDelegate, 
     @IBAction func searchTextFieldValueChanged(sender: KaedeTextField) {
         let searchtext = sender.text
         searchBar.text = searchtext
+        
+        if(!(self.searchBar.text == nil)) {
+            self.filteredShop = self.shopsWithYelp.filter({ (dataString: ShopsWithYelp) -> Bool in
+                let name = dataString.name! as String
+                
+                if(!((name.rangeOfString(searchBar.text!, options: .CaseInsensitiveSearch)) == nil)) {
+                    return true
+                } else {
+                    return false
+                }
+            })
+        } else {
+            self.filteredShop = self.shopsWithYelp
+        }
+        self.tableview.reloadData()
     }
     
     //Filters View 

@@ -1,8 +1,8 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="10116" systemVersion="15D21" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" initialViewController="BYZ-38-t0r">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="9531" systemVersion="15C50" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" initialViewController="BYZ-38-t0r">
     <dependencies>
         <deployment identifier="iOS"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="10085"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="9529"/>
         <capability name="Alignment constraints to the first baseline" minToolsVersion="6.0"/>
         <capability name="Alignment constraints with different attributes" minToolsVersion="5.1"/>
         <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
@@ -800,6 +800,7 @@
                         <outlet property="descriptionLabel" destination="Jwc-B3-vOe" id="xQc-3i-ub2"/>
                         <outlet property="locationButton" destination="paL-US-NdB" id="XTu-lJ-rIe"/>
                         <outlet property="ratingImageView" destination="X1C-IP-5oZ" id="hed-KY-hfk"/>
+                        <outlet property="shopImageView" destination="2bD-FK-xk3" id="uVu-6E-dtq"/>
                         <outlet property="shopNameLabel" destination="Znh-8r-gNf" id="8Gd-kQ-Kdw"/>
                     </connections>
                 </viewController>
@@ -981,6 +982,9 @@
                                     <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="qnc-fM-Atp">
                                         <rect key="frame" x="1" y="36" width="60" height="30"/>
                                         <state key="normal" title="Sign Out"/>
+                                        <connections>
+                                            <action selector="onSignOut:" destination="7gK-8x-0zp" eventType="touchUpInside" id="f5S-ce-jGB"/>
+                                        </connections>
                                     </button>
                                     <textField opaque="NO" clipsSubviews="YES" alpha="0.0" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="Search" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="4f6-Cj-r6t" customClass="KaedeTextField" customModule="TextFieldEffects">
                                         <rect key="frame" x="73" y="27" width="175" height="53"/>
