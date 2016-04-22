@@ -23,9 +23,12 @@ class SingleBrandViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        getBrands(brandId)
+        
         checkCurUserFavorited()
         checkFavorites()
+    }
+    override func viewWillAppear(animated: Bool) {
+      getBrands(brandId)
     }
 
     override func didReceiveMemoryWarning() {

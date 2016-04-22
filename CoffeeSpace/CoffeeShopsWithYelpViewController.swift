@@ -133,6 +133,7 @@ class CoffeeShopsWithYelpViewController: UIViewController, UISearchBarDelegate, 
     @IBAction func searchtopButton(sender: MKButton) {
         UIView.animateWithDuration(0.5, animations: {
             sender.alpha = 0
+            self.searchtextField.alpha = 1
         })
         
         
@@ -142,7 +143,7 @@ class CoffeeShopsWithYelpViewController: UIViewController, UISearchBarDelegate, 
     
     
     //Changes value of UISearchBar to updtae search results
-    @IBAction func searchTextFieldValueChanged(sender: AnyObject) {
+    @IBAction func searchTextFieldValueChanged(sender: KaedeTextField) {
         let searchtext = sender.text
         searchBar.text = searchtext
     }

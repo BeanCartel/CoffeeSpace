@@ -29,8 +29,8 @@ class SignInViewController: UIViewController {
 
         // Do any additional setup after loading the view.
         
-        textfieldsUIView.alpha = 1
-        buttonsUIView.alpha = 1
+        textfieldsUIView.alpha = 0
+        buttonsUIView.alpha = 0
         
     }
 
@@ -73,7 +73,7 @@ class SignInViewController: UIViewController {
         UIView.animateWithDuration(0.4, animations: {
             
             self.buttonsUIView.alpha = 1
-            
+            self.buttonsUIView.alpha = 1
             self.textfieldsUIView.alpha = 1
             self.userNameTextView.alpha = 1
             self.passWordTextView.alpha = 1
