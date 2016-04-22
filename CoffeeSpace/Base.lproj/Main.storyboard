@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="9531" systemVersion="15C50" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" initialViewController="BYZ-38-t0r">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="9531" systemVersion="15E65" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" initialViewController="BYZ-38-t0r">
     <dependencies>
         <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="9529"/>
@@ -472,7 +472,7 @@
                                 <nil key="highlightedColor"/>
                             </label>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="7EB-mg-lSw">
-                                <rect key="frame" x="256" y="189" width="30" height="30"/>
+                                <rect key="frame" x="256" y="189" width="30" height="31"/>
                                 <state key="normal" title="Fav"/>
                                 <connections>
                                     <action selector="onFavBrand:" destination="jyD-c2-i5T" eventType="touchUpInside" id="Cfe-RJ-3hw"/>
@@ -491,10 +491,16 @@
                                 </attributedString>
                                 <nil key="highlightedColor"/>
                             </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Description" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="gB5-ma-6U0">
+                                <rect key="frame" x="24" y="239" width="280" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" usesAttributedText="YES" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="eaX-BR-iq1">
-                                <rect key="frame" x="243" y="217" width="57" height="14"/>
+                                <rect key="frame" x="253" y="217" width="36" height="14"/>
                                 <attributedString key="attributedText">
-                                    <fragment content="78987987">
+                                    <fragment content="50000">
                                         <attributes>
                                             <color key="NSColor" red="0.60392159223556519" green="0.65882354974746704" blue="0.60392159223556519" alpha="1" colorSpace="calibratedRGB"/>
                                             <font key="NSFont" size="12" name="TrebuchetMS-Bold"/>
@@ -504,16 +510,18 @@
                                 </attributedString>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Description" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="gB5-ma-6U0">
-                                <rect key="frame" x="24" y="239" width="280" height="21"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
-                                <nil key="highlightedColor"/>
-                            </label>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                     </view>
                     <navigationItem key="navigationItem" id="VeO-02-ahW"/>
+                    <connections>
+                        <outlet property="brandImageView" destination="XlR-2C-i89" id="SAp-Oe-2me"/>
+                        <outlet property="brandLabel" destination="1fI-fz-AYS" id="OO5-gL-Nfy"/>
+                        <outlet property="descriptionLabel" destination="gB5-ma-6U0" id="oRp-aD-Enm"/>
+                        <outlet property="favButton" destination="7EB-mg-lSw" id="4lo-uS-HCK"/>
+                        <outlet property="favCountLabel" destination="eaX-BR-iq1" id="gf5-YW-Wdn"/>
+                        <outlet property="locationLabel" destination="DVQ-dw-8nj" id="JtV-to-OgT"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="caR-wf-DnF" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
