@@ -48,8 +48,12 @@
 
 
 ## Video Walkthrough 
-
+2 week progress
 <img src='http://i.imgur.com/bK3bqBb.gif'/>
 
+final sprint:
+<img src='https://giant.gfycat.com/AmpleFrigidDolphin.gif'/>
 ## Notes
-- On the walkthrough we didn't show the views to add the data partlly because thats just for the admins to see and won't be on the final build. Lot's of changes to UI to come.
+- On the walkthrough we didn't show the views to add the data partlly because thats just for the admins to see and won't be on the final build. 
+- IMPORTANT: the single views for the shop and the brands along with the map for the shop location arent shwon in the gif cause of a   last minute crash. will upload full gif tomorrow.
+- Some functionality like the filter and the search doesnt work because the backend simply isnt there, its just for show right now.
