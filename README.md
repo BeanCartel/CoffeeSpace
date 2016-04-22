@@ -41,8 +41,10 @@
 
 - [ ] Display nearby coffeeshops in a Map 
 - [ ] Login with Facebook 
-- [ ] Cool animations 
-- [ ] Yelp Integration
+- [x] Cool animations 
+- [x] Yelp Integration
+- [x] Show she location in map and maps
+- [x] non functioning filters 
 
 
 ## Video Walkthrough 
