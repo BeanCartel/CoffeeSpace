@@ -100,7 +100,7 @@ class SignUpViewController: UIViewController, UITextFieldDelegate {
             UIView.animateWithDuration(0.4, animations: {
                 self.checkmarkemail.alpha = 1
                 
-                self.newEmailTextView.background = UIImage(named: "activeText")
+                //self.newEmailTextView.background = UIImage(named: "activeText")
                 self.secondcontinueButton.alpha = 1
             })
             
@@ -108,7 +108,7 @@ class SignUpViewController: UIViewController, UITextFieldDelegate {
             UIView.animateWithDuration(0.4, animations: {
                 self.checkmarkemail.alpha = 0
                 
-                self.newNameTextView.background = UIImage(named: "errorText")
+                //self.newNameTextView.background = UIImage(named: "errorText")
             })
         }
     }
@@ -118,14 +118,14 @@ class SignUpViewController: UIViewController, UITextFieldDelegate {
             UIView.animateWithDuration(0.4, animations: {
                 
                 self.smallcheckmarkImage.alpha = 1
-                self.newNameTextView.background = UIImage(named: "activeText")
+                //self.newNameTextView.background = UIImage(named: "activeText")
                 self.firstcontinueButton.alpha = 1
             })
         } else if ((self.newNameTextView.text!.characters.count) == 1) {
             UIView.animateWithDuration(0.4, animations: {
                 
                 self.smallcheckmarkImage.alpha = 0
-                self.newNameTextView.background = UIImage(named: "errorText")
+               // self.newNameTextView.background = UIImage(named: "errorText")
             })
         }
     }
@@ -135,13 +135,13 @@ class SignUpViewController: UIViewController, UITextFieldDelegate {
             UIView.animateWithDuration(0.4, animations: {
                 self.checkmarkusername.alpha = 1
                 
-                self.newUserNameTextView.background = UIImage(named: "activeText")
+                //self.newUserNameTextView.background = UIImage(named: "activeText")
             })
         } else if (self.newUserNameTextView.text!.characters.count < 4) || (self.newUserNameTextView.text!.characters.count > 21) {
             UIView.animateWithDuration(0.4, animations: {
                 self.checkmarkusername.alpha = 0
                 
-                self.newUserNameTextView.background = UIImage(named: "errorText")
+                //self.newUserNameTextView.background = UIImage(named: "errorText")
             })
         }
     }
@@ -151,14 +151,14 @@ class SignUpViewController: UIViewController, UITextFieldDelegate {
             UIView.animateWithDuration(0.4, animations: {
                 self.checkmarkpassword.alpha = 1
                 
-                self.newPasswordTextView.background = UIImage(named: "activeText")
+                //self.newPasswordTextView.background = UIImage(named: "activeText")
                 self.signupButton.alpha = 1
             })
         } else if (self.newPasswordTextView.text!.characters.count < 4) || (self.newUserNameTextView.text!.characters.count > 21) {
             UIView.animateWithDuration(0.4, animations: {
                 self.checkmarkpassword.alpha = 0
                 
-                self.newPasswordTextView.background = UIImage(named: "errorText")
+                //self.newPasswordTextView.background = UIImage(named: "errorText")
             })
         }
         

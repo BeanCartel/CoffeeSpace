@@ -11,6 +11,9 @@ target 'CoffeeSpace' do
 	pod 'BDBOAuth1Manager'
 	pod 'MBProgressHUD'
 	pod 'OAuthSwift'
+    pod 'MaterialKit'
+    pod 'TextFieldEffects', '~> 1.1.1'
+    pod 'Spring', :git => 'https://github.com/MengTo/Spring.git', :branch => 'swift2'
 	
 end
 

@@ -29,8 +29,8 @@ class SignInViewController: UIViewController {
 
         // Do any additional setup after loading the view.
         
-        textfieldsUIView.alpha = 0
-        buttonsUIView.alpha = 0
+        textfieldsUIView.alpha = 1
+        buttonsUIView.alpha = 1
         
     }
 
@@ -71,7 +71,7 @@ class SignInViewController: UIViewController {
     }
     @IBAction func pressSignin(sender: UIButton) {
         UIView.animateWithDuration(0.4, animations: {
-            self.buttonsUIView.frame = CGRectMake(20, 202, 280, 128)
+            
             self.buttonsUIView.alpha = 1
             
             self.textfieldsUIView.alpha = 1
@@ -82,7 +82,7 @@ class SignInViewController: UIViewController {
             self.coffeetitleLabel.alpha = 0
             self.spacetitleLAbel.alpha = 0
             
-            self.textfieldsUIView.frame = CGRectMake(20, 20, self.textfieldsUIView.frame.width, self.textfieldsUIView.frame.height)
+            //self.textfieldsUIView.frame = CGRectMake(20, 20, self.textfieldsUIView.frame.width, self.textfieldsUIView.frame.height)
         })
 
     }

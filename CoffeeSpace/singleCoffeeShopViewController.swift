@@ -78,6 +78,8 @@ class singleCoffeeShopViewController: UIViewController {
             Rating.postRating(self.shopId, userId: PFUser.currentUser()?.objectId!, rating: rating, withCompletion: nil)
         }
         
+        self.navigationController?.navigationBarHidden = true
+        
     }
 
     override func didReceiveMemoryWarning() {
