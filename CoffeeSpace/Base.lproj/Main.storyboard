@@ -3,7 +3,10 @@
     <dependencies>
         <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="9529"/>
+        <capability name="Alignment constraints to the first baseline" minToolsVersion="6.0"/>
+        <capability name="Alignment constraints with different attributes" minToolsVersion="5.1"/>
         <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
+        <capability name="Unknown constraint types" minToolsVersion="5.1"/>
     </dependencies>
     <scenes>
         <!--Sign In View Controller-->
@@ -580,7 +583,7 @@
                         <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="elY-a8-zti">
+                            <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="elY-a8-zti">
                                 <rect key="frame" x="0.0" y="76" width="320" height="587"/>
                                 <subviews>
                                     <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="2bD-FK-xk3">
@@ -785,14 +788,14 @@
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
-                            <constraint firstItem="sqd-Pl-6Z3" firstAttribute="top" secondItem="YgD-lL-jRK" secondAttribute="top" constant="20" symbolic="YES" id="3d8-Hy-wry"/>
-                            <constraint firstItem="elY-a8-zti" firstAttribute="trailing" secondItem="sqd-Pl-6Z3" secondAttribute="trailing" id="6Ne-Ig-3lM"/>
+                            <constraint firstAttribute="top" secondItem="YgD-lL-jRK" secondAttribute="top" constant="20" symbolic="YES" id="3d8-Hy-wry"/>
+                            <constraint firstItem="elY-a8-zti" firstAttribute="trailing" secondAttribute="trailing" id="6Ne-Ig-3lM"/>
                             <constraint firstAttribute="bottomMargin" secondItem="elY-a8-zti" secondAttribute="bottom" id="7NV-MB-qQb"/>
                             <constraint firstItem="elY-a8-zti" firstAttribute="top" secondItem="5T5-DX-env" secondAttribute="bottom" constant="12" id="AUH-Dx-DCN"/>
-                            <constraint firstItem="sqd-Pl-6Z3" firstAttribute="leading" secondItem="YgD-lL-jRK" secondAttribute="leading" id="DsW-c0-Khs"/>
-                            <constraint firstItem="6lW-Ee-dnW" firstAttribute="top" secondItem="sqd-Pl-6Z3" secondAttribute="bottom" constant="384" id="M8q-gl-k1h"/>
-                            <constraint firstItem="sqd-Pl-6Z3" firstAttribute="leading" secondItem="elY-a8-zti" secondAttribute="leading" id="a6F-WY-EAC"/>
-                            <constraint firstAttribute="trailing" secondItem="sqd-Pl-6Z3" secondAttribute="trailing" id="ihh-rh-8Tx"/>
+                            <constraint firstAttribute="leading" secondItem="YgD-lL-jRK" secondAttribute="leading" id="DsW-c0-Khs"/>
+                            <constraint firstItem="6lW-Ee-dnW" firstAttribute="top" secondAttribute="bottom" constant="384" id="M8q-gl-k1h"/>
+                            <constraint firstAttribute="leading" secondItem="elY-a8-zti" secondAttribute="leading" id="a6F-WY-EAC"/>
+                            <constraint firstAttribute="trailing" secondAttribute="trailing" id="ihh-rh-8Tx"/>
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" title="Shop" id="Wfg-S4-jJ9"/>
@@ -800,7 +803,6 @@
                         <outlet property="descriptionLabel" destination="Jwc-B3-vOe" id="xQc-3i-ub2"/>
                         <outlet property="locationButton" destination="paL-US-NdB" id="XTu-lJ-rIe"/>
                         <outlet property="ratingImageView" destination="X1C-IP-5oZ" id="hed-KY-hfk"/>
-                        <outlet property="shopImageView" destination="sqd-Pl-6Z3" id="baA-Tv-rWi"/>
                         <outlet property="shopNameLabel" destination="Znh-8r-gNf" id="8Gd-kQ-Kdw"/>
                     </connections>
                 </viewController>
