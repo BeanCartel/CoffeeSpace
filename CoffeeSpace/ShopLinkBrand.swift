@@ -46,4 +46,33 @@ class ShopLinkBrand: NSObject {
             }
         }
     }
+    
+    //Fetch the list of brands ids returns a dictionary with all the brands
+    class func getBrandsForShops(shopId: String?, withCompletion completion: PFBooleanResultBlock?) -> [PFObject]? {
+        var returnBrands: [PFObject]? = []
+        
+        var ShopBrandsTable = PFQuery(className: "ShopLinkBrand")
+        
+        ShopBrandsTable.whereKey("shopId", equalTo: shopId!)
+
+        do {
+            let brands = try ShopBrandsTable.getFirstObject()
+            
+            ShopBrandsTable = PFQuery(className: "coffeeBrand")
+            
+            let brandlist = brands["brandId"] as! [String]
+            
+            ShopBrandsTable.whereKey("_id", containedIn: brandlist)
+            
+            do {
+                returnBrands = try ShopBrandsTable.findObjects()
+            } catch _ {
+                print("error")
+            }
+        } catch _ {
+            print("top error")
+        }
+        
+        return returnBrands
+    }
 }

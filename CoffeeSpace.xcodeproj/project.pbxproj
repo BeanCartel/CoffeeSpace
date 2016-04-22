@@ -13,6 +13,7 @@
 		0C1C27991C9A13490041B06F /* CoffeeBrandsCollectionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0C1C27981C9A13490041B06F /* CoffeeBrandsCollectionViewController.swift */; };
 		0C202BB61CC7152A002BB03E /* singleViewMap.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0C202BB51CC7152A002BB03E /* singleViewMap.swift */; };
 		0C4702D61CB87CC20015C72C /* Icons in Resources */ = {isa = PBXBuildFile; fileRef = 0C4702D51CB87CC20015C72C /* Icons */; };
+		0C4F194F1CC893040016B5FD /* CoffeeShopCollectionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0C5FAF041CADC5600076E7EB /* CoffeeShopCollectionViewController.swift */; };
 		0C6452231CB73303009DF20D /* ShopsWithYelp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0C6F34A11CB6D24900E81131 /* ShopsWithYelp.swift */; };
 		0C9135551C8FABFF0074CD93 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0C9135541C8FABFF0074CD93 /* AppDelegate.swift */; };
 		0C91355A1C8FABFF0074CD93 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 0C9135581C8FABFF0074CD93 /* Main.storyboard */; };
@@ -29,6 +30,7 @@
 		0CEF4CAD1C923FBD0079C63A /* CoffeeBrand.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0CEF4CAC1C923FBD0079C63A /* CoffeeBrand.swift */; };
 		0CEF4CAF1C9249F50079C63A /* addCoffeeBrandViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0CEF4CAE1C9249F50079C63A /* addCoffeeBrandViewController.swift */; };
 		1557B1A0ACAFAD57CED61F1A /* Pods_CoffeeSpace.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6FC86957997950D8136D8802 /* Pods_CoffeeSpace.framework */; };
+		A05FD54E1CC856DC00E5D1BF /* ShopLinkBrand.swift in Sources */ = {isa = PBXBuildFile; fileRef = A05FD54D1CC856DC00E5D1BF /* ShopLinkBrand.swift */; };
 		A062B49E1CADC7FB001C7E04 /* Rating.swift in Sources */ = {isa = PBXBuildFile; fileRef = A062B49D1CADC7FB001C7E04 /* Rating.swift */; };
 		A0EA7C321CB74132003F4105 /* SingleBrandViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A0EA7C311CB74132003F4105 /* SingleBrandViewController.swift */; };
 		A0EA7C341CB74252003F4105 /* Favorites.swift in Sources */ = {isa = PBXBuildFile; fileRef = A0EA7C331CB74252003F4105 /* Favorites.swift */; };
@@ -64,6 +66,7 @@
 		0CEF4CAE1C9249F50079C63A /* addCoffeeBrandViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = addCoffeeBrandViewController.swift; sourceTree = "<group>"; };
 		4113EB292DF2F71BBAAE2207 /* Pods-CoffeeSpace.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-CoffeeSpace.debug.xcconfig"; path = "Pods/Target Support Files/Pods-CoffeeSpace/Pods-CoffeeSpace.debug.xcconfig"; sourceTree = "<group>"; };
 		6FC86957997950D8136D8802 /* Pods_CoffeeSpace.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_CoffeeSpace.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		A05FD54D1CC856DC00E5D1BF /* ShopLinkBrand.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ShopLinkBrand.swift; sourceTree = "<group>"; };
 		A062B49D1CADC7FB001C7E04 /* Rating.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Rating.swift; sourceTree = "<group>"; };
 		A0EA7C311CB74132003F4105 /* SingleBrandViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SingleBrandViewController.swift; sourceTree = "<group>"; };
 		A0EA7C331CB74252003F4105 /* Favorites.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Favorites.swift; sourceTree = "<group>"; };
@@ -154,6 +157,7 @@
 				A062B49D1CADC7FB001C7E04 /* Rating.swift */,
 				A0EA7C331CB74252003F4105 /* Favorites.swift */,
 				0CEF4CAC1C923FBD0079C63A /* CoffeeBrand.swift */,
+				A05FD54D1CC856DC00E5D1BF /* ShopLinkBrand.swift */,
 				0C6F34A11CB6D24900E81131 /* ShopsWithYelp.swift */,
 			);
 			name = Model;
@@ -337,6 +341,7 @@
 				0CEF4CAB1C923D240079C63A /* singleCoffeeShopViewController.swift in Sources */,
 				0C9135551C8FABFF0074CD93 /* AppDelegate.swift in Sources */,
 				0C1C27951C98D73B0041B06F /* CoffeeShopsCell.swift in Sources */,
+				0C4F194F1CC893040016B5FD /* CoffeeShopCollectionViewController.swift in Sources */,
 				0CBFEC511CBE147300C7B7CE /* Yelp_Client.swift in Sources */,
 				0C202BB61CC7152A002BB03E /* singleViewMap.swift in Sources */,
 				0CBD41F91C94C4940072787F /* addCoffeeShopViewController.swift in Sources */,
@@ -353,6 +358,7 @@
 				0C1C27971C9A11AF0041B06F /* CoffeeBrandsCollectionViewCell.swift in Sources */,
 				0CEF4CA51C91EF3B0079C63A /* SignInViewController.swift in Sources */,
 				0CEF4CAD1C923FBD0079C63A /* CoffeeBrand.swift in Sources */,
+				A05FD54E1CC856DC00E5D1BF /* ShopLinkBrand.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

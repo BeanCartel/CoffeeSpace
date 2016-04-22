@@ -9,6 +9,7 @@
 import UIKit
 
 class ShopsWithYelp: NSObject {
+    let id: String?
     let name: String?
     
     let address: String?
@@ -22,6 +23,7 @@ class ShopsWithYelp: NSObject {
     init(dictionary: NSDictionary) {
         
         coordinates = nil
+        id = dictionary["id"] as? String
         name = dictionary["name"] as? String
         
         let imageURLString = dictionary["image_url"] as? String
@@ -92,7 +94,6 @@ class ShopsWithYelp: NSObject {
             shops.append(shop)
         }
         return shops
-        
     }
     
     class func searchWithTerm(term: String, completion: ([ShopsWithYelp]!, NSError!) -> Void) {
